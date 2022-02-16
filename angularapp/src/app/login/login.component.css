@@ -1,0 +1,60 @@
+.container{
+  background-image:url("forest.jpeg");
+   background-position:center;
+   background-size: cover;
+   background-repeat: no-repeat;
+  height:100%;
+  }
+  
+  
+  
+  form {
+    height: 350px;
+    width: 850px;
+    left: 18%;
+    top: 10%;
+    
+    position: absolute;
+    
+   /* background: hsla(205, 46%, 30%, 1);
+   */
+  }
+  
+  
+  .card h1, h5{
+      color: white;
+  }
+  
+  .card label{
+      color: white;
+  }
+  .signup{
+  color: white;
+  }
+  .card a{
+      color: red;
+  }
+  
+  
+  input[type=email], input[type=password] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
