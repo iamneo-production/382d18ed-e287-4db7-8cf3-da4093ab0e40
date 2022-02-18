@@ -1,27 +1,14 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="text-center">
-                    <h1>Login</h1>
-                    <h5>Enter email and password</h5>
-                </div>
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email"  placeholder="Enter your email a" class="form-control" id="email" aria-describedby="emailHelp">
-                    </div>
-                    <br>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password"  placeholder="Password" class="form-control" id="password">
-                    </div>
-                    <br>
-                    <button type="submit" class="btn btn-primary" id="loginButton">Login</button>
-                </form>
-                <br>
-                <a routerLink="/signup">New User? Click to signup</a>
-            </div>
-        </div>
+<nav class="navbar">
+    <h1>Login</h1>
+    </nav>
+    <div class="formbody">
+        <form [formGroup]="loginform" (ngSubmit)="login()">
+            <input type="email" id="email" placeholder="Enter email" name="email" formControlName="email"><br/>
+            <span style="color:red" *ngIf="email && email.invalid && email.touched">Please enter valid email</span>
+            <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"><br/>
+            <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>
+            <button type="submit" [disabled]="loginform.invalid" id="submitButton"><b>Submit</b></button><br/><br/>
+            Already a user ? <a id="signinLink" href="/signup" >Signup </a>
+    
+        </form>
     </div>
-</div>
