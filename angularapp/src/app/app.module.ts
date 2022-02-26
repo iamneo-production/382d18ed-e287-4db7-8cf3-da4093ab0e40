@@ -12,7 +12,7 @@ import { PopularplansComponent } from './popularplans/popularplans.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
-
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,8 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],
