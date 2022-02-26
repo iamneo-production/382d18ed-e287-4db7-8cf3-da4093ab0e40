@@ -13,6 +13,7 @@ const routes: Routes = [
   {path: 'popularplans', component:PopularplansComponent},
   {path: 'addons', component:AddonsComponent},
   {path: 'displayuser', component:DisplayUserComponent}
+  
 ];
 
 @NgModule({

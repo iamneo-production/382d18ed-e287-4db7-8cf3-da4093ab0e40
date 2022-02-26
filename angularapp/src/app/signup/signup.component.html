@@ -1,20 +1,26 @@
-<nav class="navbar">
-    <h1>Register</h1>
-    </nav>
-    <div class="formbody">
-        <form [formGroup]="signupform" (ngSubmit)="signup()">
-            <input type="email" id="email" placeholder="Enter email" name="email" formControlName="email"><br/>
-            <span style="color:red" *ngIf="email && email.invalid && email.touched">Please enter valid email</span>
-            <input type="text" id="username" placeholder="Enter Username" name="username" formControlName="username"><br/>
-            <span style="color:red" *ngIf="username && username.invalid && username.touched">Please enter valid username</span>
-            <input type="text" id="mobileNumber" placeholder="Enter Mobilenumber" name="mobilenumber" formControlName="mobilenumber"><br/>
-            <span style="color:red" *ngIf="mobilenumber && mobilenumber.invalid && mobilenumber.touched">Please enter valid mobile number</span>
-            <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"><br/>
-            <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>
-            <input type="password" id="confirmPassword" placeholder="Confirm password" name="confirmpassword" formControlName="confirmpassword" (change)="onPasswordChange()"><br/>
-            <span style="color:red" *ngIf="confirmpassword && confirmpassword.invalid && confirmpassword.touched &&confirm_password.hasError('mismatch')">Password and confirm password missmatch</span>
-            <button type="submit" [disabled]="signupform.invalid" id="submitButton"><b>Submit</b></button><br/><br/>
-            Already a user ? <a id="signinLink" href="/login" >Login</a>
+<div class="col-md-6 offset-md-3">
+    <h3> Sign Up </h3>
+    <form (ngSubmit) = "onSubmit()">
     
-        </form>
-    </div>
+        <div class="form-group">
+            <label> UserName</label>
+            <input type="text" class ="form-control" id = "username"
+                [(ngModel)] = "user.username" name = "username">
+        </div>
+    
+        <div class="form-group">
+            <label> MobileNumber</label>
+            <input type="text" class ="form-control" id = "mobilenumber"
+                [(ngModel)] = "user.mobilenumber" name = "mobilenumber">
+        </div>
+    
+        <div class="form-group">
+            <label> Email Id</label>
+            <input type="text" class ="form-control" id = "emailId"
+                [(ngModel)] = "user.emailId" name = "emailId">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
