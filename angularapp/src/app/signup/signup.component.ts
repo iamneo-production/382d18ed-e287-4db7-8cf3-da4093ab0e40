@@ -1,12 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/user';
 import {FormGroup,FormControl,FormControlName,Validators, AbstractControl} from '@angular/forms'
+import { Router } from '@angular/router';
+import { UserService } from '../user.service';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  constructor() { }
+  constructor(  private userservice: UserService ,private router: Router)
+  {
+
+  } 
+  user: User = new User();
+  saveUser()
+  {
+    this.userservice.createUser(this.user).subscribe(data =>{
+      console.log(data);
+      this.gotoUserlist();
+    },
+    error => console.log(error));
+  }
+  gotoUserlist()
+  {
+    this.router.navigate(['/displayuser']);
+  }
   onPasswordChange() {
     if (this.confirm_password.value == this.password1.value) {
       this.confirm_password.setErrors(null);
@@ -46,8 +66,9 @@ export class SignupComponent implements OnInit {
 	  return this.signupform.get('confirmpassword');
   }
 
-  signup(){
-	  console.log(this.signupform.value);
+  onSubmit(){
+	  console.log(this.user);
+    this.saveUser();
   }
 
   
