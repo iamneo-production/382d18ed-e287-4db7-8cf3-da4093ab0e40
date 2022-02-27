@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+
+<html lang="en">
+    
+    <head>
+        <link rel="stylesheet" href="login.component.css">
+		</head>
+		<body>
+<nav class="navbar">
+  <h1>Login</h1>
+  </nav>
+  <div class="formbody">
+      <form [formGroup]="loginform" (ngSubmit)="login()">
+          <input type="email" id="email" placeholder="Enter email" name="email" formControlName="email"><br/>
+          <span style="color:red" *ngIf="email && email.invalid && email.touched">Please enter valid email</span>
+          <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"><br/>
+          <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>
+          <button type="submit" [disabled]="loginform.invalid" id="submitButton"><b>Submit</b></button><br/><br/>
+          Already a user ? <a id="signinLink" href="/signup" >Signup </a>
+  
+      </form>
+  </div>
+  </body>
+  </html>
