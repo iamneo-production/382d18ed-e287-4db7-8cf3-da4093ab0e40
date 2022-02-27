@@ -1,1 +1,28 @@
-<p>edit-user works!</p>
+<h2> edit List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> ID</th>
+            <th> UserName</th>
+            <th> MobileNumber </th>
+            <th> Email Id</th>
+            <th> Password </th>
+            <th> User_Role </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of user" >
+            <td> {{ user.id }} </td>
+            <td> {{ user.username }} </td>
+            <td> {{ user.mobilenumber }} </td>
+            <td> {{ user.emailId }} </td>
+            <td> {{ user.password }} </td>
+            <td> {{ user.user_role }} </td>
+            <td>
+                <button (click) = "updateuser(user.id)" class = "btn btn-info"> Update</button>
+                
+                <button (click) = "userDetails(user.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
