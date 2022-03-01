@@ -39,7 +39,7 @@ public class UserModelController {
 	public UserModel createUser(@RequestBody UserModel user) {
 		return UserModelRepository.save(user);
 	}
-	/*
+	
 	// get user by id rest api
 	@GetMapping("/Users/{id}")
 	public ResponseEntity<User> getUserById(@PathVariable Long id) {
@@ -47,7 +47,7 @@ public class UserModelController {
 				.orElseThrow(() -> new ResourceNotFoundException("User not exist with id :" + id));
 		return ResponseEntity.ok(user);
 	}
-	
+	/*
 	// update user rest api
 	
 	@PutMapping("/Users/{id}")
