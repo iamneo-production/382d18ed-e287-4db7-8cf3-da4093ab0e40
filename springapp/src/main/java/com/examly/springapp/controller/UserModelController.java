@@ -20,9 +20,7 @@ import com.examly.springapp.exception.ResourceNotFoundException;
 import com.examly.springapp.model.UserModel;
 import com.examly.springapp.repository.UserModelRepository;
 
-
-@CrossOrigin(origins = "https://8081-ffeeacaeffaecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
-
+@CrossOrigin(origins = "https://8081-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/")
 @RestController
 @RequestMapping("/api/v1/")
 public class UserModelController {
@@ -43,39 +41,40 @@ public class UserModelController {
 	}
 	
 	// get user by id rest api
-	/*@GetMapping("/Users/{id}")
-	public ResponseEntity<User> getUserById(@PathVariable Long id) {
-		User user = UserRepository.findById(id)
+	@GetMapping("/Users/{id}")
+	public ResponseEntity<UserModel> getUserById(@PathVariable Long id) {
+		UserModel user = UserModelRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("User not exist with id :" + id));
 		return ResponseEntity.ok(user);
 	}
-	/*
-	// update user rest api
+	
+	// edit user rest api
 	
 	@PutMapping("/Users/{id}")
-	public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails){
-		User user = UserRepository.findById(id)
+	public ResponseEntity<UserModel> editUser(@PathVariable Long id, @RequestBody UserModel userDetails){
+		UserModel user = UserModelRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("User not exist with id :" + id));
 		
-		user.setFirstName(UserDetails.getFirstName());
-		user.setLastName(userDetails.getLastName());
+		user.setusername(userDetails.getusername());
+		user.setmobilenumber(userDetails.getmobilenumber());
 		user.setEmailId(userDetails.getEmailId());
+		user.setpassword(userDetails.getpassword());
 		
-		user updateduser = userRepository.save(user);
-		return ResponseEntity.ok(updateduser);
+		UserModel editduser = UserModelRepository.save(user);
+		return ResponseEntity.ok(editduser);
 	}
 	
 	// delete user rest api
 	@DeleteMapping("/Users/{id}")
 	public ResponseEntity<Map<String, Boolean>> deleteuser(@PathVariable Long id){
-		user user = userRepository.findById(id)
+		UserModel user = UserModelRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("user not exist with id :" + id));
 		
-		userRepository.delete(user);
+		UserModelRepository.delete(user);
 		Map<String, Boolean> response = new HashMap<>();
 		response.put("deleted", Boolean.TRUE);
 		return ResponseEntity.ok(response);
 	}
-	*/
+	
 	
 }
