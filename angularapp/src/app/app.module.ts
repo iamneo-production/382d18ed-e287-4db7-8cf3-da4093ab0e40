@@ -14,6 +14,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 
 import {HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { CommonModule } from '@angular/common';
     AddonsComponent,
     PopularplansComponent,
     DisplayUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    PrepaidplansComponent
     
   ],
   imports: [

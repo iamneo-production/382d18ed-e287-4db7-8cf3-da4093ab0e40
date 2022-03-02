@@ -2,10 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Plan } from '../plan';
 import { PlanServService } from '../plan-serv.service';
-import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-prepaidplans',
