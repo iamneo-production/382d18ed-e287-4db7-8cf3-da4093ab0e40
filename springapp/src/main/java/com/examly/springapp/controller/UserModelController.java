@@ -20,7 +20,9 @@ import com.examly.springapp.exception.ResourceNotFoundException;
 import com.examly.springapp.model.UserModel;
 import com.examly.springapp.repository.UserModelRepository;
 
+
 @CrossOrigin(origins = "https://8081-ffeeacaeffaecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
+
 @RestController
 @RequestMapping("/api/v1/")
 public class UserModelController {
