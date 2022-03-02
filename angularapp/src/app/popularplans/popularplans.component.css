@@ -1,190 +1,215 @@
-body{
-    background-image: url(data:image/jpeg;base64,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);
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: 100%;
-    font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-.pack-detail-row {
-
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-bottom: 1px solid #d4d4d4;
-    background-color: lightcoral;
-    background-blend-mode: lighten;
-   
-}
-.pack-detail-row{
-    box-sizing: border-box;
-}
-div {
-    display: block;
-}
-.pack-detail-row .coupon {
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    background-color: #59b184;
-    width: 100%;
-    margin-bottom: 5px;
-}
 * {
-    box-sizing: border-box;
-}
- .pack-detail-row .pack-top {
-    display: -ms-flexbox;
-    display: flex;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-div {
-    display: block;
-}
- .pack-detail-row .col {
-    width: 100%;
-}
-* {
-    box-sizing: border-box;
-}
-div {
-    display: block;
-}
-.pack-detail-row .col:last-child {
-    width: 25%;
-}
-.pack-detail-row .col:last-child {
-    text-align: right;
-}
-
-.pack-detail-row .col {
-    width: 100%;
-}
-* {
-    box-sizing: border-box;
-}
-
-div {
-    display: block;
-}
-.pack-detail-row .btn-circle {
-    min-width: 95px;
-}
-
-.pack-detail-row .btn-circle {
-    background: #e40000;
-    color: #fff;
-}
-.btn-circle {
-    padding-right: 20px;
-    border: 1px solid #e40000;
-    height: 40px;
-    padding: 9px;
-    border-radius: 30px;
-    display: inline-block;
-    color: #e40000;
-    cursor: pointer;
-    min-width: 79px;
-    text-align: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    transition: .3s;
-    font-size: 16px;
-}
-.pack-detail-row .pack-bottom,.pack-detail-row .pack-top {
-    display: -ms-flexbox;
-    display: flex;
-}
-.mt-3 {
-    margin-top: 1rem!important;
-}
-* {
-    box-sizing: border-box;
-}
-
-div {
-    display: block;
-}
-
-.pack-detail-wrap .pack-detail-row .col {
-    width: 100%;
-}
-* {
-    box-sizing: border-box;
-}
-
-div {
-    display: block;
-}
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
-* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-li, a, button{
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color:white;
-    background-color: #24252A;
-    text-decoration: none;
-}
-.logo{
-    font-size: 50px;
-    color: red;
-    background-color: #24252A;
-}
-.logo:hover{
-    cursor: default;
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    background-color: #24252A;
-}
-.logo{
-    cursor: pointer;
-}
-.nav_links{
-    list-style: none;
-}
-.nav_links li{
-    display: inline-block;
-    padding: 0px 20px;
-}
-.nav_links li a{
-    transition: all 0.3s ease 0s;
-}
-.nav_links li a:hover{
-    color: #0088a9;
-    font-size: 25px;
-}
 
-button{
-    padding: 9px 25px;
-    background-color: black;
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+}
+h2{
+    font-size: 40px;
+    color: red;
+}
+.wrapper{
+    position:absolute;
+    top: 5%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 40%;
+}
+ul li{
+    display: inline;
+    text-align: center;
+} 
+a{
+    display: inline-block;
+    width: 18%;
+    padding: auto;
+    margin: 32px 0;
+    text-decoration: none;
+    color:#333;
+}
+hr{
+    height: 70px;
+    width: 18%;
+    margin: -80px 0;
+    background: linear-gradient(to right, #05abe0 0%, #8200f4 100%);
     border: none;
     border-radius: 50px;
+    transition: .5s ease-in-out;
+}
+.userAddOns:hover ~hr{
+    margin-left: 18%;
+}
+.notifications:hover ~hr{
+    margin-left: 37%;
+}
+.logout:hover ~hr{
+    margin-left: 56%;
+}
+.container {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.container .popularPlansGrid {
+    display: block;
+    padding: 20px;
+    background: #ccc;
+    overflow: hidden;
+    width: 300px;
+    margin: 10px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -ms-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container .popularPlansGrid {
+    background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+    border-radius: 50px;
+}
+
+
+
+.popularPlansGrid .icon {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    text-align: center;
+    line-height: 70px;
+    font-size: 2.2em;
+    margin: 20px auto;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popularPlansGrid .icon span {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -ms-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.popularPlansGrid .type-01 {
+    color: #43CBFF;
+}
+
+.popularPlansGrid .type-02 {
+    color: #43CBFF;
+}
+
+.popularPlansGrid .type-03 {
+    color: #43CBFF;
+}
+
+.heading {
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: lighter;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.service__price {
+    color: #fff;
+    text-align: center;
+    font-size: 3em;
+}
+
+.service__price .dollar__sign {
+    font-size: 0.6em;
+    margin-left: -10px;
+}
+
+.features__list {
+    list-style: none;
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.features__list li {
+    color: #fff;
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+    font-weight: lighter;
+    font-size: 0.9em;
+    height: 30px;
+    line-height: 30px;
+}
+
+.recharge__button {
+    border: none;
+    display: block;
+    width: 70%;
+    height: 40px;
+    margin: 5px auto;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.5);
+    background: #fff;
+    
+}
+
+.recharge__button:hover {
+    width:75%;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-button:hover{
-    background-color: rgba(0,136,169,0.8);
-}
-.currentPage{
-    color: #0088a9;
-    font-size: 25px;
 }
