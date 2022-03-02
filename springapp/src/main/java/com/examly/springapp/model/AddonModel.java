@@ -11,9 +11,7 @@ import javax.persistence.Table;
 @Table(name = "Addons")
 public class AddonModel {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	
 	
 	@Column(name = "AddonId")
 	private Int AddonId;

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.example.demo.Model;
+=======
+package com.examly.springapp.model;
+>>>>>>> f357ead066fa37f01d4b5c52ef7a7fc599bcb71a
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;

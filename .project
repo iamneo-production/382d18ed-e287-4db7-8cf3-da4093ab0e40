@@ -25,6 +25,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 			<id>1642739836855</id>
 
@@ -40,6 +41,9 @@
 >>>>>>> 9b32ed66246bec0d9f070753319a425235dd750a
 =======
 			<id>1642739836855</id>
+=======
+			<id>1642739836855</id>
+>>>>>>> f357ead066fa37f01d4b5c52ef7a7fc599bcb71a
 			<name></name>
 			<type>30</type>
 			<matcher>
@@ -49,7 +53,10 @@
 		</filter>
 		<filter>
 			<id>1645885398492</id>
+<<<<<<< HEAD
 >>>>>>> 30d3980c92496bb49725721055f409295d4f399f
+=======
+>>>>>>> f357ead066fa37f01d4b5c52ef7a7fc599bcb71a
 			<name></name>
 			<type>30</type>
 			<matcher>
