@@ -22,7 +22,7 @@ import { CommonModule } from '@angular/common';
     AddonsComponent,
     PopularplansComponent,
     DisplayUserComponent,
-    EditUserComponent,
+    EditUserComponent
     
   ],
   imports: [
