@@ -1,26 +1,63 @@
-<div class="col-md-6 offset-md-3">
-    <h3> Sign Up </h3>
-    <form (ngSubmit) = "onSubmit()">
+<script>
+    $(document).ready(function() {
+        $('#identicalForm').bootstrapValidator();
+    });
+    </script>
+
+
+<div class="bg">
+  
+</div>
+
+<div class="sidenav col-md-6 offset-md-3">
+    <h3 class="main-head text-center font-weight-bolder "> Sign Up </h3>
+    <form  (ngSubmit)="onSubmit()" #SignupForm="ngForm">
     
-        <div class="form-group">
+        <div class="form-group font-weight-bold text-white " >
             <label> UserName</label>
-            <input type="text" class ="form-control" id = "username"
-                [(ngModel)] = "user.username" name = "username">
+            <input  type="text" class ="form-control" id = "username" 
+                [(ngModel)] = "user.username" name = "username" placeholder="Enter UserName" required >
+
+                
+
+                
         </div>
     
-        <div class="form-group">
+        <div class="form-group font-weight-bold text-white">
             <label> MobileNumber</label>
             <input type="text" class ="form-control" id = "mobilenumber"
-                [(ngModel)] = "user.mobilenumber" name = "mobilenumber">
+                [(ngModel)] = "user.mobilenumber" name = "mobilenumber"  pattern="^\d{10}$" placeholder="Enter your MobileNumber" required>
         </div>
     
-        <div class="form-group">
+        <div class="form-group font-weight-bold text-white">
             <label> Email Id</label>
             <input type="text" class ="form-control" id = "emailId"
-                [(ngModel)] = "user.emailId" name = "emailId">
+                [(ngModel)] = "user.emailId" name = "emailId" placeholder="Example@gmail.com" pattern=".+@gmail.com" size="30" min='5' required>
         </div>
-    
-        <button class = "btn btn-success" type ="submit">Submit</button>
-    
+        
+        <div class="form-group font-weight-bold text-white">
+            <label> Password</label>
+            <input type="password" class ="form-control" id = "password"
+                [(ngModel)] = "user.password" name = "password" placeholder="up to 8 characters(One should be upperCase atleast and also @#₹ symbol must need)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required 
+                data-bv-identical="true"
+                data-bv-identical-field="confirmPassword"
+                data-bv-identical-message="The password and its confirm are not the same" />
+        </div>
+        <div class="form-group font-weight-bold text-white">
+            <label> Confirm Password</label>
+            <input type="password" class ="form-control" id = "confirmPassword" 
+             name = "confirmpassword" placeholder="Repeat the password again" required 
+                data-bv-identical="true"
+                data-bv-identical-field="password"
+                data-bv-identical-message="The password and its confirm are not the same" />
+
+                
+        </div>
+
+        <div class="form-group">
+        
+        <button type="submit" class="btn btn-success" [disabled]="!SignupForm.form.valid">Submit</button>
+        <p class="text-white">I already have an account. <a href="/login">Login</a></p>
+        </div>
     </form>
     </div>

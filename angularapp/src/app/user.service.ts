@@ -6,7 +6,9 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class UserService {
+
   private baseURL = "https://8080-ffeeacaeffaecddebfdaffdacedbbebcbf.examlyiopb.examly.io/api/v1/Users";
+
   constructor(private httpClient:HttpClient) { }
   getUserList(): Observable<User[]>
   {
