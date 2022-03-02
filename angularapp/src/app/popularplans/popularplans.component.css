@@ -18,8 +18,8 @@ h2{
     margin:20px;
 }
 nav{
-    margin: 10px;
     position:relative;
+    left:15%;
 }
 ul li{
     display: inline;
