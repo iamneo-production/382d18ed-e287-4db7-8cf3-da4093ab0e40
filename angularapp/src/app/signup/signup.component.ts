@@ -44,7 +44,7 @@ export class SignupComponent implements OnInit {
     return this.signupform.controls['confirmpassword'];
   }
   signupform=new FormGroup({
-	  email:new FormControl('',[Validators.required,Validators.email]),
+	  emailId:new FormControl('',[Validators.required,Validators.email]),
 	  username:new FormControl('',[Validators.required]),
     mobilenumber:new FormControl('',[Validators.required,Validators.pattern("[0-9 ]{10}")]),
     password:new FormControl('',[Validators.required,]),
@@ -52,7 +52,7 @@ export class SignupComponent implements OnInit {
 
   })
 
-  get email(){
+  get emailId(){
 	  return this.signupform.get('email');
   }
   get username(){
