@@ -57,10 +57,7 @@
            <artifactId>mockito-core</artifactId>
         </dependency>
 	</dependencies>
-<<<<<<< HEAD
-=======
 	
->>>>>>> 9b32ed66246bec0d9f070753319a425235dd750a
 
 	<build>
 		<plugins>

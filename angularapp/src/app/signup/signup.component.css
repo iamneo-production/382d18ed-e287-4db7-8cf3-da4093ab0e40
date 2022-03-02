@@ -15,7 +15,7 @@
     width:79.7%;
     height: 550px;
     color:white;
-    background-image: linear-gradient(to right, #f7b733, #fc4a1a);
+    background-image: linear-gradient(rgb(167, 255, 4), rgb(60, 77, 16));
     text-align: center; 
 }
 input{

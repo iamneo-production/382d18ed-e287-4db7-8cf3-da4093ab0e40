@@ -20,7 +20,7 @@ import com.examly.springapp.exception.ResourceNotFoundException;
 import com.examly.springapp.model.UserModel;
 import com.examly.springapp.repository.UserModelRepository;
 
-@CrossOrigin(origins = "https://8081-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
+@CrossOrigin(origins = "https://8081-ffeeacaeffaecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
 @RestController
 @RequestMapping("/api/v1/")
 public class UserModelController {
@@ -41,7 +41,7 @@ public class UserModelController {
 	}
 	
 	// get user by id rest api
-	@GetMapping("/Users/{id}")
+	/*@GetMapping("/Users/{id}")
 	public ResponseEntity<User> getUserById(@PathVariable Long id) {
 		User user = UserRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("User not exist with id :" + id));
