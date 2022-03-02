@@ -13,15 +13,13 @@ body {
     font-size: 17px;
 }
 h2{
-    font-size: 40px;
+    font-size: 50px;
     color: red;
+    margin:20px;
 }
-.wrapper{
-    position:absolute;
-    top: 5%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    width: 40%;
+nav{
+    margin: 10px;
+    position:relative;
 }
 ul li{
     display: inline;
