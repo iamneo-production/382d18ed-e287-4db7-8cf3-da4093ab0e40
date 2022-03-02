@@ -4,5 +4,5 @@ export class User {
 	mobilenumber : string;
 	emailId : string;
 	password : string;
-	user_role:string;
+	
 }
