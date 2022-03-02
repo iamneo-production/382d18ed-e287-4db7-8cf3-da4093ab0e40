@@ -5,14 +5,16 @@ import { SignupComponent } from './signup/signup.component';
 import { PopularplansComponent } from './popularplans/popularplans.component';
 import { AddonsComponent } from './addons/addons.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
-
+import { EditUserComponent } from './edit-user/edit-user.component';
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'}, /** If the path is empty, it will redirect to login page */
   {path: 'login', component:LoginComponent},
   {path: 'signup', component:SignupComponent},
   {path: 'popularplans', component:PopularplansComponent},
   {path: 'addons', component:AddonsComponent},
-  {path: 'displayuser', component:DisplayUserComponent}
+  {path: 'displayuser', component:DisplayUserComponent},
+  {path: 'edituser/:id', component:EditUserComponent},
+
   
 ];
 
