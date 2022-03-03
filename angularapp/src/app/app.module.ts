@@ -26,7 +26,7 @@ import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
     PopularplansComponent,
     DisplayUserComponent,
     PrepaidplansComponent
-    
+   
 
   ],
   imports: [
@@ -34,6 +34,7 @@ import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
     ReactiveFormsModule,
     CommonModule
   ],
+
   providers: [],
   bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent]
 })
