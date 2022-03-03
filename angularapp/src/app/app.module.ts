@@ -13,6 +13,8 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
     PopularplansComponent,
     DisplayUserComponent,
     EditUserComponent,
-    PrepaidplansComponent
+    PrepaidplansComponent,
+    AdminDashboardComponent,
+    PostpaidplansComponent
     
   ],
   imports: [
