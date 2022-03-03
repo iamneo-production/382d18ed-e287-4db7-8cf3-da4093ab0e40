@@ -24,10 +24,13 @@ import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
     AddonsComponent,
     PopularplansComponent,
     DisplayUserComponent,
+    
+
+  ],
+  imports: [
     FormsModule,
     ReactiveFormsModule,
     CommonModule
-
   ],
   providers: [],
   bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent]
