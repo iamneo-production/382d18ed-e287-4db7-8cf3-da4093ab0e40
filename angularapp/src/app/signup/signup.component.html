@@ -1,26 +1,49 @@
-<div class="col-md-6 offset-md-3">
-    <h3> Sign Up </h3>
-    <form (ngSubmit) = "onSubmit()">
-    
-        <div class="form-group">
+<div class="bg">
+  
+</div>
+
+<div class="sidenav col-md-5 offset-md-4 ">
+    <h3 class="main-head text-center font-weight-bolder "> Sign Up </h3>
+    <form (ngSubmit) = "onSubmit()" [formGroup]="signupform">
+     <div class="form-group font-weight-bold">
             <label> UserName</label>
-            <input type="text" class ="form-control" id = "username"
-                [(ngModel)] = "user.username" name = "username">
+            <input type="text" class ="form-control" formControlName="username" id = "username"
+                [(ngModel)] = "user.username"  name = "username"  required>
+           <!-- <span class="text-danger" *ngIf="signupform.controls['username'].dirty && signupform.hasError('required','username)>UserName is required</span>
+     -->
         </div>
     
-        <div class="form-group">
+        <div class="form-group font-weight-bold">
             <label> MobileNumber</label>
-            <input type="text" class ="form-control" id = "mobilenumber"
-                [(ngModel)] = "user.mobilenumber" name = "mobilenumber">
+            <input type="text" class ="form-control" id = "mobilenumber"  
+                [(ngModel)] = "user.mobilenumber" name = "mobilenumber" 
+                minlength="10" pattern="^\d{10}$" placeholder="Enter only numbers"
+                required >
+
+               
         </div>
     
-        <div class="form-group">
+        <div class="form-group font-weight-bold">
             <label> Email Id</label>
-            <input type="text" class ="form-control" id = "emailId"
-                [(ngModel)] = "user.emailId" name = "emailId">
+            <input type="text" class ="form-control" id = "emailId" formControlName="emailId"
+                [(ngModel)] = "user.emailId"  name = "emailId" pattern="/^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/" required>
+               
+        </div>
+
+        <div class="form-group font-weight-bold">
+            <label> Password</label>
+            <input type="text" class ="form-control" id = "password"
+                [(ngModel)] = "user.password" name = "password" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" required>
+        </div>
+
+        <div class="form-group font-weight-bold">
+            <label> Conform Password</label>
+            <input type="text" class ="form-control" id = "conformPassword"
+                [(ngModel)] = "user.password" name = "password" required>
         </div>
     
         <button class = "btn btn-success" type ="submit">Submit</button>
+        <p>I already have an account. <a href="a">Login</a></p>
     
     </form>
-    </div> 
+    </div>
