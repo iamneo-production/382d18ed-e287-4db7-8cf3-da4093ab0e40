@@ -5,6 +5,10 @@ import { SignupComponent } from './signup/signup.component';
 import { PopularplansComponent } from './popularplans/popularplans.component';
 import { AddonsComponent } from './addons/addons.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'}, /** If the path is empty, it will redirect to login page */
@@ -12,7 +16,12 @@ const routes: Routes = [
   {path: 'signup', component:SignupComponent},
   {path: 'popularplans', component:PopularplansComponent},
   {path: 'addons', component:AddonsComponent},
-  {path: 'displayuser', component:DisplayUserComponent}
+  {path: 'displayuser', component:DisplayUserComponent},
+  {path: 'edituser/:id', component:EditUserComponent},
+  {path: 'admin/prepaidplans',component:PrepaidplansComponent},
+  {path: 'admin/dashboard', component:AdminDashboardComponent},
+  {path: 'admin/postpaidplans', component:PostpaidplansComponent}
+
   
 ];
 

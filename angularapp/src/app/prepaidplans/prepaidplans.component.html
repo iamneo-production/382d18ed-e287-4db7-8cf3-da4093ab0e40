@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <nav>
+            <ul>
+                <li><a href="admin/dashboard">AirNet</a></li>
+                <li><a id="adminPrepaid" href="admin/prepaidplans">Prepaid plans</a></li>
+                <li><a id="adminPostpaid" href="admin/postpaidplans">Postpaid plans</a></li>
+                <li><a id="adminAddOns" href="#addons">AddOns</a></li>
+                <li style="float:right"><button (click)="logout()">Logout</button></li>
+            </ul>
+        </nav>
+    
+        <h1>PREPAID PLANS</h1>
+    
+        <div class="top">
+            <button id="addPlan" (click)="addplan()">Add Plan</button> &nbsp;
+            <input type="search" placeholder="Type here to search plans" size="25"> &nbsp;
+            <button id="searchPlan">Search</button>
+        </div>
+    
+        <div class="plan_input" id="plan_inputt">
+            <h3>Welcome Admin! Enter details to add a Prepaid plan</h3>
+            <form (ngSubmit) = "onSubmit()">
+
+                <div><input [(ngModel)] = "plan.planId" name="planId" type="text" placeholder="Enter plan ID"></div>
+                <div><input [(ngModel)] = "plan.planName" name="planName" type="text" placeholder="Enter plan name"></div>
+                <div><input [(ngModel)] = "plan.planPrice" name="planPrice" type="text" placeholder="Enter the price"></div>
+                <div><input [(ngModel)] = "plan.planType" name="planType" type="text" placeholder="Enter plan type"></div>
+                <div><input [(ngModel)] = "plan.planValidity" name="planValidity" type="text" placeholder="Enter the validity"></div>
+                <div><input [(ngModel)] = "plan.planDetails" name="planDetails" type="text" placeholder="Enter plan description"></div>
+                <br><br>
+                <button type="submit" class="btn btn-success">Add plan</button>
+            </form>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> Plan Id </th>
+                    <th> Plan Type </th>
+                    <th> Plan Name</th>
+                    <th> Plan Validity </th>
+                    <th> Plan Details </th>
+                    <th> Plan Price </th>
+                    <th> Actions </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let plan of plans">
+                    <td> {{ plan.planId }} </td>
+                    <td> {{ plan.planType }} </td>
+                    <td> {{ plan.planName }} </td>
+                    <td> {{ plan.planValidity }} </td>
+                    <td> {{ plan.planDetails }} </td>
+                    <td> {{ plan.planPrice}} </td>
+                    <td>
+                        <button class="btn btn-info" class="btn btn-info">Update</button>
+                        <button (click)="deleteEmployee(plan.planId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+</html>
