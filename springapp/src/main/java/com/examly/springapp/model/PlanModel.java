@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class PlanModel {
 
 		@Id
-		private long planId;
+		private int planId;
 		@Column(name="planType")
 		private String planType;
 		@Column(name="planName")
@@ -35,10 +35,10 @@ public class PlanModel {
 			this.planDetails = planDetails;
 			this.planPrice = planPrice;
 		}
-		public Long getPlanId() {
+		public int getPlanId() {
 			return planId;
 		}
-		public void setPlanId(Long planId) {
+		public void setPlanId(int planId) {
 			this.planId = planId;
 		}
 		public String getPlanType() {

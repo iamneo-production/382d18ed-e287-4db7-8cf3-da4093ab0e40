@@ -1,6 +1,6 @@
 export class Plan {
 
-    planId: number | undefined;
+    planId!: number;
     planType: string | undefined;
     planName: string | undefined;
     planValidity: string | undefined;
