@@ -22,8 +22,10 @@ import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
     LoginComponent,
     SignupComponent,
     AddonsComponent,
+    EditUserComponent,
     PopularplansComponent,
     DisplayUserComponent,
+    PrepaidplansComponent
     
 
   ],
