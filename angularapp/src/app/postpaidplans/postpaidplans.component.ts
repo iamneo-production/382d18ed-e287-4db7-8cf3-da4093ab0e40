@@ -2,17 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Plan } from '../plan';
 import { PlanServService } from '../plan-serv.service';
-import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-prepaidplans',
-  templateUrl: './prepaidplans.component.html',
-  styleUrls: ['./prepaidplans.component.css']
+  selector: 'app-postpaidplans',
+  templateUrl: './postpaidplans.component.html',
+  styleUrls: ['./postpaidplans.component.css']
 })
-export class PrepaidplansComponent implements OnInit {
+export class PostpaidplansComponent implements OnInit {
 
   x:any;
   plan: Plan = new Plan();
@@ -57,8 +53,9 @@ onSubmit(){
 
 logout(){
   sessionStorage.clear();
-  this.router.navigate(['/login']);
+  this.router.navigate(['user/login']);
 }
+
 
 
   ngOnInit(): void {
