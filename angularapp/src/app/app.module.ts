@@ -15,6 +15,7 @@ import  { EditUserComponent } from './edit-user/edit-user.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
 
   providers: [],
