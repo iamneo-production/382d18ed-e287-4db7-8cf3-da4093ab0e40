@@ -17,7 +17,7 @@
             </ul>
         </nav>
     
-        <h1>PREPAID PLANS</h1>
+        <h1>POSTPAID PLANS</h1>
     
         <div class="top">
             <button id="addPlan" (click)="addplan()">Add Plan</button> &nbsp;
@@ -26,7 +26,7 @@
         </div>
     
         <div class="plan_input" id="plan_inputt">
-            <h3>Welcome Admin! Enter details to add a Prepaid plan</h3>
+            <h3>Welcome Admin! Enter details to add a Postpaid plan</h3>
             <form (ngSubmit) = "onSubmit()">
 
                 <div><input [(ngModel)] = "plan.planId" name="planId" type="text" placeholder="Enter plan ID"></div>
@@ -49,7 +49,7 @@
                     <th> Plan Validity </th>
                     <th> Plan Details </th>
                     <th> Plan Price </th>
-                    <th> Actions </th>
+                    <th> Actions </th> 
                 </tr>
             </thead>
             <tbody>
@@ -69,3 +69,4 @@
         </table>
 </body>
 </html>
+

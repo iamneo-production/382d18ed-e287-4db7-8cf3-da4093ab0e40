@@ -7,7 +7,7 @@
             <th> MobileNumber </th>
             <th> Email Id</th>
             <th> Password </th>
-            <th> User_Role </th>
+            
         </tr>
     </thead>
     <tbody>
@@ -17,11 +17,10 @@
             <td> {{ user.mobilenumber }} </td>
             <td> {{ user.emailId }} </td>
             <td> {{ user.password }} </td>
-            <td> {{ user.user_role }} </td>
+            
             <td>
-                <button (click) = "updateuser(user.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "edituser(user.id)" class = "btn btn-info"> Update</button>
                 <button (click) = "deleteuser(user.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-                <button (click) = "userDetails(user.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
             </td>
         </tr>
     </tbody>
