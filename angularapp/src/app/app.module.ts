@@ -26,6 +26,7 @@ import { RouterModule } from '@angular/router';
     PopularplansComponent,
     DisplayUserComponent,
     PrepaidplansComponent
+    
    
 
   ],
