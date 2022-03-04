@@ -1,142 +1,143 @@
 
 header .header{
-    background-color: #fff;
-    height: 45px;
+  background-color: #fff;
+  height: 45px;
 }
 header a img{
-  width: 134px;
+width: 134px;
 margin-top: 4px;
 }
 .login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
+width: 360px;
+padding: 8% 0 0;
+margin: auto;
 }
 .login-page .form .login{
-  margin-top: -31px;
+margin-top: -31px;
 margin-bottom: 26px;
 }
 .form {
-  position: relative;
-  z-index: 1;
-  background: #FFFFFF;
-  max-width: 360px;
-  margin: 0 auto 100px;
-  padding: 45px;
-  text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+position: relative;
+z-index: 1;
+background: #FFFFFF;
+max-width: 360px;
+margin: 0 auto 100px;
+padding: 45px;
+text-align: center;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 .form input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
+font-family: "Roboto", sans-serif;
+outline: 0;
+background: #f2f2f2;
+width: 100%;
+border: 0;
+margin: 0 0 15px;
+padding: 15px;
+box-sizing: border-box;
+font-size: 14px;
 }
 .form button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background-color: #328f8a;
-  background-image: linear-gradient(45deg,#328f8a,#08ac4b);
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
+font-family: "Roboto", sans-serif;
+text-transform: uppercase;
+outline: 0;
+background-color: #328f8a;
+background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+width: 100%;
+border: 0;
+padding: 15px;
+color: #FFFFFF;
+font-size: 14px;
+-webkit-transition: all 0.3 ease;
+transition: all 0.3 ease;
+cursor: pointer;
 }
 .form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
+margin: 15px 0 0;
+color: #b3b3b3;
+font-size: 12px;
 }
 .form .message a {
-  color: #4CAF50;
-  text-decoration: none;
+color: #4CAF50;
+text-decoration: none;
 }
 
 .container {
-  position:relative;
-  z-index: 1;
-  max-width: 300px;
-  margin: 0 auto;
+position:relative;
+z-index: 1;
+max-width: 300px;
+margin: 0 auto;
 }
 
 body {
-  background-color: #328f8a;
-  background-image: url(backgroundimage.jpeg);
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  min-height : 150%;
-  min-width : 100%;
-  background-size: 150%;
-  background-repeat: no-repeat;
- position:absolute;
-  overflow-y: hidden;
-  overflow-x: hidden;
+background-color: #328f8a;
+background-image: url(backgroundimage.jpeg);
+font-family: "Roboto", sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+min-height : 150%;
+min-width : 100%;
+background-size: 150%;
+background-repeat: no-repeat;
+position:absolute;
+overflow-y: hidden;
+overflow-x: hidden;
+}
 
 .navbar{
-  margin-top: 40px;
-  margin-left: 10%;
-  width:80%;
-  height: 70px;
-  color:white;
-  background-color: rgb(197, 31, 31);
-  text-align: center;
-  
+margin-top: 40px;
+margin-left: 10%;
+width:80%;
+height: 70px;
+color:white;
+background-color: rgb(197, 31, 31);
+text-align: center;
+
 }
 .formbody{
-  border:2px solid black;
-  margin-left: 10%;
-  margin-top: 1%;
-  width:79.7%;
-  height: 550px;
-  color:white;
-  background-image: linear-gradient(rgb(167, 255, 4), rgb(60, 77, 16));
-  text-align: center; 
+border:2px solid black;
+margin-left: 10%;
+margin-top: 1%;
+width:79.7%;
+height: 550px;
+color:white;
+background-image: linear-gradient(rgb(167, 255, 4), rgb(60, 77, 16));
+text-align: center; 
 }
 input{
-  width:40%;
-  height:30px;
-  margin: 20px;
-  margin-left:10px;
-  color: black;
+width:40%;
+height:30px;
+margin: 20px;
+margin-left:10px;
+color: black;
 }
 button{
-  width:100px;
-  height:30px;
-  color: rgb(255, 255, 255);
-  background-image: linear-gradient(rgb(248, 2, 2), rgb(94, 12, 12));
+width:100px;
+height:30px;
+color: rgb(255, 255, 255);
+background-image: linear-gradient(rgb(248, 2, 2), rgb(94, 12, 12));
 }
 a{
-  text-decoration: none;
-  color: brown;
+text-decoration: none;
+color: brown;
 }
 span{
-  display: block;
-  margin:0px;
-  padding: 0px;
+display: block;
+margin:0px;
+padding: 0px;
 }
 body{
-  background-image: url(https://m.economictimes.com/thumb/msid-80068011,width-1200,height-900,resizemode-4,imgsize-87253/mobile-bank-getty.jpg);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: 100%;
-  font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-top: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
+background-image: url(https://m.economictimes.com/thumb/msid-80068011,width-1200,height-900,resizemode-4,imgsize-87253/mobile-bank-getty.jpg);
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-size: 100%;
+font-size: large;
+font-family: Arial, Helvetica, sans-serif;
+padding-top: 40px;
+padding-left: 40px;
+padding-right: 40px;
 }
 .checkbox{
-  text-decoration:none;
+text-decoration:none;
 
 }
