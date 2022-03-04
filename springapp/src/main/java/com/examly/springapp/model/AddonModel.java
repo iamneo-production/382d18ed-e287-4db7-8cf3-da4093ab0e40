@@ -32,7 +32,7 @@ public class AddonModel {
 	public AddonModel(Int AddonId, String AddonName, Int AddonPrice , String AddonDetails) {
 		super();
 		this.AddonId = AddonId;
-		this.AddonName = Addonname;
+		this.AddonName = AddonName;
 		this.AddonPrice = AddonPrice;
 		this.AddonDetails = AddonDetails;
 		
