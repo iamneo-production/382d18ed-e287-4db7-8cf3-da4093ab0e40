@@ -17,21 +17,21 @@
           <label><b>Email   
         </b>    
         </label>    
-        <input type="email" id="email" placeholder="Enter email" name="email" formControlName="email"  pattern=".+@gmail.com" size="30" min='5' required><br/>
+        <input type="email" id="email" placeholder="Enter email" name="email" formControlName="email"  pattern=".+@gmail.com" size="30" min='5' required><br/>   
         <span style="color:red" *ngIf="email && email.invalid && email.touched">Please enter valid email</span>    
-        <br><br>    
+        <br><br>
         <label><b>Password     
           </b>    
         </label>    
         <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"><br/>
-        <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>  
+        <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>
         <br><br>   
-          <button type="submit"[disabled]="loginform.invalid"id="submitButton"><b>Submit</b></button><br/><br/>
-          <br><br> 
-          <input type="checkbox" id="check"> 
-          <span>Remember me</span>
-          <br><br> 
-          <p class="message">Already a user?<a id="signinLink" href="/signup" >Signup </a></p>
+        <button type="submit" [disabled]="loginform.invalid" id="submitButton"><b>Submit</b></button>
+        <br><br> 
+        <input type="checkbox" id="check"> 
+        <span>Remember me</span>
+        <br><br> 
+        <p class="message">Already a user?<a id="signinLink" href="/signup" >Signup </a></p>
         </form>
       </div>
     </div>
