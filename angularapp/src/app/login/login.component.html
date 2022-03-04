@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
 <link rel="stylesheet" href="login.component.css">
@@ -27,30 +26,14 @@
         <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"><br/>
         <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>  
         <br><br>   
-
-    
-    <head>
-        <link rel="stylesheet" href="login.component.css">
-		</head>
-		<body>
-<nav class="navbar">
-  <h1>Login</h1>
-  </nav>
-  <div class="formbody">
-      <form [formGroup]="loginform" (ngSubmit)="login()">
-          <input type="email" id="email" placeholder="Enter email" name="email" formControlName="email"><br/>
-          <span style="color:red" *ngIf="email && email.invalid && email.touched">Please enter valid email</span>
-          <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"><br/>
-          <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>
-          <input type="checkbox" style="margin: 0; padding 0;  height:13px"/> RememberMe
-          <br>
           <button type="submit" [disabled]="loginform.invalid" id="submitButton"><b>Submit</b></button><br/><br/>
           <br><br> 
           <input type="checkbox" id="check"> 
           <span>Remember me</span>
           <br><br> 
-          <p class="message">Already a user? <a id="signinLink" href="/signup" >Signup </a></p>
+          <p class="message">Already a user?<a id="signinLink" href="/signup" >Signup </a></p>
         </form>
       </div>
-    
+    </div>
 </body>
+</html>
