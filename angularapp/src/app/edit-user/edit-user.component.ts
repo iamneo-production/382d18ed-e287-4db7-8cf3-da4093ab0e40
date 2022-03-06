@@ -35,4 +35,3 @@ export class EditUserComponent implements OnInit {
   goToUserList(){
     this.router.navigate(['/displayuser']);
   }
-}
