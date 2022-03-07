@@ -81,13 +81,14 @@ background-repeat: no-repeat;
 position:absolute;
 overflow-y: hidden;
 overflow-x: hidden;
+
 }
-navbar{
+.navbar{
   margin-top: 40px;
   margin-left: 10%;
-  width:80%;
-  height: 70px;
-  color:white;
-  background-color: rgb(197, 31, 31);
+  width: 0vw;
+  height: 0vh;
   text-align: center;
+  color:white;
+  
 }
