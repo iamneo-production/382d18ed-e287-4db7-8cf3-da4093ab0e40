@@ -9,9 +9,6 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
 export class LoginComponent implements OnInit {
 
   constructor() { }
-
-  
-
   onPasswordChange() {
     if (this.confirm_password.value == this.password1.value) {
       this.confirm_password.setErrors(null);
@@ -53,7 +50,6 @@ export class LoginComponent implements OnInit {
 
   login(){
 	  console.log(this.loginform.value);
-
   }
 
 
