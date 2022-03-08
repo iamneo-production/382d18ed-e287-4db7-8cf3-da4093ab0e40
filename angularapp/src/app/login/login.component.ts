@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import {Router} from '@angular/router';
+
+
 
 
 @Component({
@@ -9,7 +12,7 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
 
   
 
@@ -61,44 +64,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
- /* onSubmit(){
-    console.log(this.loginform.value);
-    if(this.loginform.invalid){
-      return;
-    }
-    const loginData={
-      username.this.loginForm.controls.username.value,
-      password.this.loginForm.controls.password.value,
+ /* if(user_role === 'admin'){
+    route.navigate(['/popularplans']);
 
-    };
-    this.apiService.login(loginData).subscribe(data:any)=>{
-      this.messsage=data.message;
-      if(DataTransfer.token){
-        window.localStorage.setItem('token',data.token);
-      }
-      else{
-        this.invalidLogin=true;
-        alert(data.message);
-      }
-    }
-  }*/
-
-  /*postdata(loginform)
-  {
-  this.dataService.userlogin(loginform.value.email,loginform.value.password)
-  .pipe(first())
-  .subscribe(
-  data => {
-  const redirect = this.dataService.redirectUrl ? this.dataService.redirectUrl : '/dashboard';
-  this.router.navigate([redirect]);
-  },
-  error => {
-  alert("User name or password is incorrect")
-  });
-  }
-  get email() { return this.loginform.get('email'); }
-  get password() { return this.loginform.get('password'); }
-  }*/
-
+    
+  };*/
 
 }

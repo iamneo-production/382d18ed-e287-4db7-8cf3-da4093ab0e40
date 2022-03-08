@@ -11,7 +11,7 @@ export class UserService {
   getUserById(id: number) {
     throw new Error('Method not implemented.');
   }
-  private baseURL = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/api/v1/Users";
+  private baseURL = "https://8080-faecbadeddebfdaffdacedbbebcbf.examlyiopb.examly.io//api/v1/Users";
   constructor(private httpClient:HttpClient) { }
   getUserList(): Observable<User[]>
   {

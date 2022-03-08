@@ -11,9 +11,20 @@ import { AddonsComponent } from './addons/addons.component';
 import { PopularplansComponent } from './popularplans/popularplans.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
 
 import {HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', redirectTo: '/AppComponent', pathMatch: 'full' },
+  
+
+];
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +33,8 @@ import { CommonModule } from '@angular/common';
     AddonsComponent,
     PopularplansComponent,
     DisplayUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    PrepaidplansComponent
     
   ],
   imports: [
@@ -31,7 +43,8 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+  
 
   ],
   providers: [],

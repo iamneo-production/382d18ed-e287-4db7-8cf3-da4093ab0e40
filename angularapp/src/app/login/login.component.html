@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
-
 <html lang="en">
-    
-    <head>
-        <link rel="stylesheet" href="login.component.css">
-		</head>
-		<body>
-<nav class="navbar">
-  <h1>Login</h1>
-  </nav>
-  <div class="formbody">
-      <form [formGroup]="loginform" (ngSubmit)="login()">
-          <input type="email" id="email" placeholder="Enter email" name="email" formControlName="email"><br/>
-          <span style="color:red" *ngIf="email && email.invalid && email.touched">Please enter valid email</span>
-          <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"><br/>
-          <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>
-          <input type="checkbox" style="margin: 0; padding 0;  height:13px"/> RememberMe
-          <br>
-          <button type="submit"  id="submitButton"><b>Submit</b></button><br/><br/>
-          Already a user ? <a id="signinLink" href="/signup" >Signup </a>
-  
-      </form>
-  </div>
-  </body>
-  </html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<link rel="stylesheet" href="login.component.css">
+<title> CSS Login Screen Tutorial </title>
+</head>
+<body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>LOGIN</h3>
+          </div>
+        </div>
+        <form [formGroup]="loginform" (ngSubmit)="login()">
+            <input type="email" id="email" placeholder="Enter email" name="email" formControlName="email"><br/>
+            <span style="color:red" *ngIf="email && email.invalid && email.touched">Please enter valid email</span>
+            <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"><br/>
+            <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>
+            <button type="submit" [disabled]="loginform.invalid" id="submitButton"><b>Submit</b></button><br/><br/>
+            <input type="checkbox" id="check"> 
+            <span>Remember me</span>
+            <br><br> 
+            Already a user ? <a id="signinLink" href="/signup" >Signup </a>  
+        </form>
+      </div>
+    </div>
+</body>
+</html>
