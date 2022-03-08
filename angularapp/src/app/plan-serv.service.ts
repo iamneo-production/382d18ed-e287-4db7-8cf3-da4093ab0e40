@@ -8,9 +8,9 @@ import { Plan } from './plan';
 })
 export class PlanServService {
 
-  private baseURL = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/addPlan";
-  private baseUrl1 = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/viewPlan";
-  private baseUrl2 = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/deletePlan";
+  private baseURL = "https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/addPlan";
+  private baseUrl1 = "https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/viewPlan";
+  private baseUrl2 = "https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/deletePlan";
   constructor(private httpClient: HttpClient) { }
 
   createPlan(plan: Plan): Observable<Object>{
