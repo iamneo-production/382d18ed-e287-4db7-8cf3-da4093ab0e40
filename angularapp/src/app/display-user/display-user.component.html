@@ -7,6 +7,7 @@
             <th> MobileNumber </th>
             <th> Email Id</th>
             <th> Password </th>
+            <th>UserRole</th>
             
         </tr>
     </thead>
@@ -17,6 +18,7 @@
             <td> {{ user.mobilenumber }} </td>
             <td> {{ user.emailId }} </td>
             <td> {{ user.password }} </td>
+            <td>{{ user.userrole }}</td>
             
             <td>
                 <button (click) = "edituser(user.id)" class = "btn btn-info"> Update</button>
