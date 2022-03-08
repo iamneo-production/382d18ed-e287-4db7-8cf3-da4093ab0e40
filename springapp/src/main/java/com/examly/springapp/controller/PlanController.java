@@ -1,5 +1,11 @@
 package com.examly.springapp.controller;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -33,6 +39,18 @@ public class PlanController {
 	@GetMapping("/viewPlan")
 	public List<PlanModel> viewPlan(){
 		return prepo.findAll();
+	}
+
+	@DeleteMapping("/deletePlan/{planId}")
+	public ResponseEntity<Map<String, Boolean>> deletePlan(@PathVariable int planId){
+		//retrive particular plan from the database using planId
+		PlanModel pm = prepo.findById(planId)
+				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + planId));
+		
+		prepo.delete(pm);
+		Map<String, Boolean> response = new HashMap<>();
+		response.put("deleted", Boolean.TRUE);
+		return ResponseEntity.ok(response);
 	}
 	
 
