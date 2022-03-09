@@ -1,4 +1,4 @@
-export class Plan {
+export class addons {
 
     AddonId: number;
     AddonName: string | undefined;
