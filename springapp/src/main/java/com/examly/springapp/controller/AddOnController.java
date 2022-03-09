@@ -15,7 +15,7 @@ import com.examly.springapp.model.UserModel;
 import com.examly.springapp.repository.PlanRepository;
 import com.examly.springapp.repository.UserModelRepository;
 import com.examly.springapp.model.AddonModel;
-import com.examly.springapp.repository.AddOnRepository;
+import com.examly.springapp.repository.AddonRepository;
 
 
 @CrossOrigin(origins = "https://8081-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
@@ -24,7 +24,7 @@ import com.examly.springapp.repository.AddOnRepository;
 
 public class AddOnController {
     @Autowired
-	private AddOnRepository prepo;
+	private AddonRepository prepo;
 	
 	@PostMapping("/addAddon")
 	public AddonModel createAddon(@RequestBody AddonModel Addon)

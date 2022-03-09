@@ -14,13 +14,13 @@ public class AddonModel {
 	
 	
 	@Column(name = "AddonId")
-	private Int AddonId;
+	private int AddonId;
 
 	@Column(name = "AddonName")
 	private String AddonName;
 	
 	@Column(name = "AddonPrice")
-	private Int AddonPrice;
+	private int AddonPrice;
 	@Column(name = "AddonDetails")
 	private String AddonDetails;
 	
@@ -29,7 +29,7 @@ public class AddonModel {
 		
 	}
 	
-	public AddonModel(Int AddonId, String AddonName, Int AddonPrice , String AddonDetails) {
+	public AddonModel(int AddonId, String AddonName, int AddonPrice , String AddonDetails) {
 		super();
 		this.AddonId = AddonId;
 		this.AddonName = AddonName;
@@ -38,10 +38,10 @@ public class AddonModel {
 		
 	}
 	
-	public Int getAddonId() {
+	public int getAddonId() {
 		return AddonId;
 	}
-	public void setAddonId(Int AddonId) {
+	public void setAddonId(int AddonId) {
 		this.AddonId = AddonId;
 	}
 	public String getAddonName() {
@@ -50,16 +50,16 @@ public class AddonModel {
 	public void setAddonName(String AddonName) {
 		this.AddonName = AddonName;
 	}
-	public Int AddonPrice() {
+	public int AddonPrice() {
 		return AddonPrice;
 	}
-	public void setAddonPrice(Int AddonPrice) {
+	public void setAddonPrice(int AddonPrice) {
 		this.AddonPrice = AddonPrice;
 	}
 	public String getAddonDetails() {
 		return AddonDetails;
 	}
 	public void setAddonDetails(String AddonDeatils) {
-		this.AddonDeatils = AddonDeatils;
+		this.AddonDetails = AddonDetails;
 	}
 }
