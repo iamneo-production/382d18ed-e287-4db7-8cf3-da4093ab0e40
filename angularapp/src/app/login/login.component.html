@@ -13,16 +13,18 @@
             <h3>LOGIN</h3>
           </div>
         </div>
-        <form [formGroup]="loginform" (ngSubmit)="login()">
-            <input type="email" id="email" placeholder="Enter email" name="email" formControlName="email" pattern=".+@gmail.com" required><br/>
+        <form [formGroup]="loginform" (ngSubmit)="login()" >
+            <input type="email" id="email" placeholder="Enter email" name="email" formControlName="email" pattern=".+@gmail.com" title="Invalid email address" required><br/>
             <span style="color:red" *ngIf="email && email.invalid && email.touched">Please enter valid email</span>
-            <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"><br/>
+            <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required ><br/>
             <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>
-            <button>submit</button>
+            
+            <button type="submit" class="btn btn-success">Submit</button><br/><br/>
             <input type="checkbox" id="check"> 
             <span>Remember me</span>
             <br><br> 
-            Already a user ? <a id="signinLink" href="/signup" >Signup </a>  
+            New user ? <a id="signinLink" href="/signup" >Signup </a>  
         </form>
       </div>
     </div>
