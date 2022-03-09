@@ -61,7 +61,7 @@
                     <td> {{ plan.planDetails }} </td>
                     <td> {{ plan.planPrice}} </td>
                     <td>
-                        <button class="btn btn-info" class="btn btn-info">Update</button>
+                        <button (click)="updatePlans(plan.planId)" class="btn btn-info" style="margin-left: 10px">Update</button>
                         <button (click)="deleteEmployee(plan.planId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
                     </td>
                 </tr>

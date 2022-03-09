@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
+import { UpdatePlanComponent } from './update-plan/update-plan.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component'
     EditUserComponent,
     PrepaidplansComponent,
     AdminDashboardComponent,
-    PostpaidplansComponent
+    PostpaidplansComponent,
+    UpdatePlanComponent
     
   ],
   imports: [

@@ -1,0 +1,14 @@
+<div class="plan_update" id="plan_update">
+    <h3>Welcome Admin! Enter details to Update a Prepaid plan</h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div><label>Plan Id</label>&nbsp;<input [(ngModel)] = "plan.planId" name="planId" type="text"></div>
+        <div><label>Plan Name</label>&nbsp;<input [(ngModel)] = "plan.planName" name="planName" type="text"></div>
+        <div><label>Plan Price</label>&nbsp;<input [(ngModel)] = "plan.planPrice" name="planPrice" type="text"></div>
+        <div><label>Plan Type</label>&nbsp;<input [(ngModel)] = "plan.planType" name="planType" type="text"></div>
+        <div><label>Plan Validity</label>&nbsp;<input [(ngModel)] = "plan.planValidity" name="planValidity" type="text"></div>
+        <div><label>Plan Details</label>&nbsp;<input [(ngModel)] = "plan.planDetails" name="planDetails" type="text"></div>
+        <br><br>
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+</div>
