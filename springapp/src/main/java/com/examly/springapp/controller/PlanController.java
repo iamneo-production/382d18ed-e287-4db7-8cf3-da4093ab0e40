@@ -1,12 +1,6 @@
 package com.examly.springapp.controller;
-import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
+import java.util.*;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import com.examly.springapp.exception.ResourceNotFoundException;
 //import com.examly.springapp.Model.LoginModel;
 import com.examly.springapp.model.PlanModel;
 import com.examly.springapp.model.UserModel;
@@ -31,6 +27,7 @@ public class PlanController {
 	@Autowired
 	private PlanRepository prepo;
 	
+	
 	@PostMapping("/addPlan")
 	public PlanModel createPlan(@RequestBody PlanModel plan)
 	{
@@ -41,6 +38,7 @@ public class PlanController {
 	public List<PlanModel> viewPlan(){
 		return prepo.findAll();
 	}
+
 
 	@GetMapping("/viewPlan/{planId}")
 	public ResponseEntity<PlanModel> getPlanById(@PathVariable int planId) {
@@ -66,7 +64,6 @@ public class PlanController {
 		return ResponseEntity.ok(updatedPlan);
 		
 	}
-
 	@DeleteMapping("/deletePlan/{planId}")
 	public ResponseEntity<Map<String, Boolean>> deletePlan(@PathVariable int planId){
 		//retrive particular plan from the database using planId
@@ -81,4 +78,3 @@ public class PlanController {
 	
 
 }
-    
