@@ -40,6 +40,10 @@ savePlan(){
   );
 }
 
+updatePlans(planId: number){
+  this.router.navigate(['admin/update-plan', planId]);
+}
+
 deleteEmployee(planId: number){
   this.planService.deletePlan(planId).subscribe(data=>{
     console.log(data);
