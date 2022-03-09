@@ -27,7 +27,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class UserModelService {
 	
-	@Autowired
+	//@Autowired
 	private UserModelRepository usermodelrepository;
     
 	
@@ -37,17 +37,17 @@ public class UserModelService {
         return usermodelrepository.save(user);
     }
 
-    @Bean
+    //@Bean
     public UserModel fetchUserByEmailId(String EmailId)
     {
         return usermodelrepository.findUserByEmailId(EmailId);
     }
-    
-   @Bean 
+    /*
+   //@Bean 
     public UserModel fetchUserByEmailIdandPass(String EmailId,String password)
     {
         return usermodelrepository.findUserByEmailIdandPass(EmailId,password);
-    }
+    }*/
     
 	
 }
