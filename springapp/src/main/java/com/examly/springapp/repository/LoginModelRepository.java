@@ -11,6 +11,5 @@ import com.examly.springapp.model.UserModel;
  // <Optional>UserModel findByEmail(String emailId);
 // public UserModel findUserByEmailId(String EmailId);
  
-public UserModel findUserByEmailIdandPass(String EmailId,String password);
  //boolean existsByEmail(String email);
 }

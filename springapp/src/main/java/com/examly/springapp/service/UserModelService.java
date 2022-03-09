@@ -27,28 +27,27 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class UserModelService {
 	
-	@Autowired
-	private UserModelRepository UserModelRepository;
+	//@Autowired
+	private UserModelRepository usermodelrepository;
     
-	private LoginModelRepository LoginModelRepository;
 	
     //@Bean
     public UserModel saveUser(UserModel user)
     {
-        return UserModelRepository.save(user);
+        return usermodelrepository.save(user);
     }
 
-    
+    //@Bean
     public UserModel fetchUserByEmailId(String EmailId)
     {
-        return UserModelRepository.findUserByEmailId(EmailId);
+        return usermodelrepository.findUserByEmailId(EmailId);
     }
-    
-   @Bean ("java.lang.String")
+    /*
+   //@Bean 
     public UserModel fetchUserByEmailIdandPass(String EmailId,String password)
     {
-        return LoginModelRepository.findUserByEmailIdandPass(EmailId,password);
-    }
+        return usermodelrepository.findUserByEmailIdandPass(EmailId,password);
+    }*/
     
 	
 }
