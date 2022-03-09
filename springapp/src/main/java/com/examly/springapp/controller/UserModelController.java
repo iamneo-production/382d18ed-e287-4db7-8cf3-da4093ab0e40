@@ -15,18 +15,23 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.examly.springapp.service.UserModelService;
 
 import com.examly.springapp.exception.ResourceNotFoundException;
 import com.examly.springapp.model.UserModel;
 import com.examly.springapp.repository.UserModelRepository;
 
-@CrossOrigin(origins = "https://8081-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/")
+@CrossOrigin(origins = "https://8081-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
 @RestController
 @RequestMapping("/api/v1/")
 public class UserModelController {
 
 	@Autowired
 	private UserModelRepository UserModelRepository;
+
+	@Autowired
+	private UserModelService service;
+	
 	
 	// get all UserModels
 	@GetMapping("/Users")
@@ -36,8 +41,19 @@ public class UserModelController {
 	
 	// create User rest api
 	@PostMapping("/Users")
-	public UserModel createUser(@RequestBody UserModel user) {
-		return UserModelRepository.save(user);
+	public UserModel createUser(@RequestBody UserModel user)throws Exception {
+		String tempEmailId =user.getEmailId();
+        if(tempEmailId != null && !"".equals(tempEmailId))
+        {
+            UserModel userobj=service.fetchUserByEmailId(tempEmailId);
+            if (userobj!=null)
+            {
+                throw new Exception("user with "+tempEmailId+"is present");
+            }
+        }
+        UserModel userobj =null;
+        userobj =service.saveUser(user);
+        return userobj;
 	}
 	
 	// get user by id rest api
