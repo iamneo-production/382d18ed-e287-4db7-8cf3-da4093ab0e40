@@ -1,0 +1,47 @@
+.bg{
+    background:url("forest.jpeg");     
+  min-height : 150%;
+  min-width : 100%;
+  background-size: 200%;
+  background-repeat: no-repeat;
+ position:absolute;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+}
+.form-group{
+    border:1px;
+    
+    padding:0px 5px; 
+    margin-top: 5vh;
+}
+
+.main-head{
+    height: 20px;
+    
+}
+
+.sidenav {
+    height: 100%;
+    
+    overflow-x: hidden;
+    padding-top: 40px;
+    -webkit-box-shadow: 10px 11px 26px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 11px 26px 1px rgba(0,0,0,0.75);
+box-shadow: 10px 11px 26px 1px rgba(0,0,0,0.75);
+
+}
+
+
+.btn{
+    background-color: rgba(243, 10, 10, 0.973) !important;
+    color: #fff;
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }

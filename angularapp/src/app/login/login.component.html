@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<link rel="stylesheet" href="login.component.css">
+<title> CSS Login Screen Tutorial </title>
+</head>
+<body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>LOGIN</h3>
+          </div>
+        </div>
+        <form class="login-form">
+          <label><b>Email   
+        </b>    
+        </label>    
+        <input type="email" id="email" placeholder="Enter email" name="email" formControlName="email"  pattern=".+@gmail.com" size="30" min='5' required><br/>
+        <span style="color:red" *ngIf="email && email.invalid && email.touched">Please enter valid email</span>    
+        <br><br>    
+        <label><b>Password     
+          </b>    
+        </label>    
+        <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"><br/>
+        <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>  
+        <br><br>   
+          <button type="submit" [disabled]="loginform.invalid" id="submitButton"><b>Submit</b></button><br/><br/>
+          <br><br> 
+          <input type="checkbox" id="check"> 
+          <span>Remember me</span>
+          <br><br> 
+          <p class="message">Already a user?<a id="signinLink" href="/signup" >Signup </a></p>
+        </form>
+      </div>
+    </div>
+</body>
+</html>
