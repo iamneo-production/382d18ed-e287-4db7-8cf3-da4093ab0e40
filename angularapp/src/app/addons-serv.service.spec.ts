@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { addonsServService } from './addons-serv.service';
 
-describe('AddonServService', () => {
+describe('addonsServService', () => {
   let service: addonsServService;
 
   beforeEach(() => {
