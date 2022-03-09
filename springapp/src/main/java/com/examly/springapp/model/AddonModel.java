@@ -37,12 +37,7 @@ public class AddonModel {
 		this.AddonDetails = AddonDetails;
 		
 	}
-	public long getId() {
-		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
-	}
+	
 	public Int getAddonId() {
 		return AddonId;
 	}
