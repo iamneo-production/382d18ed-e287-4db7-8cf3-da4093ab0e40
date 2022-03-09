@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import {Router} from '@angular/router';
+
+
+
 
 @Component({
   selector: 'app-login',
@@ -8,7 +12,10 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
+
+  
+
   onPasswordChange() {
     if (this.confirm_password.value == this.password1.value) {
       this.confirm_password.setErrors(null);
@@ -55,5 +62,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+ /* if(user_role === 'admin'){
+    route.navigate(['/popularplans']);
+
+    
+  };*/
 
 }

@@ -26,6 +26,7 @@ public class PlanController {
 	@Autowired
 	private PlanRepository prepo;
 	
+	
 	@PostMapping("/addPlan")
 	public PlanModel createPlan(@RequestBody PlanModel plan)
 	{
