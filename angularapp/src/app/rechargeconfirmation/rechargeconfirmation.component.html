@@ -8,9 +8,25 @@
         
     </head>
     <body>
-        <p>Do you want to add Add-ons.?</p>
-        <a href="/addons"><button>Edit Recharge</button></a>
-        <a href="/popularplans"><button>Delete Recharge</button></a>
-        <a href="/"><button>Confirm Recharge</button></a>
+        <h2>AirNet</h2>
+        <nav> 
+            <ul class="nav_links">   
+                <li><a href="#" id="notification">Notifications</a></li>
+                <li><a id="logout" href="/login">Logout</a></li>
+            </ul>
+            <hr />
+        </nav>   
+        <br>
+        <br>
+        <br>
+        <div class="plan-details">
+            <p>Your are recharging for number{{user.mobilenumber}}</p>
+        </div>
+        <div class="container">
+            <p>Do you want to add Add-ons.?</p>
+            <a href="/addons"><button class="editRecharge">Edit Recharge</button></a>
+            <a href="/popularplans"><button class="deteleRecharge">Delete Recharge</button></a>
+            <a href="/"><button class="confirmRecharge">Confirm Recharge</button></a>
+        </div>
     </body>
 </html>
