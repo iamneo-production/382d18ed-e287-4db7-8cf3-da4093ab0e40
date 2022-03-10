@@ -1,5 +1,3 @@
-
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -12,9 +10,11 @@ import { PopularplansComponent } from './popularplans/popularplans.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
-
 import {HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
+import { UpdatePlanComponent } from './update-plan/update-plan.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -22,6 +22,7 @@ const routes: Routes = [
   
 
 ];
+
 
 
 
@@ -34,6 +35,11 @@ const routes: Routes = [
     PopularplansComponent,
     DisplayUserComponent,
     EditUserComponent,
+    PrepaidplansComponent,
+    AdminDashboardComponent,
+    PostpaidplansComponent,
+    UpdatePlanComponent,
+
     PrepaidplansComponent
     
   ],
