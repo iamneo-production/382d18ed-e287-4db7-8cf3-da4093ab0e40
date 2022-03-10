@@ -19,7 +19,7 @@ import com.examly.springapp.service.UserModelService;
 
 @RestController
 public class AuthController {
-	
+	/*
 	@Autowired
 	private UserModelService service;
 
@@ -40,6 +40,7 @@ public class AuthController {
 		return userobj;
 		
 		}
+		*/
 	
 
 }

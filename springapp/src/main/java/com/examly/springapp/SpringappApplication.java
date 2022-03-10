@@ -14,8 +14,9 @@ import org.springframework.context.annotation.Bean;
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
-@EntityScan //("com.examly.springapp.model") // path of the entity model
-@EnableJpaRepositories //("com.examly.springapp.controller") // path of jpa repository 
+//@EntityScan //("com.examly.springapp.model") // path of the entity model
+@EnableJpaRepositories// ("java.lang.String"+"com.examly.springapp.repository.UserModelRepository")//("com.examly.springapp.controller") // path of jpa repository 
+
 @SpringBootApplication
 public class SpringappApplication {
 
