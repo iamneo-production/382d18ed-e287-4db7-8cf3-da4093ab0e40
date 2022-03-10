@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
 import { RouterModule, Routes } from '@angular/router';
+import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/AppComponent', pathMatch: 'full' },
@@ -37,7 +38,8 @@ const routes: Routes = [
     PrepaidplansComponent,
     AdminDashboardComponent,
     PostpaidplansComponent,
-    PrepaidplansComponent
+    PrepaidplansComponent,
+    RechargeconfirmationComponent
     
   ],
   imports: [
