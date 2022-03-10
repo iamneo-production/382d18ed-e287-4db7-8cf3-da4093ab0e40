@@ -41,7 +41,8 @@ const routes: Routes = [
     PostpaidplansComponent,
     UpdatePlanComponent,
 
-    PrepaidplansComponent
+    PrepaidplansComponent,
+    RechargeconfirmationComponent
     
   ],
   imports: [
