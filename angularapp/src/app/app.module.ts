@@ -16,6 +16,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AddonComponent } from './addon/addon.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/AppComponent', pathMatch: 'full' },
@@ -40,7 +41,9 @@ const routes: Routes = [
     PostpaidplansComponent,
     UpdatePlanComponent,
 
-    PrepaidplansComponent
+    PrepaidplansComponent,
+
+    AddonComponent
     
   ],
   imports: [
@@ -54,6 +57,6 @@ const routes: Routes = [
 
   ],
   providers: [],
-  bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent]
+  bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent,AddonComponent]
 })
 export class AppModule { }
