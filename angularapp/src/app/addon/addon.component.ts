@@ -51,7 +51,7 @@ deleteAddon(AddonId: number){
   })
 }
 
-updatePlans(AddonId: number){
+updateAddon(AddonId: number){
   this.router.navigate(['admin/update-addon', AddonId]);
 }
 
