@@ -1,7 +1,7 @@
-import { Plan } from './plan';
+import { Addon } from './addon';
 
 describe('Plan', () => {
   it('should create an instance', () => {
-    expect(new Plan()).toBeTruthy();
+    expect(new Addon()).toBeTruthy();
   });
 });
