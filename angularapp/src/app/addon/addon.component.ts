@@ -30,21 +30,21 @@ export class AddonComponent implements OnInit {
 }
 
 private getAddon() {
-  this.addonService.getAddon().subscribe(data => {
+  this.addonService.viewAddon().subscribe(data => {
     this.addons = data;
     console.log(data);
   });
 }
 
 saveAddon(){
-  this.addonService.createAddon(this.addon).subscribe(data=>{
+  this.addonService.addAddon(this.addon).subscribe(data=>{
     this.getAddon();
   },
   error => console.log(error)
   );
 }
 
-deleteEmployee(AddonId: number){
+deleteAddon(AddonId: number){
   this.addonService.deleteAddon(AddonId).subscribe(data=>{
     console.log(data);
     this.getAddon();
