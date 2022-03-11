@@ -11,12 +11,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.context.annotation.Bean;
 
-@Configuration
+/*@Configuration
 @ComponentScan
 @EnableAutoConfiguration
 @EntityScan //("com.examly.springapp.model") // path of the entity model
 @EnableJpaRepositories// ("java.lang.String"+"com.examly.springapp.repository.UserModelRepository")//("com.examly.springapp.controller") // path of jpa repository 
-
+*/
 @SpringBootApplication
 public class SpringappApplication {
 
