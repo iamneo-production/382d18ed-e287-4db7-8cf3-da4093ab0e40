@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from '../user'
+/*import {User} from '../user'
 import { UserService } from '../user.service';
-import { Router } from '@angular/router';
+import { Router } from '@angular/router';*/
 
 @Component({
   selector: 'app-rechargeconfirmation',
