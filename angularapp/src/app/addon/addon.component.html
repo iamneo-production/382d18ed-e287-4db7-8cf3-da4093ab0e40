@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <nav>
+            <ul>
+                <li><a href="admin/dashboard">AirNet</a></li>
+                <li><a id="adminPrepaid" href="admin/prepaidplans">Prepaid plans</a></li>
+                <li><a id="adminPostpaid" href="admin/postpaidplans">Postpaid plans</a></li>
+                <li><a id="adminAddOns" href="#addons">AddOns</a></li>
+                <li style="float:right"><button (click)="logout()">Logout</button></li>
+            </ul>
+        </nav>
+    
+        <h1>ADDON PLANS</h1>
+    
+        <div class="top">
+            <button id="addAddon" (click)="addAddon()">Add Addon</button> &nbsp;
+            <input type="search" placeholder="Type here tosearch addonplan" size="25"> &nbsp;
+            <button id="searchPlan">Search</button>
+        </div>
+    
+        <div class="Addon_input" id="Addon_inputt">
+            <h3>Welcome Admin! Enter details to add a Addon plan</h3>
+            <form (ngSubmit) = "onSubmit()">
+
+                <div><input [(ngModel)] = "addon.AddonId" name="AddonId" type="text" placeholder="Enter Addon ID"></div>
+                <div><input [(ngModel)] = "addon.AddonName" name="AddonName" type="text" placeholder="Enter Addon name"></div>
+                <div><input [(ngModel)] = "addon.AddonPrice" name="AddonPrice" type="text" placeholder="Enter the price"></div>
+                <div><input [(ngModel)] = "addon.AddonDetails" name="AddonDetails" type="text" placeholder="Enter Addon description"></div>
+                <br><br>
+                <button type="submit" class="btn btn-success">Add Addon</button>
+            </form>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> Addon Id </th>
+                    <th> Addon Name</th>
+                    <th> Addon Price </th>
+                    <th> Addon Details </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let plan of addon">
+                    <td> {{ Addon.AddonId }} </td>
+                    <td> {{ Addon.AddonName }} </td>
+                    <td> {{ Addon.AddonPrice }} </td>
+                    <td> {{ Addon.AddonDetails }} </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+</body>
+</html>
