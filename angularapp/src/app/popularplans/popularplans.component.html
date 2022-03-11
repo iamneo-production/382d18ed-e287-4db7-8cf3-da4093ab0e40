@@ -25,11 +25,11 @@
         <div class="popularPlansGrid" *ngFor = "let plan of plans">
             
             <h3 class="heading">{{plan.planType}}</h3>
-            <h1 class="service__price">{{plan.planPrice}}</h1>
+            <h1 class="service__price">RS.{{plan.planPrice}}</h1>
             <ul class="features__list">
-                <li>{{plan.planName}}</li>
-                <li>{{plan.planValidity}}</li>
-                <li>{{plan.planDetails}}</li>
+                <li>Network:{{plan.planName}}</li>
+                <li>Validity:{{plan.planValidity}}</li>
+                <li>Details:{{plan.planDetails}}</li>
             </ul>
             <button class="recharge__button">Recharge</button>
         </div>   
