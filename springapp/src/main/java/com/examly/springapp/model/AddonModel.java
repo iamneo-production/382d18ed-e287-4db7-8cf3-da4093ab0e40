@@ -50,7 +50,7 @@ public class AddonModel {
 	public void setAddonName(String AddonName) {
 		this.AddonName = AddonName;
 	}
-	public int AddonPrice() {
+	public int  getAddonPrice() {
 		return AddonPrice;
 	}
 	public void setAddonPrice(int AddonPrice) {

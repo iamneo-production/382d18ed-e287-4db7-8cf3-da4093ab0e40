@@ -54,6 +54,10 @@
                     <td> {{ Addon.AddonName }} </td>
                     <td> {{ Addon.AddonPrice }} </td>
                     <td> {{ Addon.AddonDetails }} </td>
+                    <td>
+                        <button (click)="updateAddons(Addon.AddonId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                        <button (click)="deleteEmployee(addon.AddonId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                    </td>
                     
                 </tr>
             </tbody>
