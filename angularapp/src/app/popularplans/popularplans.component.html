@@ -27,17 +27,16 @@
                 <span class="fa fa-paper-plane" aria-hidden="true">
                 </span>
             </div>
-            <h3 class="heading">Airtel</h3>
-            <h1 class="service__price">Rs.499</h1>
+            <h3 class="heading">{{plan.planType}}</h3>
+            <h1 class="service__price">{{plan.planPrice}}</h1>
             <ul class="features__list">
-                <li>3GB/Day</li>
-                <li>Unlimited Calls</li>
-                <li>100 SMS/Day</li>
-                <li>Validity:29 days</li>
+                <li>{{plan.planName}}</li>
+                <li>{{plan.planValidity}}</li>
+                <li>{{plan.planDetails}}</li>
             </ul>
             <button class="recharge__button">Recharge</button>
         </div>   
-        <div class="popularPlansGrid">
+        <!--<div class="popularPlansGrid">
             <div class="icon type-01">
                 <span class="fa fa-paper-plane" aria-hidden="true">
                 </span>
@@ -96,7 +95,7 @@
                 <li>Validity:1 Year</li>
             </ul>
             <button class="recharge__button">Recharge</button>
-        </div>
+        </div>-->
     </div>
 
 </body>
