@@ -10,6 +10,7 @@ import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
+import { AddonComponent } from './addon/addon.component';
 
 import { AddonComponent } from './addon/addon.component';
 
@@ -30,11 +31,8 @@ const routes: Routes = [
   {path: 'admin/update-plan/:planId', component:UpdatePlanComponent},
    {path: 'admin/addon', component:AddonComponent}
 
-
   {path: 'rechargeconfirmation', component:RechargeconfirmationComponent}
 
-
-  
 ];
 
 @NgModule({

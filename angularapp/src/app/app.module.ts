@@ -17,7 +17,9 @@ import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component'
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AddonComponent } from './addon/addon.component';
+
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/AppComponent', pathMatch: 'full' },
   
@@ -43,6 +45,10 @@ const routes: Routes = [
     PrepaidplansComponent,
     AddonComponent,
     RechargeconfirmationComponent
+
+    PrepaidplansComponent,
+
+    AddonComponent
 
     
   ],

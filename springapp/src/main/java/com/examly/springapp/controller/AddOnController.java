@@ -24,28 +24,28 @@ import com.examly.springapp.repository.AddonRepository;
 @CrossOrigin(origins = "https://8081-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
 @RestController
 @RequestMapping("/admin")
- class AddonController {
+public class AddOnController {
 	
 	@Autowired
-	private AddonRepository prepo;
+	private AddonRepository addonrepo;
 	
 	
 	@PostMapping("/addAddon")
-	public AddonModel createAddon(@RequestBody AddonModel addon)
+	public AddonModel addAddon(@RequestBody AddonModel addon)
 	{
 
-		return prepo.save(addon);
+		return addonrepo.save(addon);
 	}
 	
 	@GetMapping("/viewAddon")
 	public List<AddonModel> viewAddon(){
-		return prepo.findAll();
+		return addonrepo.findAll();
 	}
 
 
 	@GetMapping("/viewAddon/{AddonId}")
 	public ResponseEntity<AddonModel> getAddonnById(@PathVariable int AddonId) {
-		AddonModel am = prepo.findById(AddonId)
+		AddonModel am = addonrepo.findById(AddonId)
 				.orElseThrow(() -> new ResourceNotFoundException("Plan not exist with id :" + AddonId));
 		return ResponseEntity.ok(am);
 	}
@@ -54,7 +54,7 @@ import com.examly.springapp.repository.AddonRepository;
 	public ResponseEntity<AddonModel> updateAddon(@PathVariable int AddonId, @RequestBody AddonModel AddonDetails){
 		
 		//retrive particular plan from the database using planId
-		AddonModel am = prepo.findById(AddonId)
+		AddonModel am = addonrepo.findById(AddonId)
 				.orElseThrow(() -> new ResourceNotFoundException("Addon not exist with id :" + AddonId));
 		
 		am.setAddonName(AddonDetails.getAddonName());
@@ -62,17 +62,17 @@ import com.examly.springapp.repository.AddonRepository;
 		am.setAddonDetails(AddonDetails.getAddonDetails());
 		
 		
-		AddonModel updatedAddon = prepo.save(am);
+		AddonModel updatedAddon = addonrepo.save(am);
 		return ResponseEntity.ok(updatedAddon);
 		
 	}
 	@DeleteMapping("/deleteAddon/{AddonId}")
 	public ResponseEntity<Map<String, Boolean>> deleteAddon(@PathVariable int AddonId){
 		//retrive particular plan from the database using planId
-		AddonModel am = prepo.findById(AddonId)
+		AddonModel am = addonrepo.findById(AddonId)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + AddonId));
 		
-		prepo.delete(am);
+		addonrepo.delete(am);
 		Map<String, Boolean> response = new HashMap<>();
 		response.put("deleted", Boolean.TRUE);
 		return ResponseEntity.ok(response);
