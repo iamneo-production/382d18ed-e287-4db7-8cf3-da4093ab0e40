@@ -10,6 +10,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Addons")
 public class AddonModel {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 	
 	
 	
@@ -59,7 +62,7 @@ public class AddonModel {
 	public String getAddonDetails() {
 		return AddonDetails;
 	}
-	public void setAddonDetails(String AddonDeatils) {
+	public void setAddonDetails(String AddonDetails) {
 		this.AddonDetails = AddonDetails;
 	}
 }
