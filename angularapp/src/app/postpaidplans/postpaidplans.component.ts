@@ -63,6 +63,7 @@ logout(){
 
 
   ngOnInit(): void {
+    this.getPlan();
   }
 
 }
