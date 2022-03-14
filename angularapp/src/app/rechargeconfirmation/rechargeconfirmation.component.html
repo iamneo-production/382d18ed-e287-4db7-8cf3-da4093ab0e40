@@ -19,14 +19,22 @@
         <br>
         <br>
         <br>
-        <div class="plan-details">
-            <p>Your are recharging for number +9119876543210</p>
-        </div>
         <div class="container">
-            <p>Do you want to add Add-ons.?</p>
-            <a href="/addons"><button class="editRecharge">Edit Recharge</button></a>
-            <a href="/popularplans"><button class="deteleRecharge">Delete Recharge</button></a>
-            <a href="/"><button class="confirmRecharge">Confirm Recharge</button></a>
+            <div class="popularPlansGrid" *ngFor = "let plan of plans">
+            
+                <h1 class="heading">{{plan.planName}}</h1>
+                <h2 class="service__price">Rs.{{plan.planPrice}}</h2>
+                <ul class="features__list">
+                    <li>Plan Type:{{plan.planType}}</li>
+                    <li>Validity:{{plan.planValidity}}</li>
+                    <li>Details:{{plan.planDetails}}</li>
+                </ul>
+            </div>  
+        </div>
+        <div class="buttons">
+            <a href="/addons"><button class="editRecharge">Add Add-ons</button></a>
+            <a href="/popularplans"><button class="deteleRecharge">Delete</button></a>
+            <a href="/"><button class="confirmRecharge">Recharge</button></a>
         </div>
     </body>
 </html>
