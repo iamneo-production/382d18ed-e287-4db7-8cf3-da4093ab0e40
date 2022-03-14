@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import {Router} from '@angular/router';
+import { UserService } from '../user.service';
+import { User } from '../user';
+
 
 
 
@@ -12,8 +15,8 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private route:Router) { }
-
+  constructor(private _service : UserService ,private _router :Router) { }
+ msg='';
   
 
   onPasswordChange() {
@@ -68,5 +71,24 @@ export class LoginComponent implements OnInit {
 
     
   };*/
+  user=new User();
+  loginUser(){
+    this._service.LoginUserFromRemote(this.user).subscribe(
+      data =>{
+        console.log("response received");
+        if(this.user.user_role === 'user'){
+          this._router.navigate(['/popularplans'])
+        }
+        if(this.user.user_role === 'user'){
+          this._router.navigate(['/admindashboard'])
+        }
+      },
+      error =>{
+        console.log("exception occured");
+        this.msg="Bad Credentials, please enter valid emailId and password";
+      }
+      )
+
+  }
 
 }
