@@ -31,7 +31,7 @@ class RechargeController{
         return prepo.save(recharge);
     }
 
-    @GetMApping("/viewRecharge")
+    @GetMapping("/viewRecharge")
     public List<RechargeModel> viewRecharge(){
         return prepo.findAll();
     }
@@ -55,7 +55,7 @@ class RechargeController{
 		rm.setRechargeDetails(RechargeDetails.getRechargeDetails());
 		
 		
-		RechargeModel updatedRecharge = prepo.save(am);
+		RechargeModel updatedRecharge = prepo.save(rm);
 		return ResponseEntity.ok(updatedRecharge);
 		
 	}
