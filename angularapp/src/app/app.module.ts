@@ -18,7 +18,7 @@ import { UpdatePlanComponent } from './update-plan/update-plan.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/AppComponent', pathMatch: 'full' },
+  { path: '', redirectTo: '/Popularplans', pathMatch: 'full' },
   
 
 ];

@@ -23,6 +23,7 @@ public class AuthController  {
 	
 	@Autowired
 	private UserModelService service;
+	@CrossOrigin(origins="https://8081-faecbadeddebfdaffdacedbbebcbf.examlyiopb.examly.io")
 	@PostMapping("/login")
 	public UserModel loginUser (@RequestBody UserModel user) throws Exception {
 
