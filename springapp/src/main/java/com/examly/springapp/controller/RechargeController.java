@@ -43,8 +43,8 @@ class RechargeController{
 		return ResponseEntity.ok(rm);
     }
 
-    @PutMapping("/updateRecharge/{rechargeId}")
-	public ResponseEntity<RechargeModel> updateRecharge(@PathVariable int rechargeId, @RequestBody RechargeModel RechargeDetails){
+    @PutMapping("/editEvent/{rechargeId}")
+	public ResponseEntity<RechargeModel> editEvent(@PathVariable int rechargeId, @RequestBody RechargeModel RechargeDetails){
 		
 		//retrive particular plan from the database using planId
 		RechargeModel rm = prepo.findById(rechargeId)
@@ -59,13 +59,13 @@ class RechargeController{
 		return ResponseEntity.ok(updatedRecharge);
 		
 	}
-	@DeleteMapping("/deleteRecharge/{RechargeId}")
+	@DeleteMapping("/deleteRecharge/{rechargeId}")
 	public ResponseEntity<Map<String, Boolean>> deleteRecharge(@PathVariable int RechargeId){
 		//retrive particular plan from the database using planId
-		RechargeModel am = prepo.findById(RechargeId)
-				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + RechargeId));
+		RechargeModel am = prepo.findById(rechargeId)
+				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + rechargeId));
 		
-		prepo.delete(am);
+		prepo.delete(rm);
 		Map<String, Boolean> response = new HashMap<>();
 		response.put("deleted", Boolean.TRUE);
 		return ResponseEntity.ok(response);
