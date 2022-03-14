@@ -40,10 +40,8 @@ const routes: Routes = [
     AdminDashboardComponent,
     PostpaidplansComponent,
     UpdatePlanComponent,
-    PrepaidplansComponent,
-    AddonComponent,
-    RechargeconfirmationComponent
 
+    PrepaidplansComponent
     
   ],
   imports: [
