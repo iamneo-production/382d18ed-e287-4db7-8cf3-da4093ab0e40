@@ -24,14 +24,14 @@
     <div class="container">
         <div class="popularPlansGrid" *ngFor = "let plan of plans">
             
-            <h3 class="heading">{{plan.planType}}</h3>
+            <h3 class="heading">{{plan.planName}}</h3>
             <h1 class="service__price">RS.{{plan.planPrice}}</h1>
             <ul class="features__list">
-                <li>Network:{{plan.planName}}</li>
+                <li>Plan Type:{{plan.planType}}</li>
                 <li>Validity:{{plan.planValidity}}</li>
                 <li>Details:{{plan.planDetails}}</li>
             </ul>
-            <button class="recharge__button">Recharge</button>
+            <h4><button class="recharge__button">Recharge</button></h4>
         </div>   
     </div>
 </body>
