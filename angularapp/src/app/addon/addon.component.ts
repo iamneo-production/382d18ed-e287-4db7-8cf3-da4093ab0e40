@@ -16,12 +16,12 @@ export class AddonComponent implements OnInit {
 
   x:any;
   addon: Addon = new Addon();
-  addons: Addon[] | undefined;
+  addons: Addon[] | undefined ;
   constructor(private addonService: AddonService, 
     private router: Router) { }
 
   addAddon() {
-    this.x = document.getElementById("addon_inputt");
+    this.x = document.getElementById("addon_input");
     if (this.x.style.display === "none") {
         this.x.style.display = "block";
     } else {
@@ -30,28 +30,29 @@ export class AddonComponent implements OnInit {
 }
 
 private getAddon() {
-  this.addonService.viewAddon().subscribe(data => {
-    this.addons = data;
+  this.addonService.getAddons().subscribe(data => {
+    this.addons= data;
     console.log(data);
   });
 }
 
 saveAddon(){
-  this.addonService.addAddon(this.addon).subscribe(data=>{
+  this.addonService.createAddon(this.addon).subscribe(data=>{
     this.getAddon();
   },
   error => console.log(error)
   );
 }
 
-deleteAddon(AddonId: number){
+
+
+deleteEmployee(AddonId: number){
   this.addonService.deleteAddon(AddonId).subscribe(data=>{
     console.log(data);
     this.getAddon();
   })
 }
-
-updateAddon(AddonId: number){
+updateAddons(AddonId: number){
   this.router.navigate(['admin/update-addon', AddonId]);
 }
 
