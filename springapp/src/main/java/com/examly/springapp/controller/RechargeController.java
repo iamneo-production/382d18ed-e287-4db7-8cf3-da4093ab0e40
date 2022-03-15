@@ -60,9 +60,9 @@ class RechargeController{
 		
 	}
 	@DeleteMapping("/deleteRecharge/{rechargeId}")
-	public ResponseEntity<Map<String, Boolean>> deleteRecharge(@PathVariable int RechargeId){
+	public ResponseEntity<Map<String, Boolean>> deleteRecharge(@PathVariable int rechargeId){
 		//retrive particular plan from the database using planId
-		RechargeModel am = prepo.findById(rechargeId)
+		RechargeModel rm = prepo.findById(rechargeId)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + rechargeId));
 		
 		prepo.delete(rm);
