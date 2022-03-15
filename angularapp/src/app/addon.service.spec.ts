@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PlanServService } from './plan-serv.service';
+import { AddonService } from './addon.service';
 
-describe('PlanServService', () => {
-  let service: PlanServService;
+describe('AddonService', () => {
+  let service: AddonService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PlanServService);
+    service = TestBed.inject(AddonService);
   });
 
   it('should be created', () => {
