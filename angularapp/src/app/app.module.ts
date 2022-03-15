@@ -16,7 +16,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
 import { RouterModule, Routes } from '@angular/router';
-import { AddonComponent } from './addon/addon.component';
+//import { AddonComponent } from './addon/addon.component';
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
 const routes: Routes = [
   { path: '', redirectTo: '/Popularplans', pathMatch: 'full' },
@@ -55,6 +55,6 @@ const routes: Routes = [
 
   ],
   providers: [],
-  bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent,AddonComponent]
+  bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent]
 })
 export class AppModule { }

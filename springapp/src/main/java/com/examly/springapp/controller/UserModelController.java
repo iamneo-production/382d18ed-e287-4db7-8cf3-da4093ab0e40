@@ -96,5 +96,4 @@ public class UserModelController {
 		return ResponseEntity.ok(response);
 	}
 	
-	
 }

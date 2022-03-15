@@ -8,10 +8,10 @@ import { Addon } from './addon';
 })
 export class AddonService {
 
-  private baseURL = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/addPlan";
-  private baseUrl1 = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/viewPlan";
-  private baseUrl2 = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/deletePlan";
-  private baseUrl3 = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/updatePlan";
+  private baseURL = "https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/addPlan";
+  private baseUrl1 = "https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/viewPlan";
+  private baseUrl2 = "https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/deletePlan";
+  private baseUrl3 = "https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/updatePlan";
   constructor(private httpClient: HttpClient) { }
 
   createAddon(addon: Addon): Observable<Object>{

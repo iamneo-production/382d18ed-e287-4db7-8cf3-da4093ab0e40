@@ -16,25 +16,38 @@ public class RechargeModel {
     @Column(name = "rechargeId")
 	private int rechargeId;
 
-	@Column(name = "RechargeName")
-	private String RechargeName;
-	
-	@Column(name = "RechargePrice")
-	private int RechargePrice;
+	@Column(name= "rechargetype")
+	private String rechargetype;
 
-	@Column(name = "RechargeDetails")
-	private String RechargeDetails;
+	@Column(name = "name")
+	private String name;
+	
+	@Column(name="mobile")
+	private String mobile;
+
+	@Column(name="email")
+	private String email;
+
+	@Column(name = "rechargePrice")
+	private int rechargePrice;
+
+	@Column(name = "rechargePlan")
+	private int rechargePlan;
+
 
     public RechargeModel() {
 		
 	}
 	
-	public RechargeModel(int rechargeId, String RechargeName, int RechargePrice , String RechargeDetails) {
+	public RechargeModel(int rechargeId,String rechargeType, String name,String mobile,String email, int rechargePrice , int rechargePlan) {
 		super();
 		this.rechargeId = rechargeId;
-		this.RechargeName = RechargeName;
-		this.RechargePrice = RechargePrice;
-		this.RechargeDetails = RechargeDetails;
+		this.rechargeType=rechargeType;
+		this.name = name;
+		this.mobile=mobile;
+		this.email=email;
+		this.rechargePrice = rechargePrice;
+		this.rechargePlan = rechargePlan;
 		
 	}
 
@@ -44,23 +57,41 @@ public class RechargeModel {
 	public void setrechargeId(int rechargeId) {
 		this.rechargeId = rechargeId;
 	}
-    public String getRechargeName() {
-		return RechargeName;
+	public String getrechargeType() {
+		return rechargeType;
 	}
-	public void setRechargeName(String RechargeName) {
-		this.RechargeName = RechargeName;
+	public void setrechargeType(String rechargeType) {
+		this.rechargeType = rechargeType;
 	}
-	public int  getRechargePrice() {
-		return RechargePrice;
+    public String getname() {
+		return name;
 	}
-	public void setRechargePrice(int RechargePrice) {
-		this.RechargePrice = RechargePrice;
+	public void setname(String name) {
+		this.name = name;
 	}
-	public String getRechargeDetails() {
-		return RechargeDetails;
+	public String getmobile() {
+		return mobile;
 	}
-	public void setRechargeDetails(String RechargeDetails) {
-		this.RechargeDetails = RechargeDetails;
+	public void setmobile(String mobile) {
+		this.mobile = mobile;
+	}
+	public String getemail() {
+		return email;
+	}
+	public void setemail(String email) {
+		this.email = email;
+	}
+	public int  getrechargePrice() {
+		return rechargePrice;
+	}
+	public void setrechargePrice(int rechargePrice) {
+		this.rechargePrice = rechargePrice;
+	}
+	public int getrechargePlan() {
+		return rechargePlan;
+	}
+	public void setrechargePlan(int rechargePlan) {
+		this.rechargePlan = rechargePlan;
 	}
 
 	
