@@ -39,10 +39,10 @@ public class RechargeModel {
 		
 	}
 	
-	public RechargeModel(int rechargeId,String rechargeType, String name,String mobile,String email, int rechargePrice , int rechargePlan) {
+	public RechargeModel(int rechargeId,String rechargetype, String name,String mobile,String email, int rechargePrice , int rechargePlan) {
 		super();
 		this.rechargeId = rechargeId;
-		this.rechargeType=rechargeType;
+		this.rechargetype=rechargetype;
 		this.name = name;
 		this.mobile=mobile;
 		this.email=email;
@@ -57,11 +57,11 @@ public class RechargeModel {
 	public void setrechargeId(int rechargeId) {
 		this.rechargeId = rechargeId;
 	}
-	public String getrechargeType() {
-		return rechargeType;
+	public String getrechargetype() {
+		return rechargetype;
 	}
-	public void setrechargeType(String rechargeType) {
-		this.rechargeType = rechargeType;
+	public void setrechargetype(String rechargetype) {
+		this.rechargetype = rechargetype;
 	}
     public String getname() {
 		return name;

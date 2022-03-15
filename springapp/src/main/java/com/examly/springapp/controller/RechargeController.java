@@ -50,9 +50,13 @@ class RechargeController{
 		RechargeModel rm = prepo.findById(rechargeId)
 				.orElseThrow(() -> new ResourceNotFoundException("Recharge not exist with id :" + rechargeId));
 		
-		rm.setRechargeName(RechargeDetails.getRechargeName());
-		rm.setRechargePrice(RechargeDetails.getRechargePrice());
-		rm.setRechargeDetails(RechargeDetails.getRechargeDetails());
+		rm.setname(RechargeDetails.getname());
+		rm.setrechargeId(RechargeDetails.getrechargeId());
+		rm.setrechargetype(RechargeDetails.getrechargetype());
+		rm.setmobile(RechargeDetails.getmobile());
+		rm.setemail(RechargeDetails.getemail());
+		rm.setrechargePrice(RechargeDetails.getrechargePrice());
+		rm.setrechargePlan(RechargeDetails.getrechargePlan());
 		
 		
 		RechargeModel updatedRecharge = prepo.save(rm);
