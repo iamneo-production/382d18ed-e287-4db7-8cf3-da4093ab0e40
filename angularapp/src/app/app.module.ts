@@ -19,7 +19,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddonComponent } from './addon/addon.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/AppComponent', pathMatch: 'full' },
+  { path: '', redirectTo: '/Popularplans', pathMatch: 'full' },
   
 
 ];

@@ -29,9 +29,8 @@ public class UserModelController {
 //	@Autowired
 	private UserModelRepository UserModelRepository;
 
-	//@Autowired
+	@Autowired
 	private UserModelService service;
-	
 	
 	// get all UserModels
 	@GetMapping("/Users")
@@ -40,6 +39,11 @@ public class UserModelController {
 	}		
 	
 	// create User rest api
+	/*@PostMapping("/Users")
+	public UserModel createUser(@RequestBody UserModel user) {
+		return UserModelRepository.save(user);
+	}*/
+
 	@PostMapping("/Users")
 	public UserModel createUser(@RequestBody UserModel user)throws Exception {
 		String tempEmailId =user.getEmailId();
