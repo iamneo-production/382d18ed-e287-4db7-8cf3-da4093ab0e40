@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+/*import {User} from '../user'
+import { UserService } from '../user.service';*/
 import { Router } from '@angular/router';
-import { RechargeService } from '../recharge.service';
-import { Recharge } from '../recharge';
+import { PlanServService } from '../plan-serv.service';
+import { Plan } from '../plan';
 
 @Component({
   selector: 'app-rechargeconfirmation',
@@ -10,17 +12,17 @@ import { Recharge } from '../recharge';
 })
 export class RechargeconfirmationComponent implements OnInit {
   x:any;
-  recharge: Recharge = new Recharge();
-  recharges: Recharge[] | undefined;
-  constructor(private rechargeService: RechargeService, private router: Router) { }
-  private getrecharge() {
-       this.rechargeService.getRecharges().subscribe(data => {
-        this.recharges = data;
+  plan: Plan = new Plan();
+  plans: Plan[] | undefined;
+  constructor(private planService: PlanServService, private router: Router) { }
+  private getPlan() {
+       this.planService.getPlans().subscribe(data => {
+        this.plans = data;
         console.log(data);
       });
   }
   ngOnInit(): void {
-    this.getrecharge();
+    this.getPlan();
   }
 
 }
