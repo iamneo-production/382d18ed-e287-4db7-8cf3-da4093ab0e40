@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-=======
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -58,6 +40,5 @@ import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component'
   ],
   providers: [],
   bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent]
->>>>>>> a7d69e140a987be0492b7aeab6302625030b45f6
 })
 export class AppModule { }

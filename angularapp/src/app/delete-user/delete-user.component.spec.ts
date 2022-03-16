@@ -14,7 +14,7 @@ describe('DeleteUserComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DeleteUserComponent);
+    fixture = TestBed.creteComponent(DeleteUserComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
