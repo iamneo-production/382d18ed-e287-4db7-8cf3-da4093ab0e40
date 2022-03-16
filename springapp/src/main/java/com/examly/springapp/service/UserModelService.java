@@ -31,6 +31,8 @@ public class UserModelService {
 	private UserModelRepository UserModelRepository;
     
 	private LoginModelRepository LoginModelRepository;
+    private Long id;
+    
     UserModelService(){
 
     }
@@ -49,9 +51,20 @@ public class UserModelService {
     
   // @Bean ("java.lang.String")
     public UserModel fetchByEmailIdAndPassword(String EmailId,String password)
-    {
+    {   
+
         return UserModelRepository.findByEmailIdAndPassword(EmailId,password);
+
     }
+    public UserModel fetchByUserRole(String user_role){
+        return UserModelRepository.findByUser_role(user_role);
+
+    }
+    
+
+    /*public String fetchUserRole(Long id){
+        return UserModelRepository.findByUserId(id);
+    }*/
 
     
     
