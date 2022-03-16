@@ -178,10 +178,10 @@ hr{
     line-height: 30px;
 }
 
-.recharge__button {
+a .recharge__button {
     border: none;
     display: block;
-    width: 70%;
+    width: 130px;
     height: 40px;
     margin: 5px auto;
     border-radius: 50px;
@@ -197,7 +197,7 @@ hr{
     
 }
 
-.recharge__button:hover {
-    width:75%;
+a .recharge__button:hover {
+    width:140px;
     cursor: pointer;
 }

@@ -10,6 +10,7 @@ import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
+import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'}, /** If the path is empty, it will redirect to login page */
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'popularplans', component:PopularplansComponent},
   {path: 'addons', component:AddonsComponent},
   {path: 'displayuser', component:DisplayUserComponent},
+  {path : 'rechargeconfirmation', component:RechargeconfirmationComponent},
   {path: 'edituser/:id', component:EditUserComponent},
   {path: 'admin/prepaidplans',component:PrepaidplansComponent},
   {path: 'admin/dashboard', component:AdminDashboardComponent},
