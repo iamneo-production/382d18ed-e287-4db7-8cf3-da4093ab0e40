@@ -67,7 +67,7 @@ class RechargeController{
 	public ResponseEntity<Map<String, Boolean>> deleteRecharge(@PathVariable int rechargeId){
 		//retrive particular plan from the database using planId
 		RechargeModel rm = prepo.findById(rechargeId)
-				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + rechargeId));
+				.orElseThrow(() -> new ResourceNotFoundException("Recharge not exist with id :" + rechargeId));
 		
 		prepo.delete(rm);
 		Map<String, Boolean> response = new HashMap<>();

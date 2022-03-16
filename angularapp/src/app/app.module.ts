@@ -41,7 +41,8 @@ const routes: Routes = [
     PostpaidplansComponent,
     UpdatePlanComponent,
 
-    PrepaidplansComponent
+    PrepaidplansComponent,
+    RechargeconfirmationComponent
     
   ],
   imports: [
@@ -55,6 +56,6 @@ const routes: Routes = [
 
   ],
   providers: [],
-  bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent]
+  bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent,RechargeconfirmationComponent]
 })
 export class AppModule { }
