@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
     this._service.LoginUserFromRemote(this.user).subscribe(
       data =>{
         console.log("response received");
-        if(this._service.authentication(this.user) === null){
+        if((this.user.user_role.match(null)===null)){
           this._router.navigate(['/popularplans'])
         }
         else{
