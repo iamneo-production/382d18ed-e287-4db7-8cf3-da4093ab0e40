@@ -9,12 +9,26 @@ import { AddonsComponent } from './addons/addons.component';
 import { PopularplansComponent } from './popularplans/popularplans.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
-
+import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
+import { UpdatePlanComponent } from './update-plan/update-plan.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AddonComponent } from './addon/addon.component';
+
+import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: '/AppComponent', pathMatch: 'full' },
+  
+
+];
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +40,16 @@ import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component'
     EditUserComponent,
     PrepaidplansComponent,
     AdminDashboardComponent,
-    PostpaidplansComponent
+    PostpaidplansComponent,
+    UpdatePlanComponent,
+    PrepaidplansComponent,
+    AddonComponent,
+    RechargeconfirmationComponent,
+
+    PrepaidplansComponent,
+
+    AddonComponent
+
     
   ],
   imports: [
@@ -35,10 +58,11 @@ import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component'
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+  
 
   ],
   providers: [],
-  bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent]
+  bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent,AddonComponent]
 })
 export class AppModule { }

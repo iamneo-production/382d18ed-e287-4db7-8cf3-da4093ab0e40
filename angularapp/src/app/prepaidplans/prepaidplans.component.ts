@@ -51,6 +51,10 @@ deleteEmployee(planId: number){
   })
 }
 
+updatePlans(planId: number){
+  this.router.navigate(['admin/update-plan', planId]);
+}
+
 onSubmit(){
   this.savePlan();
 }
@@ -62,6 +66,7 @@ logout(){
 
 
   ngOnInit(): void {
+    this.getPlan();
   }
 
 }
