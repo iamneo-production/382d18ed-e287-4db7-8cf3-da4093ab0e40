@@ -79,6 +79,7 @@ public class UserModelController {
 		user.setmobilenumber(userDetails.getmobilenumber());
 		user.setEmailId(userDetails.getEmailId());
 		user.setpassword(userDetails.getpassword());
+		user.setuser_role(userDetails.getuser_role());
 		
 		UserModel editduser = UserModelRepository.save(user);
 		return ResponseEntity.ok(editduser);
