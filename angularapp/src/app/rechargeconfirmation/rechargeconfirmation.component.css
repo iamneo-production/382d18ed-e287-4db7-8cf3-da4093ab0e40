@@ -1,0 +1,17 @@
+h2 {
+    color: rgb(221, 57, 57);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+button{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 500;
+    color:white;
+    background-color: #2d835f;
+    text-decoration: none;
+}
