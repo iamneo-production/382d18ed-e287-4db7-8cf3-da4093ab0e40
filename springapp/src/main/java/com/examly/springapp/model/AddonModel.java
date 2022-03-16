@@ -8,13 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Addons")
+@Table(name = "addon_model")
 public class AddonModel {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
-	@Column(name = "AddonId")
 	private int AddonId;
+	
 
 	@Column(name = "AddonName")
 	private String AddonName;

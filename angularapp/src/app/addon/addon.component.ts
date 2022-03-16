@@ -21,7 +21,7 @@ export class AddonComponent implements OnInit {
     private router: Router) { }
 
   addAddon() {
-    this.x = document.getElementById("addon_input");
+    this.x = document.getElementById("Addon_input");
     if (this.x.style.display === "none") {
         this.x.style.display = "block";
     } else {
@@ -67,6 +67,7 @@ logout(){
 
 
   ngOnInit(): void {
+    this.getAddon();
   }
 
 }

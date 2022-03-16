@@ -51,12 +51,12 @@
             </thead>
             <tbody>
                 <tr *ngFor = "let addon of addons">
-                    <td> {{ Addon.AddonId }} </td>
-                    <td> {{ Addon.AddonName }} </td>
-                    <td> {{ Addon.AddonPrice }} </td>
-                    <td> {{ Addon.AddonDetails }} </td>
+                    <td> {{ addon.AddonId }} </td>
+                    <td> {{ addon.AddonName }} </td>
+                    <td> {{ addon.AddonPrice }} </td>
+                    <td> {{ addon.AddonDetails }} </td>
                     <td>
-                        <button (click)="updateAddon(Addon.AddonId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                        <button (click)="updateAddon(addon.AddonId)" class="btn btn-info" style="margin-left: 10px">Update</button>
                         <button (click)="deleteAddon(addon.AddonId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
                     </td>
                     

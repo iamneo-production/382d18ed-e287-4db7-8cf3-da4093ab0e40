@@ -14,11 +14,11 @@ export class AddonService {
   private baseUrl3 = "https://8080-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/updateAddon";
   constructor(private httpClient: HttpClient) { }
 
-  addAddon(addon: Addon): Observable<Object>{
+  createAddon(addon: Addon): Observable<Object>{
     return this.httpClient.post(this.baseURL, addon);
   }
 
-  viewAddon(): Observable<Addon[]>{
+  getAddons(): Observable<Addon[]>{
     return this.httpClient.get<Addon[]>(this.baseUrl1);
   }
 
