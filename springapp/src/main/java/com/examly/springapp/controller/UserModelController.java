@@ -26,7 +26,7 @@ import com.examly.springapp.repository.UserModelRepository;
 @RequestMapping("/api/v1/")
 public class UserModelController {
 
-//	@Autowired
+	@Autowired
 	private UserModelRepository UserModelRepository;
 
 	@Autowired

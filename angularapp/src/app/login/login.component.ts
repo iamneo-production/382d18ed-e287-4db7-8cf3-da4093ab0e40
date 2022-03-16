@@ -72,14 +72,14 @@ export class LoginComponent implements OnInit {
     
   };*/
   user=new User();
-  loginUser(){
+  private loginUser(){
     this._service.LoginUserFromRemote(this.user).subscribe(
       data =>{
         console.log("response received");
-        if(this.user.user_role === 'user'){
+        if(this.user.user_role === 'user'||this.user.user_role === null){
           this._router.navigate(['/popularplans'])
         }
-        if(this.user.user_role === 'user'){
+        if(this.user.user_role === 'admin'){
           this._router.navigate(['/admindashboard'])
         }
       },
@@ -89,6 +89,10 @@ export class LoginComponent implements OnInit {
       }
       )
 
+  }
+  onSubmit(){
+	  console.log(this.user);
+    this.loginUser();
   }
 
 }

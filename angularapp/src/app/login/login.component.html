@@ -27,13 +27,18 @@
         <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"  [(ngModel)]="user.password" ><br/>
         <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>  
         <br><br>   
-          <button type="submit" [disabled]="loginform.invalid" id="submitButton"><b>Submit</b></button><br/><br/>
+        <!--  <button type="submit" [disabled]="loginform.invalid" id="submitButton"><b>Submit</b></button><br/><br/>-->
+        <div class="form-group">
+        
+          <button type="submit" class="btn btn-success" [disabled]="!login-form.form.valid">Submit</button>
           <br><br> 
-          <input type="checkbox" id="check"> 
+        <input type="checkbox" id="check"> 
           <span>Remember me</span>
           <br><br> 
           <p class="message">Already a user?<a id="signinLink" href="/signup" >Signup </a></p>
+        
         </form>
+        
       </div>
     </div>
 </body>

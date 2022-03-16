@@ -19,7 +19,7 @@ import com.examly.springapp.repository.PlanRepository;
 import com.examly.springapp.repository.UserModelRepository;
 
 
-@CrossOrigin(origins = "https://8081-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io")
+@CrossOrigin(origins = "https://8081-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
 @RestController
 @RequestMapping("/admin")
 public class PlanController {
