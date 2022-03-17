@@ -46,7 +46,7 @@ import com.examly.springapp.repository.AddonRepository;
 	@GetMapping("/viewAddon/{AddonId}")
 	public ResponseEntity<AddonModel> getAddonById(@PathVariable int AddonId) {
 		AddonModel am = adrepo.findById(AddonId)
-				.orElseThrow(() -> new ResourceNotFoundException("Plan not exist with id :" + AddonId));
+				.orElseThrow(() -> new ResourceNotFoundException("Addon not exist with id :" + AddonId));
 		return ResponseEntity.ok(am);
 	}
 
@@ -68,7 +68,7 @@ import com.examly.springapp.repository.AddonRepository;
 	}
 	@DeleteMapping("/deleteAddon/{AddonId}")
 	public ResponseEntity<Map<String, Boolean>> deleteAddon(@PathVariable int AddonId){
-		//retrive particular plan from the database using planId
+		//retrive particular plan from the database using AddonId
 		AddonModel am = adrepo.findById(AddonId)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + AddonId));
 		
@@ -77,6 +77,5 @@ import com.examly.springapp.repository.AddonRepository;
 		response.put("deleted", Boolean.TRUE);
 		return ResponseEntity.ok(response);
 	}
-	
 
-}
+ }
