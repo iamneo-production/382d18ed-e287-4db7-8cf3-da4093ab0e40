@@ -21,7 +21,7 @@ import { AddonComponent } from './addon/addon.component';
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/AppComponent', pathMatch: 'full' },
+  { path: '', redirectTo: '/Popularplans', pathMatch: 'full' },
   
 
 ];
