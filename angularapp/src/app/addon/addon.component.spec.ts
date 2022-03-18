@@ -14,7 +14,11 @@ describe('AddonComponent', () => {
   });
 
   beforeEach(() => {
+    fixture = TestBed.createComponent(AddonComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
   });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });

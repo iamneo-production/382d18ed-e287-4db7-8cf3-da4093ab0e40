@@ -21,7 +21,7 @@ import com.examly.springapp.exception.ResourceNotFoundException;
 import com.examly.springapp.model.UserModel;
 import com.examly.springapp.repository.UserModelRepository;
 
-@CrossOrigin(origins = "https://8081-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
+@CrossOrigin(origins = "https://8081-faaabdcbeaddebfdaffdacedbbebcbf.examlyiopb.examly.io")
 @RestController
 @RequestMapping("/api/v1/")
 public class UserModelController {
@@ -96,6 +96,5 @@ public class UserModelController {
 		response.put("deleted", Boolean.TRUE);
 		return ResponseEntity.ok(response);
 	}
-	
 	
 }

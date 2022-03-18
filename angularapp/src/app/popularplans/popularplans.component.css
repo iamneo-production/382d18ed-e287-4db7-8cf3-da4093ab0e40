@@ -47,15 +47,7 @@ hr{
     border-radius: 50px;
     transition: .5s ease-in-out;
 }
-.userAddOns:hover ~hr{
-    margin-left: 18%;
-}
-.notifications:hover ~hr{
-    margin-left: 37%;
-}
-.logout:hover ~hr{
-    margin-left: 56%;
-}
+
 .container {
     -webkit-display: flex;
     -moz-display: flex;
@@ -147,13 +139,6 @@ hr{
     color: #43CBFF;
 }
 
-.popularPlansGrid .type-02 {
-    color: #43CBFF;
-}
-
-.popularPlansGrid .type-03 {
-    color: #43CBFF;
-}
 
 .heading {
     color: #fff;
@@ -161,13 +146,13 @@ hr{
     text-transform: capitalize;
     font-weight: lighter;
     padding: 10px;
-    font-size: 1.2em;
+    font-size: 3em;
 }
 
 .service__price {
     color: #fff;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .service__price .dollar__sign {
@@ -193,10 +178,10 @@ hr{
     line-height: 30px;
 }
 
-.recharge__button {
+a .recharge__button {
     border: none;
     display: block;
-    width: 70%;
+    width: 130px;
     height: 40px;
     margin: 5px auto;
     border-radius: 50px;
@@ -212,7 +197,7 @@ hr{
     
 }
 
-.recharge__button:hover {
-    width:75%;
+a .recharge__button:hover {
+    width:140px;
     cursor: pointer;
 }

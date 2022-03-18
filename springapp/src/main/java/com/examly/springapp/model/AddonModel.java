@@ -13,6 +13,12 @@ public class AddonModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+<<<<<<< HEAD
+=======
+	
+	
+	
+>>>>>>> f01b0a6640f1d4d98910ed973a46659431672f20
 	@Column(name = "AddonId")
 	private int AddonId;
 

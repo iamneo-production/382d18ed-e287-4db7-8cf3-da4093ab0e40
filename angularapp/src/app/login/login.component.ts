@@ -18,30 +18,48 @@ export class LoginComponent implements OnInit {
   constructor(private _service : UserService ,private _router :Router) { }
  msg='';
   
+
+  onPasswordChange() {
+    if (this.confirm_password.value == this.password1.value) {
+      this.confirm_password.setErrors(null);
+    } else {
+      this.confirm_password.setErrors({ mismatch: true });
+    }
+  }
+  
   // getting the form control elements
   get password1(): AbstractControl {
     return this.loginform.controls['password'];
   }
- 
+  get confirm_password(): AbstractControl {
+    return this.loginform.controls['confirmpassword'];
+  }
   loginform=new FormGroup({
-	  emailId:new FormControl('',[Validators.required,Validators.email]),
-	 password:new FormControl('',[Validators.required,]),
-   
+	  email:new FormControl('',[Validators.required,Validators.email]),
+	  username:new FormControl('',[Validators.required]),
+    mobilenumber:new FormControl('',[Validators.required,Validators.pattern("[0-9 ]{10}")]),
+    password:new FormControl('',[Validators.required,]),
+    confirmpassword:new FormControl('',[Validators.required])
   })
 
-  get emailId(){
-	  return this.loginform.get('emailId');
+  get email(){
+	  return this.loginform.get('email');
   }
- 
+  get username(){
+	  return this.loginform.get('username');
+  }
+  get mobilenumber(){
+	  return this.loginform.get('mobilenumber');
+  }
   get password(){
 	  return this.loginform.get('password');
   }
-  
-  
+  get confirmpassword(){
+	  return this.loginform.get('confirmpassword');
+  }
 
   login(){
-	  //console.log(this.loginform.value);
-    this.loginUser();
+	  console.log(this.loginform.value);
   }
 
 
@@ -54,28 +72,23 @@ export class LoginComponent implements OnInit {
     
   };*/
   user=new User();
-  private loginUser(){
+  loginUser(){
     this._service.LoginUserFromRemote(this.user).subscribe(
       data =>{
         console.log("response received");
-        if((this.user.user_role.match(null)===null)){
+        if(this.user.user_role === 'user'){
           this._router.navigate(['/popularplans'])
         }
-        else{
-          this._router.navigate(['/admin/dashboard'])
+        if(this.user.user_role === 'user'){
+          this._router.navigate(['/admindashboard'])
         }
-      
-        },
+      },
       error =>{
         console.log("exception occured");
         this.msg="Bad Credentials, please enter valid emailId and password";
       }
       )
 
-  }
-  onSubmit(){
-	  console.log(this.user);
-    this.loginUser();
   }
 
 }

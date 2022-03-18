@@ -1,6 +1,6 @@
 import { Addon } from './addon';
 
-describe('Addon', () => {
+describe('Plan', () => {
   it('should create an instance', () => {
     expect(new Addon()).toBeTruthy();
   });

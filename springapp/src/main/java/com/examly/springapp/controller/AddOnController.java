@@ -21,31 +21,31 @@ import com.examly.springapp.model.AddonModel;
 import com.examly.springapp.repository.AddonRepository;
 
 
-@CrossOrigin(origins = "https://8081-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
+@CrossOrigin(origins = "https://8081-faaabdcbeaddebfdaffdacedbbebcbf.examlyiopb.examly.io/")
 @RestController
 @RequestMapping("/admin")
-public class AddOnController {
+ class AddonController {
 	
 	@Autowired
-	private AddonRepository addonrepo;
+	private AddonRepository prepo;
 	
 	
 	@PostMapping("/addAddon")
-	public AddonModel addAddon(@RequestBody AddonModel addon)
+	public AddonModel createAddon(@RequestBody AddonModel addon)
 	{
 
-		return addonrepo.save(addon);
+		return prepo.save(addon);
 	}
 	
 	@GetMapping("/viewAddon")
 	public List<AddonModel> viewAddon(){
-		return addonrepo.findAll();
+		return prepo.findAll();
 	}
 
 
 	@GetMapping("/viewAddon/{AddonId}")
 	public ResponseEntity<AddonModel> getAddonnById(@PathVariable int AddonId) {
-		AddonModel am = addonrepo.findById(AddonId)
+		AddonModel am = prepo.findById(AddonId)
 				.orElseThrow(() -> new ResourceNotFoundException("Plan not exist with id :" + AddonId));
 		return ResponseEntity.ok(am);
 	}
@@ -54,7 +54,7 @@ public class AddOnController {
 	public ResponseEntity<AddonModel> updateAddon(@PathVariable int AddonId, @RequestBody AddonModel AddonDetails){
 		
 		//retrive particular plan from the database using planId
-		AddonModel am = addonrepo.findById(AddonId)
+		AddonModel am = prepo.findById(AddonId)
 				.orElseThrow(() -> new ResourceNotFoundException("Addon not exist with id :" + AddonId));
 		
 		am.setAddonName(AddonDetails.getAddonName());
@@ -62,17 +62,17 @@ public class AddOnController {
 		am.setAddonDetails(AddonDetails.getAddonDetails());
 		
 		
-		AddonModel updatedAddon = addonrepo.save(am);
+		AddonModel updatedAddon = prepo.save(am);
 		return ResponseEntity.ok(updatedAddon);
 		
 	}
 	@DeleteMapping("/deleteAddon/{AddonId}")
 	public ResponseEntity<Map<String, Boolean>> deleteAddon(@PathVariable int AddonId){
 		//retrive particular plan from the database using planId
-		AddonModel am = addonrepo.findById(AddonId)
+		AddonModel am = prepo.findById(AddonId)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + AddonId));
 		
-		addonrepo.delete(am);
+		prepo.delete(am);
 		Map<String, Boolean> response = new HashMap<>();
 		response.put("deleted", Boolean.TRUE);
 		return ResponseEntity.ok(response);
