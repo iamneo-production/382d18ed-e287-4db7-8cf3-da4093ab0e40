@@ -22,7 +22,7 @@
     <br>
     <br>
     <div class="container">
-        <div class="popularPlansGrid" *ngFor = "let plan of plans">
+        <div class="popularPlansGrid" *ngFor = "let plan of plans" >
             
             <h1 class="heading">{{plan.planName}}</h1>
             <h2 class="service__price">Rs.{{plan.planPrice}}</h2>
@@ -31,7 +31,7 @@
                 <li>Validity:{{plan.planValidity}}</li>
                 <li>Details:{{plan.planDetails}}</li>
             </ul>
-            <h4><a href="/rechargeconfirmation"><button class="recharge__button">Recharge</button></a></h4>
+            <h4><a><button class="recharge__button" (ngSubmit)="OnSubmit()" (click)="rechargeconfirmation(plan.planId)">Recharge</button></a></h4>
         </div>   
     </div>
 </body>

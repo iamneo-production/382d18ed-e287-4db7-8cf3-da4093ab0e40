@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'popularplans', component:PopularplansComponent},
   {path: 'addons', component:AddonsComponent},
   {path: 'displayuser', component:DisplayUserComponent},
-  {path : 'rechargeconfirmation', component:RechargeconfirmationComponent},
+  {path : 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent},
   {path: 'edituser/:id', component:EditUserComponent},
   {path: 'admin/prepaidplans',component:PrepaidplansComponent},
   {path: 'admin/dashboard', component:AdminDashboardComponent},
