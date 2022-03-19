@@ -11,41 +11,53 @@
 body {
     font-family: "Roboto", sans-serif;
     font-size: 17px;
+    background:#eee;
 }
-h2{
-    font-size: 50px;
-    color: red;
-    margin:20px;
-}
-nav{
-    position:relative;
-    left:15%;
-}
-ul li{
-    display: inline;
-    text-align: center;
-} 
-a{
+
+.btn{
+    margin-top: 1rem;
     display: inline-block;
-    width: 18%;
-    padding: auto;
-    margin: 32px 0;
-    text-decoration: none;
-    color:#333;
-    font-size: 27px;
-}
-ul li a:hover{
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border:.2rem solid var(--black);
+    color:var(--black);
     cursor: pointer;
-    font-size: 29px;
-}
-hr{
-    height: 70px;
-    width: 18%;
-    margin: -80px 0;
-    background: linear-gradient(to right, #05abe0 0%, #8200f4 100%);
-    border: none;
+    background: none;
     border-radius: 50px;
-    transition: .5s ease-in-out;
+}
+.btn:hover{
+    background:black;
+    color:#fff;
+}
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:#fff;
+    box-shadow: var(--box-shadow);
+    text-decoration: none;
+}
+.header .logo{
+    text-align: left;
+    font-size: 35px;
+    color: red;
+    text-decoration: none;
+}
+.header .navbar a{
+    font-size: 25px;
+    margin:0 1rem;
+    text-align: center;
+    color:var(--black);
+    text-decoration: none;
+}
+
+.header .navbar a:hover{
+    color:blue;
 }
 
 .container {
