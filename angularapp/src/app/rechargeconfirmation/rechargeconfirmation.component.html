@@ -20,18 +20,18 @@
         <br>
         <br>
         <br>
-        <div class="container">
+        <div class="cotnainer">
             <!--<div class="popularplansGrid" *ngFor="let recharge of recharge [value]="recharge.planId" >-->
             
                 <h1 class="heading">{{recharge.planName}}</h1>
-                <h2 class="service__price">Rs.{{recharge.planPrice}}</h2>
+                <h3 class="service__price">Rs.{{recharge.planPrice}}</h3>
                 <ul class="features__list">
-                    <li>recharge Type:{{recharge.planType}}</li>
+                    <li>Recharge Type:{{recharge.planType}}</li>
                     <li>Validity:{{recharge.planValidity}}</li>
                     <li>Details:{{recharge.planDetails}}</li>
                 </ul> 
-        </div>
-        <div class="buttons">
+        <!--</div> --> 
+       <!-- <div class="buttons"> -->
             <a><button class="confirmRecharge">Recharge</button></a>
         </div>
     </body>
