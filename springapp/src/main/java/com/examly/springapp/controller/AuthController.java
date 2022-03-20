@@ -1,5 +1,6 @@
 package com.examly.springapp.controller;
 import java.util.*;
+import java.lang.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,12 +19,13 @@ import com.examly.springapp.repository.UserModelRepository;
 import com.examly.springapp.service.UserModelService;
 
 @RestController
-public class AuthController {
-	/*
+public class AuthController  {
+	
 	@Autowired
 	private UserModelService service;
-
-	public UserModel loginUser (@RequestBody UserModel user) {
+	@CrossOrigin(origins="https://8081-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
+	@PostMapping("/login")
+	public UserModel loginUser (@RequestBody UserModel user) throws Exception {
 
 		String tempEmailId = user.getEmailId();
 		
@@ -33,14 +35,34 @@ public class AuthController {
 		
 		if (tempEmailId != null && tempPass != null) 
 		{ 
-			userobj = service.fetchUserByEmailIdandPass (tempEmailId, tempPass); 
+			userobj = service.fetchByEmailIdAndPassword (tempEmailId, tempPass); 
 		
+		}
+		if(userobj == null){
+			throw new Exception("Bad Credentials");
 		}
 		
 		return userobj;
 		
+	}
+
+		@GetMapping("/userrole")
+		public boolean authentication (@RequestBody UserModel user) throws Exception {
+
+			String tempUserRole = user.getuser_role();
+			Long id=user.getId();
+			//String tempUserRole = service.fetchUserRole();
+			//Long id=user.getId();
+			if (tempUserRole == null  ) 
+			{ 
+				return false;
+			
+			}
+			
+			return true;
+			
 		}
-		*/
+			//return tempUserRole;
+}
 	
 
-}

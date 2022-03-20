@@ -24,30 +24,49 @@ import com.examly.springapp.repository.LoginModelRepository;
 import com.examly.springapp.controller.AuthController;
 import org.springframework.context.annotation.Configuration;
 @Service
-@Configuration
+//@Configuration
 public class UserModelService {
 	
-	//@Autowired
-	private UserModelRepository usermodelrepository;
+	@Autowired
+	private UserModelRepository UserModelRepository;
     
+	private LoginModelRepository LoginModelRepository;
+    private Long id;
+    
+    UserModelService(){
+
+    }
 	
     //@Bean
     public UserModel saveUser(UserModel user)
     {
-        return usermodelrepository.save(user);
+        return UserModelRepository.save(user);
     }
 
-    //@Bean
+    
     public UserModel fetchUserByEmailId(String EmailId)
     {
-        return usermodelrepository.findUserByEmailId(EmailId);
+        return UserModelRepository.findUserByEmailId(EmailId);
     }
-    /*
-   //@Bean 
-    public UserModel fetchUserByEmailIdandPass(String EmailId,String password)
-    {
-        return usermodelrepository.findUserByEmailIdandPass(EmailId,password);
+    
+  // @Bean ("java.lang.String")
+    public UserModel fetchByEmailIdAndPassword(String EmailId,String password)
+    {   
+
+        return UserModelRepository.findByEmailIdAndPassword(EmailId,password);
+
+    }
+    public UserModel fetchByUserRole(String user_role){
+        return UserModelRepository.findByUser_role(user_role);
+
+    }
+    
+
+    /*public String fetchUserRole(Long id){
+        return UserModelRepository.findByUserId(id);
     }*/
+
+    
     
 	
 }

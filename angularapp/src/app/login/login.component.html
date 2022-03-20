@@ -1,39 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
-<link rel="stylesheet" href="login.component.css">
-<title> CSS Login Screen Tutorial </title>
-</head>
-<body>
-    <div class="login-page">
-      <div class="form">
-        <div class="login">
-          <div class="login-header">
-            <h3>LOGIN</h3>
-          </div>
-        </div>
-        <form class="login-form">
-          <label><b>Email   
-        </b>    
-        </label>    
-        <input type="email" id="email" placeholder="Enter email" name="email" formControlName="email"  pattern=".+@gmail.com" size="30" min='5' required><br/>
-        <span style="color:red" *ngIf="email && email.invalid && email.touched">Please enter valid email</span>    
-        <br><br>    
-        <label><b>Password     
-          </b>    
-        </label>    
-        <input type="password" id="password" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"><br/>
-        <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>  
-        <br><br>   
-          <button type="submit" [disabled]="loginform.invalid" id="submitButton"><b>Submit</b></button><br/><br/>
-          <br><br> 
-          <input type="checkbox" id="check"> 
-          <span>Remember me</span>
-          <br><br> 
-          <p class="message">Already a user?<a id="signinLink" href="/signup" >Signup </a></p>
-        </form>
+<script>
+  $(document).ready(function() {
+      $('#identicalForm').bootstrapValidator();
+  });
+  </script>
+
+
+<div class="bg">
+
+</div>
+
+<div class="sidenav col-md-6 offset-md-3">
+  <h3 class="main-head text-center font-weight-bolder text-white"> Sign Up </h3>
+  <form  (ngSubmit)="login()" #LoginForm="ngForm">
+  
+      
+  
+      
+  
+      <div class="form-group font-weight-bold text-white">
+          <label> Email Id</label>
+          <input type="text" class ="form-control" id = "emailId"
+              [(ngModel)] = "user.emailId" name = "emailId" placeholder="Enter EmailId"  required>
       </div>
-    </div>
-</body>
-</html>
+      
+      <div class="form-group font-weight-bold text-white">
+          <label> Password</label>
+          <input type="password" class ="form-control" id = "password"
+              [(ngModel)] = "user.password" name = "password" placeholder="Enter the password" > 
+              
+      </div>
+      
+      <div class="form-group">
+      
+      <button type="submit" class="btn btn-success" [disabled]="!LoginForm.form.valid">Submit</button>
+      <p class="text-white">I already have an account. <a href="/signup">SignUp</a></p>
+      </div>
+  </form>
+  </div>

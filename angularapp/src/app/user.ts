@@ -5,4 +5,6 @@ export class User {
 	emailId : string;
 	password : string;
 	user_role:string;
+	
+constructor(){}
 }
