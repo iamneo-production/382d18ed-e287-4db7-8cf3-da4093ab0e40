@@ -29,7 +29,8 @@ const routes: Routes = [
   {path: 'admin/update-plan/:planId', component:UpdatePlanComponent},
    {path: 'admin/addon', component:AddonsComponent},
 
-  {path: 'rechargeconfirmation', component:RechargeconfirmationComponent}
+  {path: 'rechargeconfirmation', component:RechargeconfirmationComponent},
+  {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent}
 
 ];
 
