@@ -24,7 +24,7 @@ import com.examly.springapp.repository.AddonRepository;
 @CrossOrigin(origins = "https://8081-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io")
 @RestController
 @RequestMapping("/admin")
- class AddOnController {
+public class AddOnController {
 	
 	@Autowired
 	private AddonRepository adrepo;
