@@ -1,0 +1,63 @@
+
+body{
+    /*background:teal;*/
+    background-size: 100%;
+  }
+button{
+    size: 50px;
+    margin-left:50px; ;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color:white;
+    background-color: #24252A;
+    text-decoration: none;
+    
+}
+button:hover{
+   background-color: rgb(51, 177, 40);
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline;
+    margin-left: 20px;
+}
+
+
+h2{
+    font-size: 50px;
+    color: red;
+    background-color: #24252A;
+    padding:25px;
+
+}
+div{
+   background-color: rgb(204, 91, 16);
+    height: auto;
+    width: 300px;
+    padding: 25px;
+    margin-left: 600px;
+    padding: 50px;
+    border-radius:10px;
+    
+}
+/*h1{
+    margin-left:50px;;
+}*/
+a:hover
+{
+     color:red;
+      
+}
+
+/*.container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+*/
+
+
