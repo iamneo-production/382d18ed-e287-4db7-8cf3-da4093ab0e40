@@ -9,74 +9,72 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+//import jdk.nashorn.internal.ir.IdentNode;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import com.examly.springapp.exception.ResourceNotFoundException;
-//import com.examly.springapp.Model.LoginModel;
-import com.examly.springapp.model.PlanModel;
 import com.examly.springapp.model.UserModel;
-import com.examly.springapp.repository.PlanRepository;
 import com.examly.springapp.repository.UserModelRepository;
 import com.examly.springapp.model.AddonModel;
 import com.examly.springapp.repository.AddonRepository;
 
 
-@CrossOrigin(origins = "https://8081-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
+@CrossOrigin(origins = "https://8081-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io")
 @RestController
 @RequestMapping("/admin")
 public class AddOnController {
 	
 	@Autowired
-	private AddonRepository addonrepo;
+	private AddonRepository adrepo;
 	
 	
 	@PostMapping("/addAddon")
-	public AddonModel addAddon(@RequestBody AddonModel addon)
+	public AddonModel createAddon(@RequestBody AddonModel addon)
 	{
 
-		return addonrepo.save(addon);
+		return adrepo.save(addon);
 	}
 	
 	@GetMapping("/viewAddon")
 	public List<AddonModel> viewAddon(){
-		return addonrepo.findAll();
+		return adrepo.findAll();
 	}
 
 
-	@GetMapping("/viewAddon/{AddonId}")
-	public ResponseEntity<AddonModel> getAddonnById(@PathVariable int AddonId) {
-		AddonModel am = addonrepo.findById(AddonId)
-				.orElseThrow(() -> new ResourceNotFoundException("Plan not exist with id :" + AddonId));
+	@GetMapping("/viewAddon/{id}")
+	public ResponseEntity<AddonModel> getAddonById(@PathVariable int id) {
+		AddonModel am = adrepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Addon not exist with id :" + id));
 		return ResponseEntity.ok(am);
 	}
 
-	@PutMapping("/updateAddon/{AddonId}")
-	public ResponseEntity<AddonModel> updateAddon(@PathVariable int AddonId, @RequestBody AddonModel AddonDetails){
+	@PutMapping("/updateAddon/{id}")
+	public ResponseEntity<AddonModel> updateAddon(@PathVariable int id, @RequestBody AddonModel AddonDetails){
 		
 		//retrive particular plan from the database using planId
-		AddonModel am = addonrepo.findById(AddonId)
-				.orElseThrow(() -> new ResourceNotFoundException("Addon not exist with id :" + AddonId));
+		AddonModel am = adrepo.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Addon not exist with id :" + id));
 		
 		am.setAddonName(AddonDetails.getAddonName());
 		am.setAddonPrice(AddonDetails.getAddonPrice());
 		am.setAddonDetails(AddonDetails.getAddonDetails());
 		
 		
-		AddonModel updatedAddon = addonrepo.save(am);
+		AddonModel updatedAddon = adrepo.save(am);
 		return ResponseEntity.ok(updatedAddon);
 		
 	}
-	@DeleteMapping("/deleteAddon/{AddonId}")
-	public ResponseEntity<Map<String, Boolean>> deleteAddon(@PathVariable int AddonId){
-		//retrive particular plan from the database using planId
-		AddonModel am = addonrepo.findById(AddonId)
-				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + AddonId));
+	@DeleteMapping("/deleteAddon/{id}")
+	public ResponseEntity<Map<String, Boolean>> deleteAddon(@PathVariable int id){
+		//retrive particular plan from the database using AddonId
+		AddonModel am = adrepo.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + id));
 		
-		addonrepo.delete(am);
+		adrepo.delete(am);
 		Map<String, Boolean> response = new HashMap<>();
 		response.put("deleted", Boolean.TRUE);
 		return ResponseEntity.ok(response);
 	}
-	
 
-}
+ }

@@ -8,17 +8,21 @@ import { Addon } from './addon';
 })
 export class AddonService {
 
+
   private baseURL = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/addAddon";
   private baseUrl1 = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/viewAddon";
   private baseUrl2 = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/deleteAddon";
   private baseUrl3 = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/updateAddon";
+
   constructor(private httpClient: HttpClient) { }
 
   createAddon(addon: Addon): Observable<Object>{
     return this.httpClient.post(this.baseURL, addon);
   }
 
-  viewAddon(): Observable<Addon[]>{
+
+  getAddons(): Observable<Addon[]>{
+
     return this.httpClient.get<Addon[]>(this.baseUrl1);
   }
 
@@ -30,8 +34,8 @@ export class AddonService {
     return this.httpClient.put(`${this.baseUrl3}/${id}`, addon);
   }
 
-  deleteAddon(AddonId:number): Observable<Object>{
-    return this.httpClient.delete(`${this.baseUrl2}/${AddonId}`);
+  deleteAddon(id:number): Observable<Object>{
+    return this.httpClient.delete(`${this.baseUrl2}/${id}`);
   }
 
 }
