@@ -12,6 +12,7 @@ import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component'
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
 import { AddonComponent } from './addon/addon.component';
 import { UpdateAddonComponent } from './update-addon/update-addon.component';
+
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
 
 
@@ -31,6 +32,7 @@ const routes: Routes = [
    {path: 'admin/update-addon/:id', component:UpdateAddonComponent},
   {path: 'rechargeconfirmation', component:RechargeconfirmationComponent},
   {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent}
+
 ];
 
 @NgModule({
