@@ -3,7 +3,7 @@ package com.examly.springapp.controller;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import java.io.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -26,12 +26,11 @@ import com.examly.springapp.repository.UserModelRepository;
 @RequestMapping("/api/v1/")
 public class UserModelController {
 
-//	@Autowired
+	@Autowired
 	private UserModelRepository UserModelRepository;
 
-	//@Autowired
+	@Autowired
 	private UserModelService service;
-	
 	
 	// get all UserModels
 	@GetMapping("/Users")
@@ -40,6 +39,11 @@ public class UserModelController {
 	}		
 	
 	// create User rest api
+	/*@PostMapping("/Users")
+	public UserModel createUser(@RequestBody UserModel user) {
+		return UserModelRepository.save(user);
+	}*/
+
 	@PostMapping("/Users")
 	public UserModel createUser(@RequestBody UserModel user)throws Exception {
 		String tempEmailId =user.getEmailId();
@@ -75,6 +79,7 @@ public class UserModelController {
 		user.setmobilenumber(userDetails.getmobilenumber());
 		user.setEmailId(userDetails.getEmailId());
 		user.setpassword(userDetails.getpassword());
+		user.setuser_role(userDetails.getuser_role());
 		
 		UserModel editduser = UserModelRepository.save(user);
 		return ResponseEntity.ok(editduser);

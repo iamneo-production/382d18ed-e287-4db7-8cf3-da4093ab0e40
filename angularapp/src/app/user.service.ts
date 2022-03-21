@@ -13,6 +13,15 @@ export class UserService {
   }
   private baseURL = "https://8080-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io/api/v1/Users";
   constructor(private httpClient:HttpClient) { }
+
+  public LoginUserFromRemote(user:User): Observable<any>{
+    return this.httpClient.post<any>("https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/login",user);
+  }
+
+  public authentication(user:User): Observable<any>{
+    return this.httpClient.get<any>("https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/userrole");
+  }
+
   getUserList(): Observable<User[]>
   {
     return this.httpClient.get<User[]>(`${this.baseURL}`);

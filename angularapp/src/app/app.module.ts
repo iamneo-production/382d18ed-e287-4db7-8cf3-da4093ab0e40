@@ -22,7 +22,7 @@ import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeco
 import { UpdateAddonComponent } from './update-addon/update-addon.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/AppComponent', pathMatch: 'full' },
+  { path: '', redirectTo: '/Popularplans', pathMatch: 'full' },
   
 
 ];
