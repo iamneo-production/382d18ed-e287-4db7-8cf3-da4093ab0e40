@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 /*import {User} from '../user'
+
 import { UserService } from '../user.service';*/
 import { ActivatedRoute, Router } from '@angular/router';
 import { PlanServService } from '../plan-serv.service';
@@ -8,12 +9,14 @@ import { RechargeService } from '../recharge.service';
 import {FormGroup,FormControl,FormControlName,Validators, AbstractControl} from '@angular/forms'
 import { Recharge } from '../recharge';
 
+
 @Component({
   selector: 'app-rechargeconfirmation',
   templateUrl: './rechargeconfirmation.component.html',
   styleUrls: ['./rechargeconfirmation.component.css']
 })
 export class RechargeconfirmationComponent implements OnInit {
+<
   planId:any;
   rechargeId:number;
   plan: Plan = new Plan();
@@ -65,3 +68,4 @@ export class RechargeconfirmationComponent implements OnInit {
     });
   }*/
 }
+

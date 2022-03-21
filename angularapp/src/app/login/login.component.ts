@@ -58,13 +58,15 @@ export class LoginComponent implements OnInit {
     this._service.LoginUserFromRemote(this.user).subscribe(
       data =>{
         console.log("response received");
-       /* if((this.user.user_role.match(null)===null)){
-          
+
+        if((this.user.user_role.match(null)===null)){
+          this._router.navigate(['/popularplans'])
         }
         else{
           this._router.navigate(['/admin/dashboard'])
-        }*/
-        this._router.navigate(['/popularplans'])
+        }
+      
+
         },
       error =>{
         console.log("exception occured");
