@@ -17,8 +17,7 @@ import com.examly.springapp.model.UserModel;
  @Query("select u.user_role  from UserModel u where u.emailId= emailId")
  public UserModel findByUser_role(@Param("user_role") String user_role);
  public UserModel findUserByEmailId(String EmailId);
- //public UserModel findByUser_role(String user_role);
- //public UserModel findByUserId(Long Id);
+
 
  
 }
