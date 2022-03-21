@@ -3,6 +3,7 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
 import {Router} from '@angular/router';
 import { UserService } from '../user.service';
 import { User } from '../user';
+import { AuthService } from '../auth.service';
 
 
 
@@ -15,7 +16,7 @@ import { User } from '../user';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private _service : UserService ,private _router :Router) { }
+  constructor(private _service : AuthService ,private _router :Router,private _service1:UserService) { }
  msg='';
   
   // getting the form control elements
@@ -55,15 +56,16 @@ export class LoginComponent implements OnInit {
   };*/
   user=new User();
   loginUser(){
-    this._service.LoginUserFromRemote(this.user).subscribe(
+    this._service.generateToken(this.user).subscribe(
       data =>{
         console.log("response received");
-        if(this._service.authentication(this.user) === null){
+        if(this._service.isLoggedIn())
+        //if(this._service.authentication(this.user) === null){
           this._router.navigate(['/popularplans'])
-        }
-        else{
+        
+       /* else{
           this._router.navigate(['/admin/dashboard'])
-        }
+        }*/
       
         },
       error =>{

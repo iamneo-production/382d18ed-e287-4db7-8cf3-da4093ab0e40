@@ -56,10 +56,16 @@ public class UserModelService {
         return UserModelRepository.findByEmailIdAndPassword(EmailId,password);
 
     }
-    public UserModel fetchByUserRole(String user_role){
+
+    public UserModel fetchByEmailIdAndUserRole(String emailId,String user_role){
+        return UserModelRepository.findByEmailIdAndUser_role(emailId,user_role);
+    }
+
+
+    /*public UserModel fetchByUserRole(String user_role){
         return UserModelRepository.findByUser_role(user_role);
 
-    }
+    }*/
     
 
     /*public String fetchUserRole(Long id){
