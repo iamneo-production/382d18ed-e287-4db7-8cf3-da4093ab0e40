@@ -16,10 +16,6 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
 import { RouterModule, Routes } from '@angular/router';
-<<<<<<< HEAD
-//import { AddonComponent } from './addon/addon.component';
-import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
-=======
 import { AddonComponent } from './addon/addon.component';
 
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
@@ -27,7 +23,6 @@ import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeco
 import { UpdateAddonComponent } from './update-addon/update-addon.component';
 
 
->>>>>>> d2306c9a2fd2129eb9bbd6f3422514ffdec56d05
 const routes: Routes = [
   { path: '', redirectTo: '/Popularplans', pathMatch: 'full' },
   
@@ -51,13 +46,6 @@ const routes: Routes = [
     PostpaidplansComponent,
     UpdatePlanComponent,
     PrepaidplansComponent,
-<<<<<<< HEAD
-
-    RechargeconfirmationComponent,
-
-    PrepaidplansComponent,
-    RechargeconfirmationComponent
-=======
     AddonComponent,
 
     RechargeconfirmationComponent,
@@ -68,7 +56,6 @@ const routes: Routes = [
 
     UpdateAddonComponent
 
->>>>>>> d2306c9a2fd2129eb9bbd6f3422514ffdec56d05
     
   ],
   imports: [
@@ -82,10 +69,6 @@ const routes: Routes = [
 
   ],
   providers: [],
-<<<<<<< HEAD
-  bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent,RechargeconfirmationComponent]
-=======
   bootstrap: [AppComponent,LoginComponent,SignupComponent,AddonsComponent,PopularplansComponent,AddonComponent]
->>>>>>> d2306c9a2fd2129eb9bbd6f3422514ffdec56d05
 })
 export class AppModule { }

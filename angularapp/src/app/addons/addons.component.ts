@@ -14,7 +14,7 @@ export class AddonsComponent implements OnInit {
   addons: Addon[] | undefined;
   constructor(private addonService: AddonService, private router: Router) { }
   private getAddon() {
-    this.addonService.getAddon().subscribe(data => {
+    this.addonService.getAddons().subscribe(data => {
      this.addons = data;
      console.log(data);
    });

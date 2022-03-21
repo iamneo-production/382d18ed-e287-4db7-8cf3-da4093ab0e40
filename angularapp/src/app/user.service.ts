@@ -18,9 +18,6 @@ export class UserService {
     return this.httpClient.post<any>("https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/login",user);
   }
 
-  public authentication(user:User): Observable<any>{
-    return this.httpClient.get<any>("https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/userrole");
-  }
 
   public authentication(user:User): Observable<any>{
     return this.httpClient.get<any>("https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/userrole");
