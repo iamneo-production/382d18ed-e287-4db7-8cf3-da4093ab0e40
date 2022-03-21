@@ -12,8 +12,6 @@ import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component'
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
 import { AddonComponent } from './addon/addon.component';
 
-import { AddonComponent } from './addon/addon.component';
-
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
 
 
@@ -29,9 +27,10 @@ const routes: Routes = [
   {path: 'admin/dashboard', component:AdminDashboardComponent},
   {path: 'admin/postpaidplans', component:PostpaidplansComponent},
   {path: 'admin/update-plan/:planId', component:UpdatePlanComponent},
-   {path: 'admin/addon', component:AddonComponent}
+   {path: 'admin/addon', component:AddonsComponent},
 
-  {path: 'rechargeconfirmation', component:RechargeconfirmationComponent}
+  {path: 'rechargeconfirmation', component:RechargeconfirmationComponent},
+  {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent}
 
 ];
 

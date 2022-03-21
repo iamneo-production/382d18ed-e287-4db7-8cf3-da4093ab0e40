@@ -19,14 +19,21 @@
         <br>
         <br>
         <br>
-        <div class="plan-details">
-            <p>Your are recharging for number +9119876543210</p>
-        </div>
         <div class="container">
-            <p>Do you want to add Add-ons.?</p>
-            <a href="/addons"><button class="editRecharge">Edit Recharge</button></a>
-            <a href="/popularplans"><button class="deteleRecharge">Delete Recharge</button></a>
-            <a href="/"><button class="confirmRecharge">Confirm Recharge</button></a>
+            <!--<div class="popularplansGrid" *ngFor="let recharge of recharge [value]="recharge.planId" >-->
+                <input type="text" class="username" placeholder="Enter your Name" [(ngModel)]="recharge.name" name="username">
+                <input type="mobilenumber" class="mobilenumber" placeholder="Enter your Mobile Number">
+                <input type="emailId" class="emailId" placeholder="Enter your Email">
+                <h1 class="heading">{{recharge.planName}}</h1>
+                <h2 class="service__price">Rs.{{recharge.planPrice}}</h2>
+                <ul class="features__list">
+                    <li>recharge Type:{{recharge.planType}}</li>
+                    <li>Validity:{{recharge.planValidity}}</li>
+                    <li>Details:{{recharge.planDetails}}</li>
+                </ul> 
+        </div>
+        <div class="buttons">
+            <a><button class="confirmRecharge">Recharge</button></a>
         </div>
     </body>
 </html>
