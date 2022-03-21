@@ -59,7 +59,6 @@ body {
 .header .navbar a:hover{
     color:blue;
 }
-
 .container {
     -webkit-display: flex;
     -moz-display: flex;
@@ -190,7 +189,7 @@ body {
     line-height: 30px;
 }
 
-a .recharge__button {
+a .confirmRecharge {
     border: none;
     display: block;
     width: 130px;
@@ -209,7 +208,7 @@ a .recharge__button {
     
 }
 
-a .recharge__button:hover {
+a .confirmRecharge:hover {
     width:140px;
     cursor: pointer;
 }

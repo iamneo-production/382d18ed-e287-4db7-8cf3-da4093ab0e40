@@ -23,31 +23,30 @@ import com.examly.springapp.repository.RechargeRepository;
 @RequestMapping("/admin")
 class RechargeController{   
     @Autowired
-    private RechargeRepository prepo;
+    private RechargeRepository rerepo;
 
     @PostMapping("/addRecharge")
     public RechargeModel createRecharge(@RequestBody RechargeModel recharge)
     {
-        return prepo.save(recharge);
+        return rerepo.save(recharge);
     }
 
     @GetMapping("/viewRecharge")
     public List<RechargeModel> viewRecharge(){
-        return prepo.findAll();
+        return rerepo.findAll();
     }
 
     @GetMapping("/viewRecharge/{rechargeId}")
     public ResponseEntity<RechargeModel> getRechargeById(@PathVariable int rechargeId){
-        RechargeModel rm = prepo.findById(rechargeId)
+        RechargeModel rm = rerepo.findById(rechargeId)
 				.orElseThrow(() -> new ResourceNotFoundException("Plan not exist with id :" + rechargeId));
 		return ResponseEntity.ok(rm);
     }
 
     @PutMapping("/editEvent/{rechargeId}")
 	public ResponseEntity<RechargeModel> editEvent(@PathVariable int rechargeId, @RequestBody RechargeModel RechargeDetails){
-		
-		//retrive particular plan from the database using planId
-		RechargeModel rm = prepo.findById(rechargeId)
+
+		RechargeModel rm = rerepo.findById(rechargeId)
 				.orElseThrow(() -> new ResourceNotFoundException("Recharge not exist with id :" + rechargeId));
 		
 		rm.setname(RechargeDetails.getname());
@@ -59,17 +58,17 @@ class RechargeController{
 		rm.setrechargePlan(RechargeDetails.getrechargePlan());
 		
 		
-		RechargeModel updatedRecharge = prepo.save(rm);
+		RechargeModel updatedRecharge = rerepo.save(rm);
 		return ResponseEntity.ok(updatedRecharge);
 		
 	}
 	@DeleteMapping("/deleteRecharge/{rechargeId}")
 	public ResponseEntity<Map<String, Boolean>> deleteRecharge(@PathVariable int rechargeId){
 		//retrive particular plan from the database using planId
-		RechargeModel rm = prepo.findById(rechargeId)
+		RechargeModel rm = rerepo.findById(rechargeId)
 				.orElseThrow(() -> new ResourceNotFoundException("Recharge not exist with id :" + rechargeId));
 		
-		prepo.delete(rm);
+		rerepo.delete(rm);
 		Map<String, Boolean> response = new HashMap<>();
 		response.put("deleted", Boolean.TRUE);
 		return ResponseEntity.ok(response);
