@@ -6,12 +6,15 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class UserService {
+  isValid() {
+      throw new Error('Method not implemented.');
+  }
   updateUser: any;
   getUserbyid: any;
   getUserById(id: number) {
     throw new Error('Method not implemented.');
   }
-  private baseURL = "https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/api/v1/Users";
+  private baseURL = "https://8080-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io/api/v1/Users";
   constructor(private httpClient:HttpClient) { }
 
   public LoginUserFromRemote(user:User): Observable<any>{

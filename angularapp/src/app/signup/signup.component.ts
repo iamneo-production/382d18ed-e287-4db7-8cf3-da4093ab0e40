@@ -68,6 +68,10 @@ export class SignupComponent implements OnInit {
 	  return this.signupform.get('confirmpassword');
   }
 
+  get user_role(){
+    return this.signupform.get('user_role');
+  }
+
   onSubmit(){
 	  console.log(this.user);
     this.saveUser();
