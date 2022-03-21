@@ -16,7 +16,7 @@ import { Recharge } from '../recharge';
   styleUrls: ['./rechargeconfirmation.component.css']
 })
 export class RechargeconfirmationComponent implements OnInit {
-<
+
   planId:any;
   rechargeId:number;
   plan: Plan = new Plan();
