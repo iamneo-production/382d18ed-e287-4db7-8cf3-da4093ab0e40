@@ -22,5 +22,10 @@ export class PopularplansComponent implements OnInit {
   ngOnInit(): void {
     this.getPlan();
   }
-
+  onSubmit(){
+    console.log(this.plan);
+  }
+  rechargeconfirmation(planId:number){
+    this.router.navigate(['rechargeconfirmation',planId]);
+  }
 }

@@ -18,7 +18,7 @@ import com.examly.springapp.repository.PlanRepository;
 import com.examly.springapp.repository.UserModelRepository;
 import com.examly.springapp.model.RechargeModel;
 import com.examly.springapp.repository.RechargeRepository;
-@CrossOrigin(origins="https://8081-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/")
+@CrossOrigin(origins="https://8081-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io")
 @RestController
 @RequestMapping("/admin")
 class RechargeController{   
