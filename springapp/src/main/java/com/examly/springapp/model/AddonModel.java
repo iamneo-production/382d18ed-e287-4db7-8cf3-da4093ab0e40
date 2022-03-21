@@ -12,7 +12,9 @@ import javax.persistence.Table;
 public class AddonModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private int id;
+
 
 	@Column(name = "AddonId")
 	private int AddonId;

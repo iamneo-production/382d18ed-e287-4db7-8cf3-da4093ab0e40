@@ -16,6 +16,9 @@ import { UpdateAddonComponent } from './update-addon/update-addon.component';
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
 
 
+import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
+
+
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'}, /** If the path is empty, it will redirect to login page */
   {path: 'login', component:LoginComponent},
@@ -28,9 +31,13 @@ const routes: Routes = [
   {path: 'admin/dashboard', component:AdminDashboardComponent},
   {path: 'admin/postpaidplans', component:PostpaidplansComponent},
   {path: 'admin/update-plan/:planId', component:UpdatePlanComponent},
+
    {path: 'admin/addon', component:AddonComponent},
    {path: 'admin/update-addon/:id', component:UpdateAddonComponent},
   {path: 'rechargeconfirmation', component:RechargeconfirmationComponent}
+
+  {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent}
+
 
 ];
 

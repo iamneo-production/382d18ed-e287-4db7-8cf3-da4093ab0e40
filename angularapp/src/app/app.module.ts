@@ -19,7 +19,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddonComponent } from './addon/addon.component';
 
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
+
 import { UpdateAddonComponent } from './update-addon/update-addon.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/Popularplans', pathMatch: 'full' },
@@ -45,6 +47,7 @@ const routes: Routes = [
     UpdatePlanComponent,
     PrepaidplansComponent,
     AddonComponent,
+
     RechargeconfirmationComponent,
 
     PrepaidplansComponent,

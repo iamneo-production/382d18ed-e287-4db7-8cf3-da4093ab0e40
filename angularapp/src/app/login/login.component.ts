@@ -58,6 +58,7 @@ export class LoginComponent implements OnInit {
     this._service.LoginUserFromRemote(this.user).subscribe(
       data =>{
         console.log("response received");
+
         if((this.user.user_role.match(null)===null)){
           this._router.navigate(['/popularplans'])
         }
@@ -65,6 +66,7 @@ export class LoginComponent implements OnInit {
           this._router.navigate(['/admin/dashboard'])
         }
       
+
         },
       error =>{
         console.log("exception occured");
