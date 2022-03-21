@@ -19,11 +19,21 @@
         <br>
         <br>
         <br>
+        <!--<div class="User-Input">
+            <input type="text" class="name" placeholder="Name" id="name"> 
+                <br>
+                <input type="mobile" class="MobileNumber" placeholder="Mobile Number" id="MobileNumber">
+                <br>
+                <input type="email" class="email" placeholder="Email">
+                <br>
+                <button onclick="User-data">Submit</button>
+
+        </div>-->
         <div class="container">
             <!--<div class="popularplansGrid" *ngFor="let recharge of recharge [value]="recharge.planId" >-->
-                <input type="text" class="name" placeholder="Enter your Name">
-                <input type="mobile" class="MobileNumber" placeholder="Enter your Mobile Number">
-                <input type="email" class="email" placeholder="Enter your Email">
+                <p id=uname></p>
+                <p id="umobile"></p>
+                <p id="uemail"></p>
                 <h1 class="heading">{{recharge.planName}}</h1>
                 <h2 class="service__price">Rs.{{recharge.planPrice}}</h2>
                 <ul class="features__list">
