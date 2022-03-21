@@ -11,7 +11,7 @@ import { AddonService } from '../addon.service';
 export class UpdateAddonComponent implements OnInit {
 
   
-  AddonId: any;
+  id: number;
   addon: Addon = new Addon();
 
   constructor(private addonService:  AddonService,
@@ -19,15 +19,18 @@ export class UpdateAddonComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.AddonId = this.route.snapshot.params['AddonId'];
-    this.addonService.getAddonById(this.AddonId).subscribe(data => {
+    this.id = this.route.snapshot.params['id'];
+    this.addonService.getAddonById(this.id).subscribe(data => {
       console.log(data);
       this.addon = data;
+      console.log("working");
     }, error => console.log(error));
   }
 
   onSubmit(){
-    this.addonService.updateAddon(this.AddonId, this.addon).subscribe( data =>{
+    
+    this.addonService.updateAddon(this.id, this.addon).subscribe( data =>{
+  
       this.goToAddonList();
     }
     , error => console.log(error));

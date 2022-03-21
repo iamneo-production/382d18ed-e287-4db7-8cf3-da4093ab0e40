@@ -12,7 +12,8 @@ import javax.persistence.Table;
 public class AddonModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private int id;
+
 	@Column(name = "AddonId")
 	private int AddonId;
 
@@ -36,6 +37,12 @@ public class AddonModel {
 		this.AddonPrice = AddonPrice;
 		this.AddonDetails = AddonDetails;
 		
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	public int getAddonId() {

@@ -1,11 +1,10 @@
 <div class="addon_update" id="addon_update">
     <h3>Welcome Admin! Enter details to Update ADDONS</h3>
     <form (ngSubmit) = "onSubmit()">
-
-        <div><label>AddonId</label>&nbsp;<input [(ngModel)] = "addon.AddonId" name="AddonId" type="text"></div>
-        <div><label>AddonName</label>&nbsp;<input [(ngModel)] = "addon.AddonName" name="AddonName" type="text"></div>
-        <div><label>AddonPrice</label>&nbsp;<input [(ngModel)] = "addon.AddonPrice" name="AddonPrice" type="text"></div>
-        <div><label>AddonDetails</label>&nbsp;<input [(ngModel)] = "addon.AddonDetails" name="AddonDetails" type="text"></div>
+        <div><label>AddonId</label>&nbsp;<input [(ngModel)] = "addon.addonId" name="AddonId" type="number"></div>
+        <div><label>AddonName</label>&nbsp;<input [(ngModel)] = "addon.addonName" name="AddonName" type="text"></div>
+        <div><label>AddonDetails</label>&nbsp;<input [(ngModel)] = "addon.addonDetails" name="AddonDetails" type="text"></div>
+        <div><label>AddonPrice</label>&nbsp;<input [(ngModel)] = "addon.addonPrice" name="AddonPrice" type="number"></div>
         <br><br>
         <button type="submit" class="btn btn-success">Update</button>
     </form>

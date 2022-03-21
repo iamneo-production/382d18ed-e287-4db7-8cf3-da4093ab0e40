@@ -29,7 +29,7 @@ const routes: Routes = [
   {path: 'admin/postpaidplans', component:PostpaidplansComponent},
   {path: 'admin/update-plan/:planId', component:UpdatePlanComponent},
    {path: 'admin/addon', component:AddonComponent},
-   {path: 'admin/update-addon/:AddonId', component:UpdateAddonComponent},
+   {path: 'admin/update-addon/:id', component:UpdateAddonComponent},
   {path: 'rechargeconfirmation', component:RechargeconfirmationComponent}
 
 ];

@@ -12,27 +12,28 @@
                 <li><a href="admin/dashboard">AirNet</a></li>
                 <li><a id="adminPrepaid" href="admin/prepaidplans">Prepaid plans</a></li>
                 <li><a id="adminPostpaid" href="admin/postpaidplans">Postpaid plans</a></li>
-                <li><a id="adminAddOns" href="admin/addon">AddOns</a></li>
+                <li><a id="adminAddOn" href="admin/addons">AddOns</a></li>
                 <li style="float:right"><button (click)="logout()">Logout</button></li>
             </ul>
         </nav>
     
-        <h1>ADDON PLANS</h1>
+        <h1>addon PLANS</h1>
     
         <div class="top">
             <button id="addAddon" (click)="addAddon()">Add Addon</button> &nbsp;
-            <input type="search" placeholder="Type here tosearch addonplan" size="25"> &nbsp;
-            <button id="searchPlan">Search</button>
+            <input type="search" placeholder="Type here to search Addons" size="25"> &nbsp;
+            <button id="searchAddon">Search</button>
         </div>
     
-        <div class="Addon_input" id="Addon_input">
-            <h3>Welcome Admin! Enter details to add a Addon plan</h3>
+        <div class="Addon_inputt" id="Addon_inputt">
+            <h3>Welcome Admin! Enter details to add a Postpaid Addon</h3>
             <form (ngSubmit) = "onSubmit()">
 
-                <div><input [(ngModel)] = "addon.AddonId" name="AddonId" type="text" placeholder="Enter Addon "></div>
-                <div><input [(ngModel)] = "addon.AddonName" name="AddonName" type="text" placeholder="Enter Addon name"></div>
-                <div><input [(ngModel)] = "addon.AddonPrice" name="AddonPrice" type="text" placeholder="Enter the price"></div>
-                <div><input [(ngModel)] = "addon.AddonDetails" name="AddonDetails" type="text" placeholder="Enter Addon description"></div>
+                <div><input [(ngModel)] = "Addon.addonId" name="AddonId" type="text" placeholder="Enter Addon ID"></div>
+                <div><input [(ngModel)] = "Addon.addonName" name="AddonName" type="text" placeholder="Enter Addon name"></div>
+                
+                <div><input [(ngModel)] = "Addon.addonDetails" name="AddonDetails" type="text" placeholder="Enter Addon description"></div>
+                <div><input [(ngModel)] = "Addon.addonPrice" name="AddonPrice" type="text" placeholder="Enter the price"></div>
                 <br><br>
                 <button type="submit" class="btn btn-success">Add Addon</button>
             </form>
@@ -41,27 +42,32 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th> ID</th>
                     <th> Addon Id </th>
+                   
                     <th> Addon Name</th>
-                    <th> Addon Price </th>
+                   
                     <th> Addon Details </th>
-                    <th> Actions </th>
-                    
+                    <th> Addon Price </th>
+              
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor = "let addon of addons">
-                    <td> {{ addon.AddonId }} </td>
-                    <td> {{ addon.AddonName }} </td>
-                    <td> {{ addon.AddonPrice }} </td>
-                    <td> {{ addon.AddonDetails }} </td>
-                    <td>
-                        <button (click)="updateAddons(addon.AddonId)" class="btn btn-info" style="margin-left: 10px">Update</button>
-                        <button (click)="deleteEmployee(addon.AddonId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
-                    </td>
+                <tr *ngFor = "let Addon of Addons">
+                    <td> {{ Addon.id }} </td>
+                    <td> {{ Addon.addonId }} </td>
                     
+                    <td> {{ Addon.addonName }} </td>
+                
+                    <td> {{ Addon.addonDetails }} </td>
+                    <td> {{ Addon.addonPrice}} </td>
+                    <td>
+                        <button (click)="updateAddons(Addon.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                        <button (click)="deleteEmployee(Addon.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
 </body>
 </html>
+

@@ -30,8 +30,8 @@ export class AddonService {
     return this.httpClient.put(`${this.baseUrl3}/${id}`, Addon);
   }
 
-  deleteAddon(AddonId:number): Observable<Object>{
-    return this.httpClient.delete(`${this.baseUrl2}/${AddonId}`);
+  deleteAddon(id:number): Observable<Object>{
+    return this.httpClient.delete(`${this.baseUrl2}/${id}`);
   }
 
 }
