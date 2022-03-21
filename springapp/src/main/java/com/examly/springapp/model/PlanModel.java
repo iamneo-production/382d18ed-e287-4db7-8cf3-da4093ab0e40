@@ -10,6 +10,7 @@ import javax.persistence.Table;
 public class PlanModel {
 
 		@Id
+		@Column(name="planId")
 		private int planId;
 		@Column(name="planType")
 		private String planType;

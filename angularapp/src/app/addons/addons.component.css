@@ -59,7 +59,11 @@ body {
 .header .navbar a:hover{
     color:blue;
 }
-
+#active{
+    color: #9708CC;
+    font-size: 30px;
+    font-style: italic;
+}
 .container {
     -webkit-display: flex;
     -moz-display: flex;

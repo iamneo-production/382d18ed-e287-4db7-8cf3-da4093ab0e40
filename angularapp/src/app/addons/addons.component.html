@@ -9,19 +9,16 @@
         
     </head>
     <body>
-        <header>
-            <p class="logo">Airnet</p>
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="https://8081-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io/popularplans" id="userPlans" >Popular plans</a></li>
-
-                    <li><a href="https://8081-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io/addons" id="userAdOns" class="currentPage">Add ons</a></li>
-                    <li><a href="#" id="notification">Notifications</a></li>
-                </ul>
-            </nav> 
-            <a class="logout" href="https://8081-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io/login"><button>Logout</button></a>
-
-        </header>  
+        <header class="header">
+            <a href="#" class="logo">AirNet </a>
+        
+            <nav class="navbar">
+                <a href="/popularplans" class="userPlans" id="userPlans">Popular Plans</a>
+                <a href="/addons" class="userAddons" id="active">Addons</a>
+                <a href="#" class="notifications">Notifications</a>
+                <a href="/login" class="login">Logout</a>
+            </nav>
+        </header>   
         <br>
         <br>
         <br>
@@ -31,12 +28,10 @@
             <h1 class="heading">{{addon.addonName}}</h1>
             <h2 class="service__price">Rs.{{addon.addonPrice}}</h2>
             <ul class="features__list">
-                <li>addon Type:{{addon.addonType}}</li>
-                <li>Validity:{{addon.addonValidity}}</li>
                 <li>Details:{{addon.addonDetails}}</li>
             </ul>
             <h4><a><button class="recharge__button" (ngSubmit)="OnSubmit()" (click)="rechargeconfirmation(addon.addonId)">Recharge</button></a></h4>
         </div>   
-    </div>z
+    </div>
     </body>
 </html>
