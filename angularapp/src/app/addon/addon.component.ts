@@ -2,14 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Addon } from '../addon';
 import { AddonService } from '../addon.service';
-<<<<<<< HEAD
-=======
-import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-
->>>>>>> f01b0a6640f1d4d98910ed973a46659431672f20
 @Component({
   selector: 'app-addon',
   templateUrl: './addon.component.html',
@@ -18,13 +10,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class AddonComponent implements OnInit {
 
   x:any;
-  addon: Addon = new Addon();
-  addons: Addon[] | undefined;
-  constructor(private addonService: AddonService, 
+  Addon: Addon = new Addon();
+  Addons: Addon[] | undefined;
+  constructor(private AddonService: AddonService, 
     private router: Router) { }
 
   addAddon() {
-    this.x = document.getElementById("addon_inputt");
+    this.x = document.getElementById("Addon_inputt");
     if (this.x.style.display === "none") {
         this.x.style.display = "block";
     } else {
@@ -33,33 +25,31 @@ export class AddonComponent implements OnInit {
 }
 
 private getAddon() {
-<<<<<<< HEAD
-  this.addonService.viewAddon().subscribe(data => {
-=======
-  this.addonService.getAddon().subscribe(data => {
->>>>>>> f01b0a6640f1d4d98910ed973a46659431672f20
-    this.addons = data;
+
+  this.AddonService.getAddons().subscribe(data => {
+    this.Addons = data;
+
     console.log(data);
   });
 }
 
 saveAddon(){
-  this.addonService.createAddon(this.addon).subscribe(data=>{
+  this.AddonService.createAddon(this.Addon).subscribe(data=>{
     this.getAddon();
   },
   error => console.log(error)
   );
 }
 
-deleteEmployee(AddonId: number){
-  this.addonService.deleteAddon(AddonId).subscribe(data=>{
+updateAddons(id: number){
+  this.router.navigate(['admin/update-addon', id]);
+}
+
+deleteEmployee(id: number){
+  this.AddonService.deleteAddon(id).subscribe(data=>{
     console.log(data);
     this.getAddon();
   })
-}
-
-updatePlans(AddonId: number){
-  this.router.navigate(['admin/update-addon', AddonId]);
 }
 
 onSubmit(){
@@ -68,15 +58,15 @@ onSubmit(){
 
 logout(){
   sessionStorage.clear();
-  this.router.navigate(['/login']);
+  this.router.navigate(['user/login']);
 }
 
 
+
   ngOnInit(): void {
-<<<<<<< HEAD
-    this.saveAddon();
-=======
->>>>>>> f01b0a6640f1d4d98910ed973a46659431672f20
+
+    this.getAddon();
+
   }
 
 }
