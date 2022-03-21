@@ -13,12 +13,23 @@ import com.examly.springapp.model.UserModel;
     
 
  public UserModel findByEmailIdAndPassword(String email,String password);
- @Async
+ /*@Async
  @Query("select u.user_role  from UserModel u where u.emailId= emailId")
  public UserModel findByUser_role(@Param("user_role") String user_role);
+
+*/
+
  public UserModel findUserByEmailId(String EmailId);
+
  //public UserModel findByUser_role(String user_role);
  //public UserModel findByUserId(Long Id);
-
+ /*@Async
+ @Query("select u.user_role from UserModel u where u.emailId= emailId")
+ public UserModel findByUser_role(@Param("user_role") String user_role);*/
+ //public UserModel findByMobileNumber(@Param("mobileNumber") String mobileNumber);
+ @Async
+ @Query("select u.user_role,u.emailId from UserModel u where u.emailId= emailId")
+ public UserModel findByEmailIdAndUser_role(@Param("user_role") String user_role,@Param("emailId") String email);
+//public UserModel findUserByEmailIdandUser_role(String email, String user_role);
  
 }
