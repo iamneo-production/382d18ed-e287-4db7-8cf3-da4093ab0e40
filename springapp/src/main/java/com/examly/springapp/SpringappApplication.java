@@ -12,7 +12,13 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.context.annotation.Bean;
 
 
+@Configuration
+@ComponentScan
+@EnableAutoConfiguration@SpringBootApplication
+
+
 @SpringBootApplication
+
 public class SpringappApplication {
 
 
