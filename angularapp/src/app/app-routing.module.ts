@@ -26,7 +26,6 @@ const routes: Routes = [
   {path: 'admin/postpaidplans', component:PostpaidplansComponent},
   {path: 'admin/update-plan/:planId', component:UpdatePlanComponent}
 
-  
 ];
 
 @NgModule({

@@ -7,10 +7,10 @@ import { Recharge } from './recharge';
 })
 export class RechargeService {
 
-  private baseURL = "https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/addRecharge";
-  private baseUrl1 = "https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/viewRecharge";
-  private baseUrl2 = "https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/deleteRecharge";
-  private baseUrl3 = "https://8080-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/editRecharge";
+  private baseURL = "https://8080-faaabdcbeaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/addRecharge";
+  private baseUrl1 = "https://8080-faaabdcbeaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/viewRecharge";
+  private baseUrl2 = "https://8080-faaabdcbeaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/deleteRecharge";
+  private baseUrl3 = "https://8080-faaabdcbeaddebfdaffdacedbbebcbf.examlyiopb.examly.io/admin/editRecharge";
   constructor(private httpClient: HttpClient) { }
   createRecharge(Recharge: Recharge): Observable<Object>{
     return this.httpClient.post(this.baseURL, Recharge);

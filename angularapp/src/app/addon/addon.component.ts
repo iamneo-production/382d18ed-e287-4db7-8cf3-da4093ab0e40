@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Addon } from '../addon';
 import { AddonService } from '../addon.service';
+<<<<<<< HEAD
+=======
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
+>>>>>>> f01b0a6640f1d4d98910ed973a46659431672f20
 @Component({
   selector: 'app-addon',
   templateUrl: './addon.component.html',
@@ -30,7 +33,11 @@ export class AddonComponent implements OnInit {
 }
 
 private getAddon() {
+<<<<<<< HEAD
+  this.addonService.viewAddon().subscribe(data => {
+=======
   this.addonService.getAddon().subscribe(data => {
+>>>>>>> f01b0a6640f1d4d98910ed973a46659431672f20
     this.addons = data;
     console.log(data);
   });
@@ -66,6 +73,10 @@ logout(){
 
 
   ngOnInit(): void {
+<<<<<<< HEAD
+    this.saveAddon();
+=======
+>>>>>>> f01b0a6640f1d4d98910ed973a46659431672f20
   }
 
 }

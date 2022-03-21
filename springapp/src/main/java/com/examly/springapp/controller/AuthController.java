@@ -23,7 +23,7 @@ public class AuthController  {
 	
 	@Autowired
 	private UserModelService service;
-	@CrossOrigin(origins="https://8081-cefcccadbaddebfdaffdacedbbebcbf.examlyiopb.examly.io/")
+	@CrossOrigin(origins="https://8081-faaabdcbeaddebfdaffdacedbbebcbf.examlyiopb.examly.io")
 	@PostMapping("/login")
 	public UserModel loginUser (@RequestBody UserModel user) throws Exception {
 
@@ -44,7 +44,25 @@ public class AuthController  {
 		
 		return userobj;
 		
+	}
+
+		@GetMapping("/userrole")
+		public boolean authentication (@RequestBody UserModel user) throws Exception {
+
+			String tempUserRole = user.getuser_role();
+			Long id=user.getId();
+			//String tempUserRole = service.fetchUserRole();
+			//Long id=user.getId();
+			if (tempUserRole == null  ) 
+			{ 
+				return false;
+			
+			}
+			
+			return true;
+			
 		}
+	}
+
 	
 
-}
