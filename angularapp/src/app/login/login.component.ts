@@ -55,18 +55,21 @@ export class LoginComponent implements OnInit {
     
   };*/
   user=new User();
+
   loginUser(){
     this._service.generateToken(this.user).subscribe(
       data =>{
         console.log("response received");
         if(this._service.isLoggedIn())
         //if(this._service.authentication(this.user) === null){
+
           this._router.navigate(['/popularplans'])
         
        /* else{
           this._router.navigate(['/admin/dashboard'])
         }*/
       
+
         },
       error =>{
         console.log("exception occured");
@@ -74,6 +77,10 @@ export class LoginComponent implements OnInit {
       }
       )
 
+  }
+  onSubmit(){
+	  console.log(this.user);
+    this.loginUser();
   }
 
 }

@@ -3,7 +3,7 @@ package com.examly.springapp.controller;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import java.io.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -21,7 +21,7 @@ import com.examly.springapp.exception.ResourceNotFoundException;
 import com.examly.springapp.model.UserModel;
 import com.examly.springapp.repository.UserModelRepository;
 
-@CrossOrigin(origins = "https://8081-faecbadeddebfdaffdacedbbebcbf.examlyiopb.examly.io")
+@CrossOrigin(origins = "https://8081-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io")
 @RestController
 @RequestMapping("/api/v1/")
 public class UserModelController {

@@ -1,9 +1,9 @@
 export class Addon {
-
-    AddonId: number;
-    AddonName: string | undefined;
-    AddonPrice: number;
-    AddonDetails: string | undefined;
+    id : number;
+    addonId!: number;
+    addonName: string  ;
+    addonPrice: number;
+    addonDetails: string ;
     
 
 }
