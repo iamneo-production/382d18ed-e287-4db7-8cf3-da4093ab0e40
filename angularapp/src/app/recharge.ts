@@ -1,5 +1,5 @@
 export class Recharge {
-
+    id : number;
     rechargeId : number;
     rechargetype: string ;
     name: string ;
