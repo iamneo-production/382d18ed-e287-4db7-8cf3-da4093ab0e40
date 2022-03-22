@@ -20,6 +20,7 @@ import { AddonComponent } from './addon/addon.component';
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
 
 import { UpdateAddonComponent } from './update-addon/update-addon.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 
 const routes: Routes = [
@@ -49,7 +50,8 @@ const routes: Routes = [
     RechargeconfirmationComponent,
     PrepaidplansComponent,
     AddonComponent,
-    UpdateAddonComponent
+    UpdateAddonComponent,
+    NotificationsComponent
     
   ],
   imports: [

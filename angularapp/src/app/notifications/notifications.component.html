@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+
+<html lang="en">
+    <head></head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">AirNet </a>
+        
+            <nav class="navbar">
+                <a href="/popularplans" class="userPlans">Popular Plans</a>
+                <a href="/addons" class="userAddons">Addons</a>
+                <a href="/notifications" class="notifications" id="active">Notifications</a>
+                <a href="/login" class="login">Logout</a>
+            </nav>
+        </header> 
+        <div class="container">
+            <div class="recharge-notify" id="notificationBody" *ngFor = "let recharge of recharges">
+                <h1>Congratulations!!! {{recharge.name}}</h1>
+                <h2>You have Recharged successfully for {{recharge.mobile}} </h2>
+            </div>
+
+        </div>
+    </body>
+</html>

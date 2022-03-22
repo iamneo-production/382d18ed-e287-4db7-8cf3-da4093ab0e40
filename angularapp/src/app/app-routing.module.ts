@@ -10,6 +10,7 @@ import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 //import { AuthGuard } from './auth.guard';
 
@@ -36,7 +37,8 @@ const routes: Routes = [
    {path: 'admin/addon', component:AddonComponent},
    {path: 'admin/update-addon/:id', component:UpdateAddonComponent},
   {path: 'rechargeconfirmation', component:RechargeconfirmationComponent},
-  {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent}
+  {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent},
+  {path:'notifications', component:NotificationsComponent}
 
 ];
 
