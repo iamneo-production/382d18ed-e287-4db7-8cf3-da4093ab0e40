@@ -11,7 +11,9 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
 
-//import { AuthGuard } from './auth.guard';
+
+import { AuthGuard } from './auth.guard';
+
 
 import { AddonComponent } from './addon/addon.component';
 import { UpdateAddonComponent } from './update-addon/update-addon.component';
@@ -21,9 +23,11 @@ import { DisplayrechargeComponent } from './displayrecharge/displayrecharge.comp
 import { EditrechargeComponent } from './editrecharge/editrecharge.component';
 
 
+
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'}, /** If the path is empty, it will redirect to login page */
-  {path: 'login', component:LoginComponent},//,canActivate:[AuthGuard]},
+
+  {path: 'login', component:LoginComponent,canActivate:[AuthGuard]},
   {path: 'signup', component:SignupComponent},
   {path: 'popularplans', component:PopularplansComponent},
   {path: 'addons', component:AddonsComponent},
@@ -36,9 +40,11 @@ const routes: Routes = [
    {path: 'admin/addon', component:AddonComponent},
    {path: 'admin/update-addon/:id', component:UpdateAddonComponent},
   {path: 'rechargeconfirmation', component:RechargeconfirmationComponent},
+
   {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent},
   {path: 'displayrecharge',component:DisplayrechargeComponent},
   {path: 'admin/editrecharge/:id',component:EditrechargeComponent }
+
 
 ];
 

@@ -5,33 +5,106 @@
     
     <head>
         <link rel="stylesheet" href="popularplans.component.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
     </head>
     <body>
-        <header class="header">
-            <a href="#" class="logo">AirNet </a>
-        
-            <nav class="navbar">
-                <a href="/popularplans" class="userPlans" id="active">Popular Plans</a>
-                <a href="/addons" class="userAddons">Addons</a>
-                <a href="#" class="notifications">Notifications</a>
-                <a href="/login" class="login">Logout</a>
-            </nav>
-        </header>   
+
+    <h2>AirNet</h2>
+    <nav> 
+        <ul class="nav_links">   
+            <li><a href="/popularplans" id="userPlans" class="currentPage">Popular plans</a></li>
+            <li><a href="/addons" id="userAdOns">Add ons</a></li>
+            <li><a href="#" id="notification">Notifications</a></li>
+            <li><a id="logout" href="/login">Logout</a></li>
+        </ul>
+        <hr />
+    </nav>   
+
     <br>
     <br>
     <br>
     <div class="container">
-        <div class="popularPlansGrid" *ngFor = "let plan of plans" >  
-            <h1 class="heading">{{plan.planName}}</h1>
-            <h2 class="service__price">Rs.{{plan.planPrice}}</h2>
+
+
+        <div class="popularPlansGrid" *ngFor = "let plan of plans">
+            <div class="icon type-01">
+                <span class="fa fa-paper-plane" aria-hidden="true">
+                </span>
+            </div>
+            <h3 class="heading">{{plan.planType}}</h3>
+            <h1 class="service__price">{{plan.planPrice}}</h1>
+
             <ul class="features__list">
-                <li>Plan Type:{{plan.planType}}</li>
-                <li>Validity:{{plan.planValidity}}</li>
-                <li>Details:{{plan.planDetails}}</li>
+                <li>{{plan.planName}}</li>
+                <li>{{plan.planValidity}}</li>
+                <li>{{plan.planDetails}}</li>
             </ul>
-            <h4><a><button class="recharge__button" (ngSubmit)="OnSubmit()" (click)="rechargeconfirmation(plan.planId)">Recharge</button></a></h4>
+            <button class="recharge__button">Recharge</button>
         </div>   
+        <!--<div class="popularPlansGrid">
+            <div class="icon type-01">
+                <span class="fa fa-paper-plane" aria-hidden="true">
+                </span>
+            </div>
+            <h3 class="heading">Airtel</h3>
+            <h1 class="service__price">Rs.499</h1>
+            <ul class="features__list">
+                <li>3GB/Day</li>
+                <li>Unlimited Calls</li>
+                <li>100 SMS/Day</li>
+                <li>Validity:29 days</li>
+            </ul>
+            <button class="recharge__button">Recharge</button>
+        </div>    
+        <div class="popularPlansGrid">
+            <div class="icon type-01">
+                <span class="fa fa-paper-plane" aria-hidden="true">
+                </span>
+            </div>
+            <h3 class="heading">Jio</h3>
+            <h1 class="service__price">Rs.599</h1>
+            <ul class="features__list">
+                <li>2GB/Day</li>
+                <li>Unlimited Calls</li>
+                <li>100 SMS/Day</li>
+                <li>Validity:56 days</li>
+            </ul>
+            <button class="recharge__button">Recharge</button>
+        </div>
+        <div class="popularPlansGrid">
+            <div class="icon type-01">
+                <span class="fa fa-paper-plane" aria-hidden="true">
+                </span>
+            </div>
+            <h3 class="heading">Vodafone</h3>
+            <h1 class="service__price">Rs.2999</h1>
+            <ul class="features__list">
+                <li>2.5GB/Day</li>
+                <li>Unlimited Calls</li>
+                <li>100 SMS/Day</li>
+                <li>Validity:1 Year</li>
+            </ul>
+            <button class="recharge__button">Recharge</button>
+        </div>
+        <div class="popularPlansGrid">
+            <div class="icon type-01">
+                <span class="fa fa-paper-plane" aria-hidden="true">
+                </span>
+            </div>
+            <h3 class="heading">Vodafone</h3>
+            <h1 class="service__price">Rs.2999</h1>
+            <ul class="features__list">
+                <li>2.5GB/Day</li>
+                <li>Unlimited Calls</li>
+                <li>100 SMS/Day</li>
+                <li>Validity:1 Year</li>
+            </ul>
+            <button class="recharge__button">Recharge</button>
+        </div>-->
     </div>
+
 </body>
+
+
+
 </html>

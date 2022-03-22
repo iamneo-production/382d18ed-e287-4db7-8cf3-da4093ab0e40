@@ -1,4 +1,4 @@
-/*import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
@@ -12,7 +12,7 @@ export class AuthService {
   
 
   public LoginUserFromRemote(user:User): Observable<any>{
-    return this.httpClient.post<any>("https://8080-fcaafabafbacafecddebfdaffdacedbbebcbf.examlyiopb.examly.io/login",user);
+    return this.httpClient.post<any>("https://8080-faecbadeddebfdaffdacedbbebcbf.examlyiopb.examly.io/login",user);
   }
   loginUser(token){
     localStorage.setItem("token",token);
@@ -31,7 +31,7 @@ export class AuthService {
   }
   
 
- setToken(token: string): void {
+ /* setToken(token: string): void {
     localStorage.setItem('token', token);
   }
 
@@ -41,7 +41,7 @@ export class AuthService {
 
   isLoggedIn() {
     return this.getToken() !== null;
-  }
+  }*/
 
   logout() {
     localStorage.removeItem('token');
@@ -55,4 +55,3 @@ export class AuthService {
   }
 
   }
-*/
