@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class RechargeModel {
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private int id;
 
     @Column(name = "rechargeId")
 	private int rechargeId;
@@ -49,6 +49,12 @@ public class RechargeModel {
 		this.rechargePrice = rechargePrice;
 		this.rechargePlan = rechargePlan;
 		
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 
     public int getrechargeId() {

@@ -36,19 +36,19 @@ class RechargeController{
         return prepo.findAll();
     }
 
-    @GetMapping("/viewRecharge/{rechargeId}")
-    public ResponseEntity<RechargeModel> getRechargeById(@PathVariable int rechargeId){
-        RechargeModel rm = prepo.findById(rechargeId)
-				.orElseThrow(() -> new ResourceNotFoundException("Plan not exist with id :" + rechargeId));
+    @GetMapping("/viewRecharge/{id}")
+    public ResponseEntity<RechargeModel> getRechargeById(@PathVariable int id){
+        RechargeModel rm = prepo.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Plan not exist with id :" + id));
 		return ResponseEntity.ok(rm);
     }
 
-    @PutMapping("/editEvent/{rechargeId}")
-	public ResponseEntity<RechargeModel> editEvent(@PathVariable int rechargeId, @RequestBody RechargeModel RechargeDetails){
+    @PutMapping("/editEvent/{id}")
+	public ResponseEntity<RechargeModel> editEvent(@PathVariable int id, @RequestBody RechargeModel RechargeDetails){
 		
 		//retrive particular plan from the database using planId
-		RechargeModel rm = prepo.findById(rechargeId)
-				.orElseThrow(() -> new ResourceNotFoundException("Recharge not exist with id :" + rechargeId));
+		RechargeModel rm = prepo.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Recharge not exist with id :" + id));
 		
 		rm.setname(RechargeDetails.getname());
 		rm.setrechargeId(RechargeDetails.getrechargeId());
@@ -63,11 +63,11 @@ class RechargeController{
 		return ResponseEntity.ok(updatedRecharge);
 		
 	}
-	@DeleteMapping("/deleteRecharge/{rechargeId}")
-	public ResponseEntity<Map<String, Boolean>> deleteRecharge(@PathVariable int rechargeId){
+	@DeleteMapping("/deleteRecharge/{id}")
+	public ResponseEntity<Map<String, Boolean>> deleteRecharge(@PathVariable int id){
 		//retrive particular plan from the database using planId
-		RechargeModel rm = prepo.findById(rechargeId)
-				.orElseThrow(() -> new ResourceNotFoundException("Recharge not exist with id :" + rechargeId));
+		RechargeModel rm = prepo.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Recharge not exist with id :" + id));
 		
 		prepo.delete(rm);
 		Map<String, Boolean> response = new HashMap<>();

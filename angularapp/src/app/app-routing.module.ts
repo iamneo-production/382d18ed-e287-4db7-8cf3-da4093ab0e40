@@ -17,7 +17,8 @@ import { AddonComponent } from './addon/addon.component';
 import { UpdateAddonComponent } from './update-addon/update-addon.component';
 
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
-
+import { DisplayrechargeComponent } from './displayrecharge/displayrecharge.component';
+import { EditrechargeComponent } from './editrecharge/editrecharge.component';
 
 
 const routes: Routes = [
@@ -35,7 +36,9 @@ const routes: Routes = [
    {path: 'admin/addon', component:AddonComponent},
    {path: 'admin/update-addon/:id', component:UpdateAddonComponent},
   {path: 'rechargeconfirmation', component:RechargeconfirmationComponent},
-  {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent}
+  {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent},
+  {path: 'displayrecharge',component:DisplayrechargeComponent},
+  {path: 'admin/editrecharge/:id',component:EditrechargeComponent }
 
 ];
 
