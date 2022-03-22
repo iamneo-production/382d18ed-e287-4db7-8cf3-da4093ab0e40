@@ -6,6 +6,9 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class UserService {
+  isValid() {
+      throw new Error('Method not implemented.');
+  }
   updateUser: any;
   getUserbyid: any;
   getUserById(id: number) {

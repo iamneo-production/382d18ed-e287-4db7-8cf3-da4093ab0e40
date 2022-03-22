@@ -3,6 +3,7 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
 import {Router} from '@angular/router';
 import { UserService } from '../user.service';
 import { User } from '../user';
+//import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { User } from '../user';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private _service : UserService ,private _router :Router) { }
+  constructor(/*private _service : AuthService*/ private _router :Router,private _service1:UserService) { }
  msg='';
   
   // getting the form control elements
@@ -50,15 +51,17 @@ export class LoginComponent implements OnInit {
     
   };*/
   user=new User();
-  private loginUser(){
-    this._service.LoginUserFromRemote(this.user).subscribe(
+
+  loginUser(){
+    /*this._service.generateToken(this.user).subscribe(
       data =>{
         console.log("response received");
+        if(this._service.isLoggedIn())
+        //if(this._service.authentication(this.user) === null){
 
-        if((this.user.user_role.match(null)===null)){
           this._router.navigate(['/popularplans'])
-        }
-        else{
+        
+       /* else{
           this._router.navigate(['/admin/dashboard'])
         }
       
@@ -69,7 +72,7 @@ export class LoginComponent implements OnInit {
         this.msg="Bad Credentials, please enter valid emailId and password";
       }
       )
-
+*/
   }
   onSubmit(){
 	  console.log(this.user);

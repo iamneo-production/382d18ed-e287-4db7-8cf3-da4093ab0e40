@@ -21,26 +21,26 @@
         <br>
         <br>
         <br>
-        <!--<div class="User-Input">
-            <input type="text" class="name" placeholder="Name" id="name"> 
+        <div class="User-Input">
+          
+            <input type="text" [(ngModel)] = "recharge.name" class="name" placeholder="Name" id="name"> 
                 <br>
-                <input type="mobile" class="MobileNumber" placeholder="Mobile Number" id="MobileNumber">
+                <input type="mobile" [(ngModel)] = "recharge.mobile" class="MobileNumber" placeholder="Mobile Number" id="mobile">
                 <br>
-                <input type="email" class="email" placeholder="Email">
+                <input type="email" [(ngModel)] = "recharge.email" class="email" placeholder="Email" id="email">
                 <br>
-                <button onclick="User-data">Submit</button>
-
-        </div>-->
+            
+        </div>
         <div class="container">
             <div class="popularplansGrid">
-                <h1 class="heading">{{recharge.planName}}</h1>
-                <h2 class="service__price">Rs.{{recharge.planPrice}}</h2>
+                <h1 class="heading">{{plan.planName}}</h1>
+                <h2 class="service__price">Rs.{{plan.planPrice}}</h2>
                 <ul class="features__list">
-                    <li>recharge Type:{{recharge.planType}}</li>
-                    <li>Validity:{{recharge.planValidity}}</li>
-                    <li>Details:{{recharge.planDetails}}</li>
+                    <li>plan Type:{{plan.planType}}</li>
+                    <li>Validity:{{plan.planValidity}}</li>
+                    <li>Details:{{plan.planDetails}}</li>
                 </ul> 
-                <h4><a><button class="confirmRecharge">Recharge</button></a></h4>
+                <h4><a><button class="confirmRecharge" (click)="onRecharge()" >Recharge</button></a></h4>
             </div>
         </div>
     </body>
