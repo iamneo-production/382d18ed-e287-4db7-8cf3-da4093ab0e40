@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Bean;
 
 @Configuration
 @ComponentScan
-@EnableAutoConfiguration@SpringBootApplication
+@EnableAutoConfiguration
 
 
 @SpringBootApplication

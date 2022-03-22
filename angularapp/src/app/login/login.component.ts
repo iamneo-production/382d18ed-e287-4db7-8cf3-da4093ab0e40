@@ -3,7 +3,10 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
 import {Router} from '@angular/router';
 import { UserService } from '../user.service';
 import { User } from '../user';
+
 import { AuthService } from '../auth.service';
+
+
 
 
 
@@ -16,7 +19,11 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
+
+ 
+
   constructor(private _service : AuthService ,private _router :Router,private _service1:UserService) { }
+
  msg='';
   
   // getting the form control elements
@@ -57,7 +64,11 @@ export class LoginComponent implements OnInit {
   user=new User();
 
   loginUser(){
+
+    /*this._service.generateToken(this.user).subscribe(
+
     this._service.generateToken(this.user).subscribe(
+
       data =>{
         console.log("response received");
         if(this._service.isLoggedIn())

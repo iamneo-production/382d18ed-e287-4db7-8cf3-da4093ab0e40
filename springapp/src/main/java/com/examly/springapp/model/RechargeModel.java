@@ -7,11 +7,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Recharge")
+@Table(name = "Recharge_Planmodel")
 public class RechargeModel {
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private int id;
 
     @Column(name = "rechargeId")
 	private int rechargeId;
@@ -29,17 +29,17 @@ public class RechargeModel {
 	private String email;
 
 	@Column(name = "rechargePrice")
-	private int rechargePrice;
+	private String rechargePrice;
 
 	@Column(name = "rechargePlan")
-	private int rechargePlan;
+	private String rechargePlan;
 
 
     public RechargeModel() {
 		
 	}
 	
-	public RechargeModel(int rechargeId,String rechargetype, String name,String mobile,String email, int rechargePrice , int rechargePlan) {
+	public RechargeModel(int rechargeId,String rechargetype, String name,String mobile,String email, String rechargePrice , String rechargePlan) {
 		super();
 		this.rechargeId = rechargeId;
 		this.rechargetype=rechargetype;
@@ -49,6 +49,12 @@ public class RechargeModel {
 		this.rechargePrice = rechargePrice;
 		this.rechargePlan = rechargePlan;
 		
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 
     public int getrechargeId() {
@@ -81,16 +87,16 @@ public class RechargeModel {
 	public void setemail(String email) {
 		this.email = email;
 	}
-	public int  getrechargePrice() {
+	public String  getrechargePrice() {
 		return rechargePrice;
 	}
-	public void setrechargePrice(int rechargePrice) {
+	public void setrechargePrice(String rechargePrice) {
 		this.rechargePrice = rechargePrice;
 	}
-	public int getrechargePlan() {
+	public String getrechargePlan() {
 		return rechargePlan;
 	}
-	public void setrechargePlan(int rechargePlan) {
+	public void setrechargePlan(String rechargePlan) {
 		this.rechargePlan = rechargePlan;
 	}
 
