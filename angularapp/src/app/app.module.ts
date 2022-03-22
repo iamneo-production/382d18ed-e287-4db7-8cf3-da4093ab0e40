@@ -21,6 +21,7 @@ import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeco
 
 import { UpdateAddonComponent } from './update-addon/update-addon.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { AddonRechargeconfirmationComponent } from './addon-rechargeconfirmation/addon-rechargeconfirmation.component';
 
 
 const routes: Routes = [
@@ -51,7 +52,8 @@ const routes: Routes = [
     PrepaidplansComponent,
     AddonComponent,
     UpdateAddonComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    AddonRechargeconfirmationComponent
     
   ],
   imports: [
