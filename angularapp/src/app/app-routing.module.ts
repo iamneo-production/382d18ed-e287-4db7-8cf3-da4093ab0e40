@@ -40,7 +40,7 @@ const routes: Routes = [
   {path: 'rechargeconfirmation', component:RechargeconfirmationComponent},
   {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent},
   {path:'notifications', component:NotificationsComponent},
-  {path: 'addon-rechargeconfirmation', component:AddonRechargeconfirmationComponent}
+  {path: 'addon-rechargeconfirmation/:id', component:AddonRechargeconfirmationComponent}
 
 ];
 

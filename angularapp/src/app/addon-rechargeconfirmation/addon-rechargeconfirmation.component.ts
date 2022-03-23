@@ -13,7 +13,7 @@ import {FormGroup,FormControl,FormControlName,Validators, AbstractControl} from 
   styleUrls: ['./addon-rechargeconfirmation.component.css']
 })
 export class AddonRechargeconfirmationComponent implements OnInit {
-  addonId:any;
+  id:any;
   rechargeId:number;
   addon: Addon = new Addon();
   recharge : Recharge=new Recharge();
@@ -27,7 +27,7 @@ export class AddonRechargeconfirmationComponent implements OnInit {
 }
   private rechargemodel()
   {
-    this.addonService.getAddonById(this.addonId).subscribe(data=>{
+    this.addonService.getAddonById(this.id).subscribe(data=>{
       this.addon=data;
       this.recharge.rechargeId=data.addonId;
       this.recharge.rechargePlan=data.addonName;
@@ -62,9 +62,9 @@ export class AddonRechargeconfirmationComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getAddon();
-    this.addonId=this.route.snapshot.params['addonId'];
+    this.id=this.route.snapshot.params['id'];
     this.addon=new Addon();
-    this.addonService.getAddonById(this.addonId).subscribe(data=>{
+    this.addonService.getAddonById(this.id).subscribe(data=>{
       this.addon=data;
       this.recharge.rechargeId=data.addonId;
       this.recharge.rechargePlan=data.addonName;
