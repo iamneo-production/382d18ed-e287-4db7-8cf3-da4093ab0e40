@@ -26,7 +26,7 @@ export class AddonsComponent implements OnInit {
     console.log(this.addon);
   }
   rechargeconfirmation(addonId:number){
-    this.router.navigate(['rechargeconfirmation',addonId]);
+    this.router.navigate(['addon-rechargeconfirmation',addonId]);
   }
 
 }
