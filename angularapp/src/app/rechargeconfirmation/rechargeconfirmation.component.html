@@ -40,7 +40,7 @@
                     <li>Validity:{{plan.planValidity}}</li>
                     <li>Details:{{plan.planDetails}}</li>
                 </ul> 
-                <h4><a href="/notifications"><button class="confirmRecharge" (click)="onRecharge()" >Recharge</button></a></h4>
+                <h4><a href="/notifications"><button class="confirmRecharge" (click)="onRecharge()" (click)="notifications(recharge.rechargeId)">Recharge</button></a></h4>
             </div>
         </div>
     </body>

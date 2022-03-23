@@ -27,10 +27,23 @@ export class NotificationsComponent implements OnInit {
       this.recharge=data;
       this.recharge.name=data.name;
       this.recharge.mobile=data.mobile;
+      this.recharge.rechargePrice=data.rechargePrice;
     },error => console.log(error));
   }
 
   ngOnInit(): void {
+    this.getRecharge();
+    this.rechargeId=this.route.snapshot.params['planId'];
+    this.recharge=new Recharge();
+    this.rechargeService.getRechargeById(this.rechargeId).subscribe(data=>{
+      this.recharge=data;
+      this.recharge.rechargeId=data.rechargeId;
+      this.recharge.rechargePlan=data.rechargePlan;
+      this.recharge.rechargePrice=data.rechargePrice;
+      this.recharge.rechargetype=data.rechargetype;
+      //var em=document.getElementById("email");
+      //this.recharge.email=document.getElementById("email");
+    },error => console.log(error));
   }
 
 }
