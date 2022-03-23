@@ -5,10 +5,6 @@ import { UserService } from '../user.service';
 import { User } from '../user';
 //import { AuthService } from '../auth.service';
 
-
-
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
