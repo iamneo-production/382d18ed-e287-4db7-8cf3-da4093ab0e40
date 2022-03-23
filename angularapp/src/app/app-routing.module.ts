@@ -12,6 +12,7 @@ import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component'
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { AddonRechargeconfirmationComponent } from './addon-rechargeconfirmation/addon-rechargeconfirmation.component';
+import { DisplayrechargeComponent } from './displayrecharge/displayrecharge.component';
 
 //import { AuthGuard } from './auth.guard';
 
@@ -40,6 +41,7 @@ const routes: Routes = [
   {path: 'rechargeconfirmation', component:RechargeconfirmationComponent},
   {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent},
   {path:'notifications', component:NotificationsComponent},
+  {path: 'displayrecharge',component:DisplayrechargeComponent},
   {path: 'addon-rechargeconfirmation/:id', component:AddonRechargeconfirmationComponent}
 
 ];
