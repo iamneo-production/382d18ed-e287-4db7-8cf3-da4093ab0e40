@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
-import {Router} from '@angular/router';
+import { AbstractControl, ControlContainer, FormControl, FormGroup, Validators } from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
 import { UserService } from '../user.service';
 import { User } from '../user';
+import { Observable } from 'rxjs';
 //import { AuthService } from '../auth.service';
 
 @Component({
@@ -12,7 +13,7 @@ import { User } from '../user';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(/*private _service : AuthService*/ private _router :Router,private _service1:UserService) { }
+  constructor(/*private _service : AuthService*/ private _router :Router,private _service1:UserService,private route:ActivatedRoute) { }
  msg='';
   
   // getting the form control elements
@@ -51,18 +52,32 @@ export class LoginComponent implements OnInit {
     
   };*/
   user=new User();
-
+  user1=new User();
+ 
+getdata()
+{
+  
+  this.user.emailId=this.route.snapshot.params['emailId'];
+  this._service1.getUserbyemailId(this.user.emailId).subscribe(data=>{
+    this.user.user_role=data.user_role;
+    
+  })
+  
+}
   loginUser(){
-    /*this._service.generateToken(this.user).subscribe(
+    //this._service.generateToken(this.user).subscribe(
+      this.getdata();
+      this._service1.LoginUserFromRemote(this.user1=this.user).subscribe(
       data =>{
         console.log("response received");
-        if(this._service.isLoggedIn())
-        //if(this._service.authentication(this.user) === null){
-
-          this._router.navigate(['/popularplans'])
-        
-       /* else{
+        console.log(this.user);
+        if(this.user.user_role==="admin"){
           this._router.navigate(['/admin/dashboard'])
+          
+        }
+
+        else{
+          this._router.navigate(['/popularplans'])
         }
       
 
@@ -72,7 +87,7 @@ export class LoginComponent implements OnInit {
         this.msg="Bad Credentials, please enter valid emailId and password";
       }
       )
-*/
+
   }
   onSubmit(){
 	  console.log(this.user);

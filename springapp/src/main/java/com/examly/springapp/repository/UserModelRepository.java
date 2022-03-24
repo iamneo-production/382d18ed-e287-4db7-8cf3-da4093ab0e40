@@ -29,7 +29,7 @@ import com.examly.springapp.model.UserModel;
  //public UserModel findByMobileNumber(@Param("mobileNumber") String mobileNumber);
  @Async
  @Query("select u.user_role,u.emailId from UserModel u where u.emailId= emailId")
- public UserModel findByEmailIdAndUser_role(@Param("user_role") String user_role,@Param("emailId") String email);
+ public UserModel findByEmailIdAndUser_role(@Param("emailId") String email,@Param("user_role") String user_role);
 //public UserModel findUserByEmailIdandUser_role(String email, String user_role);
  
 }
