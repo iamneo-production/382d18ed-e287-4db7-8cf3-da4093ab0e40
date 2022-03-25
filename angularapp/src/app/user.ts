@@ -7,5 +7,7 @@ export class User {
 	password : string;
 	user_role: string;
 	
+
+
 constructor(){}
 }

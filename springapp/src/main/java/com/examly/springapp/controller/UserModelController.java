@@ -67,6 +67,11 @@ public class UserModelController {
 				.orElseThrow(() -> new ResourceNotFoundException("User not exist with id :" + id));
 		return ResponseEntity.ok(user);
 	}
+	@GetMapping("/Users/email/{emailId}")
+	public ResponseEntity<UserModel> getUserByemailId(@PathVariable String emailId) {
+		UserModel user = UserModelRepository.findUserByEmailId(emailId);
+		return ResponseEntity.ok(user);
+	}
 	
 	// edit user rest api
 	

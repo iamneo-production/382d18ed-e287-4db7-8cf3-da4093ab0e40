@@ -1,16 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
-import {Router} from '@angular/router';
+import { AbstractControl, ControlContainer, FormControl, FormGroup, Validators } from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
 import { UserService } from '../user.service';
 import { User } from '../user';
-
-import { AuthService } from '../auth.service';
-
-
-
-
-
-
+import { Observable } from 'rxjs';
+//import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -19,11 +13,7 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
-
- 
-
-  constructor(private _service : AuthService ,private _router :Router,private _service1:UserService) { }
-
+  constructor(/*private _service : AuthService*/ private _router :Router,private _service1:UserService,private route:ActivatedRoute) { }
  msg='';
   
   // getting the form control elements
@@ -56,29 +46,41 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
- /* if(user_role === 'admin'){
-    route.navigate(['/popularplans']);
 
-    
-  };*/
-  user=new User();
+  user : User=new User();
+  user1: User=new User();
 
+getdata()
+{
+  
+
+  this.user1.emailId=this.user.emailId;
+  this._service1.getUserbyemailId(this.user1.emailId).subscribe(data=>{
+
+    this.user1.user_role=data.user_role;
+   
+   
+   
+  })
+  
+}
   loginUser(){
 
-    /*this._service.generateToken(this.user).subscribe(
+      this.getdata();
+ 
 
-    this._service.generateToken(this.user).subscribe(
-
+      this._service1.LoginUserFromRemote(this.user).subscribe(
       data =>{
-        console.log("response received");
-        if(this._service.isLoggedIn())
-        //if(this._service.authentication(this.user) === null){
+         this.getdata();
 
-          this._router.navigate(['/popularplans'])
-        
-       /* else{
+        if(this.user1.user_role === "admin"){
           this._router.navigate(['/admin/dashboard'])
-        }*/
+          
+        }
+
+        else{
+          this._router.navigate(['/popularplans'])
+        }
       
 
         },
