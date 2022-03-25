@@ -3,7 +3,7 @@ package com.examly.springapp.controller;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import java.io.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -21,7 +21,7 @@ import com.examly.springapp.exception.ResourceNotFoundException;
 import com.examly.springapp.model.UserModel;
 import com.examly.springapp.repository.UserModelRepository;
 
-@CrossOrigin(origins = "https://8081-faecbadeddebfdaffdacedbbebcbf.examlyiopb.examly.io")
+@CrossOrigin(origins = "https://8081-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io")
 @RestController
 @RequestMapping("/api/v1/")
 public class UserModelController {
@@ -65,6 +65,11 @@ public class UserModelController {
 	public ResponseEntity<UserModel> getUserById(@PathVariable Long id) {
 		UserModel user = UserModelRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("User not exist with id :" + id));
+		return ResponseEntity.ok(user);
+	}
+	@GetMapping("/Users/email/{emailId}")
+	public ResponseEntity<UserModel> getUserByemailId(@PathVariable String emailId) {
+		UserModel user = UserModelRepository.findUserByEmailId(emailId);
 		return ResponseEntity.ok(user);
 	}
 	

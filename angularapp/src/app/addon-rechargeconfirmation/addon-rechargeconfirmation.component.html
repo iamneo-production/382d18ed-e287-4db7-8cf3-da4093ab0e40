@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+
+<html lang="en">
+    
+    <head>
+        <link rel="stylesheet" href="addon-rechargeconfirmation.component.css">
+        
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">AirNet </a>
+        
+            <nav class="navbar">
+                <a href="/popularplans" class="userPlans">Popular Plans</a>
+                <a href="/addons" class="userAddons">Addons</a>
+                <a href="/notifications" class="notifications">Notifications</a>
+                <a href="/login" class="login">Logout</a>
+            </nav>
+        </header>   
+        <br>
+        <br>
+        <br>
+        <div class="InputUser">
+         
+            
+        </div>
+        <div class="container">
+            <div class="addonsGrid">
+                <h1 class="heading">{{addon.addonName}}</h1>
+                <h2 class="service__price">Rs.{{addon.addonPrice}}</h2>
+                <ul class="features__list">
+                    <li>Addon Type:{{addon.addonDetails}}</li>
+                </ul> 
+                <h4><a href="/notifications"><button class="confirmRecharge" (click)="onRecharge()" >Recharge</button></a></h4>
+            </div>
+        </div>
+    </body>
+</html>
