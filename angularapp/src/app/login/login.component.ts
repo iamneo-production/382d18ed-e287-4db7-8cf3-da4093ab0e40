@@ -55,17 +55,24 @@ export class LoginComponent implements OnInit {
     
   };*/
   user=new User();
+  user1 =new User();
   loginUser(){
-    this._service.generateToken(this.user).subscribe(
+    this._service1.LoginUserFromRemote(this.user).subscribe(
+    //this._service.generateToken(this.user).subscribe((response)
       data =>{
         console.log("response received");
-        if(this._service.isLoggedIn())
-        //if(this._service.authentication(this.user) === null){
-          this._router.navigate(['/popularplans'])
-        
-       /* else{
+        this.user1=this.user;
+        console.log(this.user1);
+        //if(this._service.isLoggedIn())
+        if(this._service1.authentication(this.user) === null){
+          console.log(this._service1.authentication(this.user) === "admin");
           this._router.navigate(['/admin/dashboard'])
-        }*/
+        }
+        
+        else{
+          console.log(this._service1.authentication(this.user));
+          this._router.navigate(['/popularplans'])
+        }
       
         },
       error =>{
@@ -75,5 +82,9 @@ export class LoginComponent implements OnInit {
       )
 
   }
+
+
+ 
+  
 
 }

@@ -21,8 +21,9 @@ export class UserService {
     return this.httpClient.post<any>("https://8080-faecbadeddebfdaffdacedbbebcbf.examlyiopb.examly.io/login",user);
   }
 
-  public authentication(user:User): Observable<any>{
-    return this.httpClient.get<any>("https://8080-faecbadeddebfdaffdacedbbebcbf.examlyiopb.examly.io/userrole");
+
+  public authentication(user:User): Observable<String>{
+    return this.httpClient.get<String>("https://8080-faecbadeddebfdaffdacedbbebcbf.examlyiopb.examly.io/userrole");
   }
 
   getUserList(): Observable<User[]>

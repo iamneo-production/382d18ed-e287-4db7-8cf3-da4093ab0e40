@@ -62,10 +62,10 @@ public class UserModelService {
     }
 
 
-    /*public UserModel fetchByUserRole(String user_role){
-        return UserModelRepository.findByUser_role(user_role);
+    public UserModel fetchByUserRole(String emailId){
+        return UserModelRepository.findByUser_role(emailId);
 
-    }*/
+    }
     
 
     /*public String fetchUserRole(Long id){
