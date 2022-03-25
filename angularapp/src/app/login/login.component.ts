@@ -46,32 +46,34 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
- /* if(user_role === 'admin'){
-    route.navigate(['/popularplans']);
 
-    
-  };*/
-  user=new User();
-  user1=new User();
- 
+  user : User=new User();
+  user1: User=new User();
+
 getdata()
 {
   
-  this.user.emailId=this.route.snapshot.params['emailId'];
-  this._service1.getUserbyemailId(this.user.emailId).subscribe(data=>{
-    this.user.user_role=data.user_role;
-    
+
+  this.user1.emailId=this.user.emailId;
+  this._service1.getUserbyemailId(this.user1.emailId).subscribe(data=>{
+
+    this.user1.user_role=data.user_role;
+   
+   
+   
   })
   
 }
   loginUser(){
-    //this._service.generateToken(this.user).subscribe(
+
       this.getdata();
-      this._service1.LoginUserFromRemote(this.user1=this.user).subscribe(
+ 
+
+      this._service1.LoginUserFromRemote(this.user).subscribe(
       data =>{
-        console.log("response received");
-        console.log(this.user);
-        if(this.user.user_role==="admin"){
+         this.getdata();
+
+        if(this.user1.user_role === "admin"){
           this._router.navigate(['/admin/dashboard'])
           
         }

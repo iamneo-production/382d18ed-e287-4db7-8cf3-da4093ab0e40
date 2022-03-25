@@ -74,7 +74,7 @@ export class RechargeconfirmationComponent implements OnInit {
       this.recharge.rechargePlan=data.planName;
       this.recharge.rechargePrice=data.planPrice;
       this.recharge.rechargetype=data.planType;
-      var em=document.getElementById("email");
+     // var em=document.getElementById("email");
       //this.recharge.email=document.getElementById("email");
     },error => console.log(error));
   }

@@ -70,7 +70,7 @@ export class AddonRechargeconfirmationComponent implements OnInit {
       this.recharge.rechargePlan=data.addonName;
       this.recharge.rechargePrice=data.addonPrice;
       this.recharge.rechargetype=data.addonDetails;
-      var em=document.getElementById("email");
+      //var em=document.getElementById("email");
       //this.recharge.email=document.getElementById("email");
     },error => console.log(error));
   }

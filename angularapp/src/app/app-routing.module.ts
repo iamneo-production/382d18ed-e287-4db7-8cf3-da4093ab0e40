@@ -19,8 +19,8 @@ import { UpdateAddonComponent } from './update-addon/update-addon.component';
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
 import { DisplayrechargeComponent } from './displayrecharge/displayrecharge.component';
 import { EditrechargeComponent } from './editrecharge/editrecharge.component';
-
-
+import { AddonRechargeconfirmationComponent } from './addon-rechargeconfirmation/addon-rechargeconfirmation.component';
+import {NotificationsComponent} from './notifications/notifications.component';
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'}, /** If the path is empty, it will redirect to login page */
   {path: 'login', component:LoginComponent},//,canActivate:[AuthGuard]},
@@ -38,8 +38,10 @@ const routes: Routes = [
   {path: 'rechargeconfirmation', component:RechargeconfirmationComponent},
   {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent},
   {path: 'displayrecharge',component:DisplayrechargeComponent},
-  {path: 'admin/editrecharge/:id',component:EditrechargeComponent }
-
+  {path: 'admin/editrecharge/:id',component:EditrechargeComponent },
+  {path: 'addon-rechargeconfirmation/:id',component:AddonRechargeconfirmationComponent},
+  {path: 'addon-rechargeconfirmation',component:AddonRechargeconfirmationComponent},
+  {path: 'notifications',component:NotificationsComponent}
 ];
 
 @NgModule({

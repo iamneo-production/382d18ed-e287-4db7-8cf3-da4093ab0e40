@@ -25,8 +25,8 @@ export class AddonsComponent implements OnInit {
   onSubmit(){
     console.log(this.addon);
   }
-  rechargeconfirmation(addonId:number){
-    this.router.navigate(['addon-rechargeconfirmation',addonId]);
+  rechargeconfirmation(id:number){
+    this.router.navigate(['addon-rechargeconfirmation',id]);
   }
 
 }
