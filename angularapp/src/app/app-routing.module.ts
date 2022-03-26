@@ -28,7 +28,9 @@ import {NotificationsComponent} from './notifications/notifications.component';
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'}, /** If the path is empty, it will redirect to login page */
 
+
   {path: 'login', component:LoginComponent,canActivate:[AuthGuard]},
+
   {path: 'signup', component:SignupComponent},
   {path: 'popularplans', component:PopularplansComponent},
   {path: 'addons', component:AddonsComponent},
