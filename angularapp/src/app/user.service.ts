@@ -15,6 +15,7 @@ export class UserService {
     throw new Error('Method not implemented.');
   }
   private baseURL = "https://8080-faecbadeddebfdaffdacedbbebcbf.examlyiopb.examly.io/api/v1/Users";
+  private baseURL1 = "https://8080-faecbadeddebfdaffdacedbbebcbf.examlyiopb.examly.io/api/v1/Users/email";
   constructor(private httpClient:HttpClient) { }
 
   public LoginUserFromRemote(user:User): Observable<any>{
@@ -44,5 +45,9 @@ export class UserService {
 
   deleteuser(id: number): Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
+  getUserbyemailId(emailId : String) : Observable <User>
+  {
+    return this.httpClient.get<User> (`${this.baseURL1}/${emailId}`);
   }
 }
