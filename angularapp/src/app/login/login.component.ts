@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
-import {Router} from '@angular/router';
+import { AbstractControl, ControlContainer, FormControl, FormGroup, Validators } from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
 import { UserService } from '../user.service';
 import { User } from '../user';
-
-
-
-
+import { Observable } from 'rxjs';
+//import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +13,7 @@ import { User } from '../user';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private _service : UserService ,private _router :Router) { }
+  constructor(/*private _service : AuthService*/ private _router :Router,private _service1:UserService,private route:ActivatedRoute) { }
  msg='';
   
   // getting the form control elements
@@ -48,23 +46,43 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
- /* if(user_role === 'admin'){
-    route.navigate(['/popularplans']);
 
-    
-  };*/
-  user=new User();
-  private loginUser(){
-    this._service.LoginUserFromRemote(this.user).subscribe(
+  user : User=new User();
+  user1: User=new User();
+
+getdata()
+{
+  
+
+  this.user1.emailId=this.user.emailId;
+  this._service1.getUserbyemailId(this.user1.emailId).subscribe(data=>{
+
+    this.user1.user_role=data.user_role;
+   
+   
+   
+  })
+  
+}
+  loginUser(){
+
+      this.getdata();
+ 
+
+      this._service1.LoginUserFromRemote(this.user).subscribe(
       data =>{
-        console.log("response received");
-        if((this.user.user_role.match(null)===null)){
+         this.getdata();
+
+        if(this.user1.user_role === "admin"){
+          this._router.navigate(['/admin/dashboard'])
+          
+        }
+
+        else{
           this._router.navigate(['/popularplans'])
         }
-        else{
-          this._router.navigate(['/admin/dashboard'])
-        }
       
+
         },
       error =>{
         console.log("exception occured");

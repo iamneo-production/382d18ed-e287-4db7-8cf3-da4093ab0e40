@@ -2,7 +2,7 @@ export class Addon {
     id : number;
     addonId!: number;
     addonName: string  ;
-    addonPrice: number;
+    addonPrice: string;
     addonDetails: string ;
     
 

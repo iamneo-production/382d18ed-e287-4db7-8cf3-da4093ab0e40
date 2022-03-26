@@ -9,51 +9,30 @@
         
     </head>
     <body>
-        <header>
-            <p class="logo">Airnet</p>
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="https://8081-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io/popularplans" id="userPlans" >Popular plans</a></li>
-                    <li><a href="https://8081-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io//addons" id="userAdOns" class="currentPage">Add ons</a></li>
-                    <li><a href="#" id="notification">Notifications</a></li>
-                </ul>
-            </nav> 
-            <a class="logout" href="https://8081-fadecdccafcddebfdaffdacedbbebcbf.examlyiopb.examly.io//login"><button>Logout</button></a>
+        <header class="header">
+            <a href="#" class="logo">AirNet </a>
+        
+            <nav class="navbar">
+                <a href="/popularplans" class="userPlans">Popular Plans</a>
+                <a href="/addons" class="userAddons" id="active">Addons</a>
+                <a href="/notifications" class="notifications">Notifications</a>
+                <a href="/login" class="login">Logout</a>
+            </nav>
+
         </header>  
         <br>
         <br>
-      
-        <div class="pack-detail-row">
-            <div class="coupon"></div>
-            <div class="pack-top"><div class="col">
-                <p class="fs-lg icn-rupee">₹21</p>
-                <p class="text-grey fs-sm icn-rupee">Unlimited Calls</p>
-            </div><div class="col"><p class="fs-lg icn-rupee">1.5GB</p>
-                <p class="text-grey fs-sm">/day</p></div><div class="col">
-                    <p class="fs-lg">3GB</p><p class="text-grey fs-sm">Data</p>
-                </div><div class="col"><button class="btn-circle icn-rupee">₹21</button></div></div>
-                <div class="pack-bottom mt-3 extra-benifit-outer"><div class="col"><p class="text-grey fs-sm mb-2">Note: You can recharge with above plan the same with the existing plan.</p>
-                    <div class="clear extra-benifit"><div class="col-4 benefit-tile"><p class="fs-sm benefit-des">Offer:20% upto repeat 200 cashback</p></div>
-                    <div class="col-4 benefit-tile"><p class="fs-sm benefit-des">Validity: Avail till existing plan</p></div></div></div>
-                    <div class="col pull-right pt-1 mt-3"></div></div></div>
-                    <br>
-                    <br>
-                    <div class="pack-detail-row">
-                        <div class="coupon"></div>
-                        <div class="pack-top"><div class="col">
-                            <p class="fs-lg icn-rupee">₹31</p>
-                            <p class="text-grey fs-sm icn-rupee">Unlimited Calls</p>
-                        </div><div class="col"><p class="fs-lg icn-rupee">2GB</p>
-                            <p class="text-grey fs-sm">/day</p></div><div class="col">
-                                <p class="fs-lg">5GB</p><p class="text-grey fs-sm">Data</p>
-                            </div><div class="col"><button class="btn-circle icn-rupee">₹31</button></div></div>
-                            <div class="pack-bottom mt-3 extra-benifit-outer"><div class="col"><p class="text-grey fs-sm mb-2">Note: You can recharge with above plan the same with the existing plan.</p>
-                                <div class="clear extra-benifit"><div class="col-4 benefit-tile"><p class="fs-sm benefit-des">Offer:10% upto repeat 200 cashback</p></div>
-                                <div class="col-4 benefit-tile"><p class="fs-sm benefit-des">Validity: Avail till existing plan</p></div></div></div>
-                                <div class="col pull-right pt-1 mt-3"></div></div></div>
-
-                </body>
-
-
-
+        <br>
+        <div class="container">
+        <div class="AddonsGrid" *ngFor = "let addon of addons" >
+            
+            <h1 class="heading">{{addon.addonName}}</h1>
+            <h2 class="service__price">Rs.{{addon.addonPrice}}</h2>
+            <ul class="features__list">
+                <li>Details:{{addon.addonDetails}}</li>
+            </ul>
+            <h4><a><button class="recharge__button" (ngSubmit)="OnSubmit()" (click)="addon-rechargeconfirmation(addon.id)">Recharge</button></a></h4>
+        </div>   
+    </div>
+    </body>
 </html>

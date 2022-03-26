@@ -17,9 +17,12 @@ import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component'
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AddonComponent } from './addon/addon.component';
-
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
+
 import { UpdateAddonComponent } from './update-addon/update-addon.component';
+import { DisplayrechargeComponent } from './displayrecharge/displayrecharge.component';
+import { EditrechargeComponent } from './editrecharge/editrecharge.component';
+import{NotificationsComponent} from './notifications/notifications.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Popularplans', pathMatch: 'full' },
@@ -46,13 +49,12 @@ const routes: Routes = [
     PrepaidplansComponent,
     AddonComponent,
     RechargeconfirmationComponent,
-
     PrepaidplansComponent,
-
     AddonComponent,
-
-    UpdateAddonComponent
-
+    UpdateAddonComponent,
+    DisplayrechargeComponent,
+    EditrechargeComponent,
+    NotificationsComponent
     
   ],
   imports: [

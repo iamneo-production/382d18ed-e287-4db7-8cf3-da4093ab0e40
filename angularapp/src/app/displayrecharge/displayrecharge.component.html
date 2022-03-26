@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <nav>
+            <ul>
+                <li><a href="admin/dashboard">AirNet</a></li>
+                <li><a id="adminPrepaid" href="admin/prepaidplans">Prepaid plans</a></li>
+                <li><a id="adminPostpaid" href="admin/postpaidplans">Postpaid plans</a></li>
+                <li><a id="adminAddOns" href="admin/addon">AddOns</a></li>
+                <li style="float:right"><button (click)="logout()">Logout</button></li>
+            </ul>
+        </nav>
+    
+        <h1>Recharge</h1>
+    
+        <div class="top">
+            <button id="addrecharge" (click)="addrecharge()">Add recharge</button> &nbsp;
+        </div>
+    
+        <div class="recharge_input" id="recharge_inputt">
+            <h3>Welcome Admin! Enter details to add a recharge</h3>
+            <form (ngSubmit) = "onSubmit()">
+                <div> <input type="text" [(ngModel)] = "recharge.name" class="name" placeholder="Name" id="name"> </div>
+                
+                <div> <input type="mobile" [(ngModel)] = "recharge.mobile" class="MobileNumber" placeholder="Mobile Number" id="mobile"></div>
+                
+                <div><input type="email" [(ngModel)] = "recharge.email" class="email" placeholder="Email" id="email"></div>
+                
+                <div><input [(ngModel)] = "recharge.rechargeId" name="rechargeId" type="text" placeholder="Enter recharge ID"></div>
+                <div><input [(ngModel)] = "recharge.rechargePlan" name="rechargePlan" type="text" placeholder="Enter recharge Plan"></div>
+                <div><input [(ngModel)] = "recharge.rechargePrice" name="rechargePrice" type="text" placeholder="Enter the price"></div>
+                <div><input [(ngModel)] = "recharge.rechargetype" name="rechargeType" type="text" placeholder="Enter recharge type"></div>
+            
+                <br><br>
+                <button type="submit" class="btn btn-success">Add recharge</button>
+            </form>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> recharge Name</th>
+                    <th> recharge mobile</th>
+                    <th> recharge email </th>
+                    <th> recharge Id </th>
+                    <th> recharge plan </th>
+                    
+                    <th> recharge Price </th>
+                    <th> recharge type </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let recharge of recharges">
+                    
+                   
+                    <td> {{ recharge.name }} </td>
+                    <td> {{ recharge.mobile }} </td>
+                    <td> {{ recharge.email }} </td>
+                    <td> {{ recharge.rechargeId }} </td>
+                    <td> {{ recharge.rechargePlan}} </td>
+                    <td> {{ recharge.rechargePrice}} </td>
+                    <td> {{ recharge.rechargetype }} </td>
+                    
+                    <td>
+                        <button (click)="editrecharge(recharge.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                        <button (click)="deleteEmployee(recharge.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+</html>

@@ -30,18 +30,32 @@ public class AuthController  {
 		String tempEmailId = user.getEmailId();
 		
 		String tempPass = user.getpassword();
+		String tempRole=null;
 		
 		UserModel userobj = null;
+		UserModel userobj1=null;
 		
 		if (tempEmailId != null && tempPass != null) 
 		{ 
 			userobj = service.fetchByEmailIdAndPassword (tempEmailId, tempPass); 
-		
+			if(authentication(userobj)==true)
+			{
+				userobj.setuser_role("admin");
+			}
+			else
+			{
+				userobj.setuser_role("user");
+			}
+			//userobj1= service.fetchByEmailIdAndUserRole(tempEmailId);
+			//String tempRole=user.getuser_role();
+			/*if(service.fetchByUserRole(tempRole).equals("admin")){
+				userobj.setuser_role("admin");
+			}*/
 		}
 		if(userobj == null){
 			throw new Exception("Bad Credentials");
 		}
-		
+	
 		return userobj;
 		
 	}
@@ -49,11 +63,12 @@ public class AuthController  {
 		@GetMapping("/userrole")
 		public boolean authentication (@RequestBody UserModel user) throws Exception {
 
-			String tempUserRole = user.getuser_role();
-			Long id=user.getId();
-			//String tempUserRole = service.fetchUserRole();
+			String tempUserRole =null;
+			String tempEmailId=user.getEmailId();
 			//Long id=user.getId();
-			if (tempUserRole == null  ) 
+			UserModel tempUserRole1 = service.fetchUserByEmailId(tempEmailId);
+			//Long id=user.getId();
+			if (tempUserRole1.getuser_role().equals("user")) 
 			{ 
 				return false;
 			

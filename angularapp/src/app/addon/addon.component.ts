@@ -25,8 +25,10 @@ export class AddonComponent implements OnInit {
 }
 
 private getAddon() {
+
   this.AddonService.getAddons().subscribe(data => {
     this.Addons = data;
+
     console.log(data);
   });
 }
@@ -62,7 +64,9 @@ logout(){
 
 
   ngOnInit(): void {
+
     this.getAddon();
+
   }
 
 }
