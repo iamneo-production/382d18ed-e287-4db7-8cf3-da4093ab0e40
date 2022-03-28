@@ -21,15 +21,22 @@
         <br>
         <br>
         <br>
+        <br>
+        <br>
+        <br>
         <div class="-InputUser">
-          
-            <input type="text" [(ngModel)] = "recharge.name" class="name" placeholder="Name" id="name"> 
+            <form>
+                <label>Name:</label>
+                <input type="text" [(ngModel)] = "recharge.name" class="name" placeholder="Name" id="name">
                 <br>
+                <br>
+                <label>Mobile Num:</label>
                 <input type="mobile" [(ngModel)] = "recharge.mobile" class="MobileNumber" placeholder="Mobile Number" id="mobile">
                 <br>
-                <input type="email" [(ngModel)] = "recharge.email" class="email" placeholder="Email" id="email">
                 <br>
-            
+                <label>Email:</label>
+                <input type="email" [(ngModel)] = "recharge.email" class="email" placeholder="Email" id="email">
+            </form>
         </div>
         <div class="container">
             <div class="popularplansGrid">
