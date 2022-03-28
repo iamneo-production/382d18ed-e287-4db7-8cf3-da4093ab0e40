@@ -25,6 +25,7 @@ body {
     cursor: pointer;
     background: none;
     border-radius: 50px;
+    text-decoration: none;
 }
 .btn:hover{
     background:black;

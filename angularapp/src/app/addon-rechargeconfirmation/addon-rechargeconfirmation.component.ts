@@ -77,7 +77,7 @@ export class AddonRechargeconfirmationComponent implements OnInit {
   onRecharge(){
     console.log(document.getElementById("email"));
     this.saveRecharge();
-    this.router.navigate(['notifications']);
+    this.router.navigate(['notifications',this.id]);
     
   }
 }
