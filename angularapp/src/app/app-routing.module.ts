@@ -10,12 +10,28 @@ import { PrepaidplansComponent } from './prepaidplans/prepaidplans.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { PostpaidplansComponent } from './postpaidplans/postpaidplans.component';
 import { UpdatePlanComponent } from './update-plan/update-plan.component';
+
+
 import { AuthGuard } from './auth.guard';
 import { DisplayrechargeComponent } from './displayrecharge/displayrecharge.component';
 
+
+import { AddonComponent } from './addon/addon.component';
+import { UpdateAddonComponent } from './update-addon/update-addon.component';
+
+import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
+import { DisplayrechargeComponent } from './displayrecharge/displayrecharge.component';
+import { EditrechargeComponent } from './editrecharge/editrecharge.component';
+
+import { AddonRechargeconfirmationComponent } from './addon-rechargeconfirmation/addon-rechargeconfirmation.component';
+import {NotificationsComponent} from './notifications/notifications.component';
+
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'}, /** If the path is empty, it will redirect to login page */
-  {path: 'login', component:LoginComponent},
+
+
+  {path: 'login', component:LoginComponent,canActivate:[AuthGuard]},
+
   {path: 'signup', component:SignupComponent},
   {path: 'popularplans', component:PopularplansComponent},
   {path: 'addons', component:AddonsComponent},
@@ -25,9 +41,22 @@ const routes: Routes = [
   {path: 'admin/dashboard', component:AdminDashboardComponent},
   {path: 'admin/postpaidplans', component:PostpaidplansComponent},
   {path: 'admin/update-plan/:planId', component:UpdatePlanComponent},
+
   {path: 'displayrecharge', component:DisplayrechargeComponent}
 
-  
+   {path: 'admin/addon', component:AddonComponent},
+   {path: 'admin/update-addon/:id', component:UpdateAddonComponent},
+  {path: 'rechargeconfirmation', component:RechargeconfirmationComponent},
+
+  {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent},
+  {path: 'displayrecharge',component:DisplayrechargeComponent},
+
+  {path: 'admin/editrecharge/:id',component:EditrechargeComponent },
+  {path: 'addon-rechargeconfirmation/:id',component:AddonRechargeconfirmationComponent},
+  {path: 'addon-rechargeconfirmation',component:AddonRechargeconfirmationComponent},
+  {path: 'notifications',component:NotificationsComponent}
+
+
 ];
 
 @NgModule({
