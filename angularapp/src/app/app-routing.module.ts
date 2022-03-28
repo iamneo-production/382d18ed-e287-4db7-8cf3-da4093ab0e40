@@ -13,6 +13,7 @@ import { UpdatePlanComponent } from './update-plan/update-plan.component';
 
 
 import { AuthGuard } from './auth.guard';
+import { DisplayrechargeComponent } from './displayrecharge/displayrecharge.component';
 
 
 import { AddonComponent } from './addon/addon.component';
@@ -40,6 +41,9 @@ const routes: Routes = [
   {path: 'admin/dashboard', component:AdminDashboardComponent},
   {path: 'admin/postpaidplans', component:PostpaidplansComponent},
   {path: 'admin/update-plan/:planId', component:UpdatePlanComponent},
+
+  {path: 'displayrecharge', component:DisplayrechargeComponent}
+
    {path: 'admin/addon', component:AddonComponent},
    {path: 'admin/update-addon/:id', component:UpdateAddonComponent},
   {path: 'rechargeconfirmation', component:RechargeconfirmationComponent},
@@ -51,6 +55,7 @@ const routes: Routes = [
   {path: 'addon-rechargeconfirmation/:id',component:AddonRechargeconfirmationComponent},
   {path: 'addon-rechargeconfirmation',component:AddonRechargeconfirmationComponent},
   {path: 'notifications',component:NotificationsComponent}
+
 
 ];
 
