@@ -38,19 +38,23 @@
         <div class="form-group font-weight-bold text-white">
             <label> Password</label>
             <input type="password" class ="form-control" id = "password"
-                [(ngModel)] = "user.password" name = "password" placeholder="up to 8 characters(One should be upperCase atleast and also @#₹ symbol must need)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required 
-                data-bv-identical="true"
-                data-bv-identical-field="confirmPassword"
-                data-bv-identical-message="The password and its confirm are not the same" />
+                [(ngModel)] = "user.password" name = "password" placeholder="up to 8 characters(One should be upperCase atleast and also @#₹ symbol must need)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                required  />
+
+                <div *ngIf="password.errors && (password.invalid && password.touched)" class="alert alert-danger" style="margin-top: 10px;">
+                    <div *ngIf="password.hasError('required')">Password is required</div>
+                    <div *ngIf="password.hasError('pattern')">Enter Valid password</div>
+                   </div>
+
+
         </div>
         <div class="form-group font-weight-bold text-white">
             <label> Confirm Password</label>
-            <input type="password" class ="form-control" id = "confirmPassword" 
-             name = "confirmpassword" placeholder="Repeat the password again" required 
-                data-bv-identical="true"
-                data-bv-identical-field="password"
-                data-bv-identical-message="The password and its confirm are not the same" />
+            <input type="password" class ="form-control" id = "confirmpassword"  (ngModel) = "user.password"
+             name = "confirmpassword" placeholder="Repeat the password again" pattern=".{8,}" required 
+             [class.is-invalid]="password.invalid && password.touched"   />
 
+             <span class="alert alert-danger"  [class.d-none]="(confirmpassword.value==password.value) || password.untouched" style="margin-top: 10px;">Password doesn't Match</span>
                 
         </div>
 

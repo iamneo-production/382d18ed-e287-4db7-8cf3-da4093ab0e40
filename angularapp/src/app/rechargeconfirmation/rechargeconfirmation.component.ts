@@ -81,7 +81,7 @@ export class RechargeconfirmationComponent implements OnInit {
   onRecharge(){
     console.log(document.getElementById("email"));
     this.saveRecharge();
-    this.router.navigate(['notifications']);
+   // this.router.navigate(['notifications']);
     
   }
   /*deteleRecharge(rechargeId:number){
