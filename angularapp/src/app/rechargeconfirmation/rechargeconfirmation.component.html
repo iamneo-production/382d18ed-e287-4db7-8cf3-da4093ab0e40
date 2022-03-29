@@ -22,7 +22,9 @@
         <br>
         <br>
         <div class="-InputUser">
-          
+            <br>
+            <br>
+            <br>
             <input type="text" [(ngModel)] = "recharge.name" class="name" placeholder="Name" id="name"> 
                 <br>
                 <input type="mobile" [(ngModel)] = "recharge.mobile" class="MobileNumber" placeholder="Mobile Number" id="mobile">
@@ -41,6 +43,8 @@
                     <li>Details:{{plan.planDetails}}</li>
                 </ul> 
                 <h4><a href="/notifications"><button class="confirmRecharge" (click)="onRecharge()" >Recharge</button></a></h4>
+                <h4><a href="/popularplans"><button class="Delete" >Delete</button></a></h4>
+                <h4><a href="/popularplans"><button class="Edit" >Edit</button></a></h4>
             </div>
         </div>
     </body>
