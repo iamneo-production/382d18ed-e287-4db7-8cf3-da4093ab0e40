@@ -26,7 +26,7 @@ export class SignupComponent implements OnInit {
   }
   gotoUserlist()
   {
-    this.router.navigate(['/displayuser']);
+    this.router.navigate(['/login']);
   }
   onPasswordChange() {
     if (this.confirm_password.value == this.password1.value) {
