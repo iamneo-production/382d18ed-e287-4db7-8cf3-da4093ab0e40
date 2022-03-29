@@ -40,7 +40,8 @@ const routes: Routes = [
    {path: 'admin/update-addon/:id', component:UpdateAddonComponent},
   {path: 'rechargeconfirmation', component:RechargeconfirmationComponent},
   {path: 'rechargeconfirmation/:planId', component:RechargeconfirmationComponent},
-  {path:'notifications/:rechargeId', component:NotificationsComponent},
+  {path: 'notifcations',component:NotificationsComponent},
+  {path:'notifications/:id', component:NotificationsComponent},
   {path: 'displayrecharge',component:DisplayrechargeComponent},
   {path: 'addon-rechargeconfirmation/:id', component:AddonRechargeconfirmationComponent}
 

@@ -20,9 +20,10 @@ import { AddonComponent } from './addon/addon.component';
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
 
 import { UpdateAddonComponent } from './update-addon/update-addon.component';
-import { NotificationsComponent } from './notifications/notifications.component';
+import { DisplayrechargeComponent } from './displayrecharge/displayrecharge.component';
+import { EditrechargeComponent } from './editrecharge/editrecharge.component';
+import{NotificationsComponent} from './notifications/notifications.component';
 import { AddonRechargeconfirmationComponent } from './addon-rechargeconfirmation/addon-rechargeconfirmation.component';
-
 
 const routes: Routes = [
   { path: '', redirectTo: '/Popularplans', pathMatch: 'full' },
@@ -52,6 +53,8 @@ const routes: Routes = [
     PrepaidplansComponent,
     AddonComponent,
     UpdateAddonComponent,
+    DisplayrechargeComponent,
+    EditrechargeComponent,
     NotificationsComponent,
     AddonRechargeconfirmationComponent
     

@@ -74,18 +74,18 @@ export class RechargeconfirmationComponent implements OnInit {
       this.recharge.rechargePlan=data.planName;
       this.recharge.rechargePrice=data.planPrice;
       this.recharge.rechargetype=data.planType;
-      var em=document.getElementById("email");
+     // var em=document.getElementById("email");
       //this.recharge.email=document.getElementById("email");
     },error => console.log(error));
   }
   onRecharge(){
     console.log(document.getElementById("email"));
     this.saveRecharge();
-    this.router.navigate(['notifications',this.rechargeId]);
+   // this.router.navigate(['notifications']);
     
   }
-  notifications(rechargeId:number){
-    this.router.navigate(['notifications',rechargeId]);
+  notifications(){
+    this.router.navigate(['notifications']);
   }
   /*deteleRecharge(rechargeId:number){
     this.deteleRecharge(rechargeId).subscribe(data=>{

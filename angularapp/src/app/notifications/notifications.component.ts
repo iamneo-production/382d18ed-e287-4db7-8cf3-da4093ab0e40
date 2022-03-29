@@ -33,9 +33,9 @@ export class NotificationsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getRecharge();
-    this.rechargeId=this.route.snapshot.params['planId'];
+    this.rechargeId=this.route.snapshot.params['id'];
     this.recharge=new Recharge();
-    this.rechargeService.getRechargeById(this.rechargeId).subscribe(data=>{
+    this.rechargeService.getRechargeById(this.recharge.id).subscribe(data=>{
       this.recharge=data;
       this.recharge.rechargeId=data.rechargeId;
       this.recharge.rechargePlan=data.rechargePlan;
