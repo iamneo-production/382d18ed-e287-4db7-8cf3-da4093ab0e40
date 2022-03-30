@@ -93,7 +93,9 @@ input {
     border: none;
     background: #f1f1f1;
 }
-
+p{
+    font-size: 15px;
+}
 .gap{
     width:10%;
     float:left;

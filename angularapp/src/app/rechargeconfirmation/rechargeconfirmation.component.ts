@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-/*import {User} from '../user'
-import { UserService } from '../user.service';*/
 import { ActivatedRoute, Router } from '@angular/router';
 import { PlanServService } from '../plan-serv.service';
 import { Plan } from '../plan';
