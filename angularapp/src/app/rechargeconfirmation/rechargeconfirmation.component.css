@@ -11,8 +11,19 @@
 body {
     font-family: "Roboto", sans-serif;
     font-size: 17px;
-    background:#eee;
 }
+
+/*.bg{
+    background:url("bg_img_plans.jpg");     
+  min-height : 100%;
+  min-width : 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+ position:absolute;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  opacity: 0.5;
+}*/
 
 .btn{
     margin-top: 1rem;
@@ -30,6 +41,9 @@ body {
     background:black;
     color:#fff;
 }
+
+/*header*/
+
 .header{
     position: fixed;
     top:0; left:0; right: 0;
@@ -59,3 +73,34 @@ body {
 .header .navbar a:hover{
     color:blue;
 }
+
+
+
+/* Input user */
+
+.InputUser{
+    float: left;
+    padding: 20px;
+    background-color: white;
+    height: 250px;
+    width:40%;
+}
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/*container*/
+.container{
+    float: left;
+    padding: 20px;
+    background-color: white;
+    height: 450px;
+    width:60%;
+}
+
+  
