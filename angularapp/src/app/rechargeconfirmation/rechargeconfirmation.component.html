@@ -2,13 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
 
 <html lang="en">
-    
-    <head>
-        <link rel="stylesheet" href="rechargeconfirmation.component.css">
-        
-    </head>
-    <body>
-        <header class="header">
+<body>
+        <!--<div class="bg"></div>-->
+        <div class="header">
             <a href="#" class="logo">AirNet </a>
         
             <nav class="navbar">
@@ -17,22 +13,37 @@
                 <a href="/notifications" class="notifications">Notifications</a>
                 <a href="/login" class="login">Logout</a>
             </nav>
-        </header>   
+        </div>   
         <br>
         <br>
         <br>
-        <div class="-InputUser">
-          
-            <input type="text" [(ngModel)] = "recharge.name" class="name" placeholder="Name" id="name"> 
+        <form>
+            <div class="InputUser">
                 <br>
+                <br>
+                <br>
+                <p>Please fill the details</p>
+                <hr>
+                <br>
+                <label>Name:</label>
+                <input type="text" [(ngModel)] = "recharge.name" class="name" placeholder="Name" id="name"> 
+                <br>
+                <label>Mobile Number:</label>
                 <input type="mobile" [(ngModel)] = "recharge.mobile" class="MobileNumber" placeholder="Mobile Number" id="mobile">
                 <br>
+                <label>Email:</label>
                 <input type="email" [(ngModel)] = "recharge.email" class="email" placeholder="Email" id="email">
                 <br>
-            
-        </div>
+            </div>
+        </form>
+        <div class="gap"></div>
+        <br>
+        <br>
+        <br>
         <div class="container">
-            <div class="popularplansGrid">
+                <br>
+                <br>
+                <br>
                 <h1 class="heading">{{plan.planName}}</h1>
                 <h2 class="service__price">Rs.{{plan.planPrice}}</h2>
                 <ul class="features__list">
@@ -41,7 +52,8 @@
                     <li>Details:{{plan.planDetails}}</li>
                 </ul> 
                 <h4><a href="/notifications"><button class="confirmRecharge" (click)="onRecharge()" >Recharge</button></a></h4>
-            </div>
+                <h4><a href="/popularplans"><button class="Delete" >Delete</button></a></h4>
+                <h4><a href="/popularplans"><button class="Edit" >Edit</button></a></h4>      
         </div>
     </body>
 </html>
