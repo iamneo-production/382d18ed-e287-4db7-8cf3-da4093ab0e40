@@ -31,13 +31,14 @@ ul {
      text-align: center;
  }
 
- .plan_input{
+ .recharge_input{
     margin-top: 1%;
     text-align: center;
     display: none;
     border-style: groove;
     margin-left: 12%;
     margin-right: 12%;
+    padding: 10px;
  }
 
  h1{
