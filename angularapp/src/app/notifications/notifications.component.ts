@@ -30,8 +30,6 @@ export class NotificationsComponent implements OnInit {
     },error => console.log(error));
   }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
 }

@@ -18,7 +18,7 @@ import { UpdatePlanComponent } from './update-plan/update-plan.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AddonComponent } from './addon/addon.component';
 import { RechargeconfirmationComponent } from './rechargeconfirmation/rechargeconfirmation.component';
-
+import { AddonRechargeconfirmationComponent } from './addon-rechargeconfirmation/addon-rechargeconfirmation.component';
 import { UpdateAddonComponent } from './update-addon/update-addon.component';
 import { DisplayrechargeComponent } from './displayrecharge/displayrecharge.component';
 import { EditrechargeComponent } from './editrecharge/editrecharge.component';
@@ -54,7 +54,8 @@ const routes: Routes = [
     UpdateAddonComponent,
     DisplayrechargeComponent,
     EditrechargeComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    AddonRechargeconfirmationComponent
     
   ],
   imports: [
