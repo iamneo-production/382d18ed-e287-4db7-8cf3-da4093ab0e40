@@ -1,3 +1,15 @@
+.bg{
+    background:url("bg_notifications.jpg");     
+  min-height : 100%;
+  min-width : 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+ position:absolute;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  opacity: 0.3;
+
+}
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -11,7 +23,6 @@
 body {
     font-family: "Roboto", sans-serif;
     font-size: 17px;
-    background:#eee;
 }
 
 .btn{
@@ -38,7 +49,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding:2rem 9%;
-    background:#fff;
     box-shadow: var(--box-shadow);
     text-decoration: none;
 }
@@ -52,7 +62,7 @@ body {
     font-size: 25px;
     margin:0 1rem;
     text-align: center;
-    color:var(--black);
+    color:black;
     text-decoration: none;
 }
 
@@ -60,7 +70,23 @@ body {
     color:blue;
 }
 #active{
-    color: #9708CC;
+    color: green;
     font-size: 30px;
-    font-style: italic;
 }
+
+.container {
+    padding: 20px;
+    background-color: black;
+    height: 320px;
+    width:30%;
+    align-items: center;
+    margin-left: 550px;
+    display: block;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+}
+
+
+
+
