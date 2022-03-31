@@ -14,6 +14,7 @@ import {FormGroup,FormControl,FormControlName,Validators, AbstractControl} from 
 })
 export class AddonRechargeconfirmationComponent implements OnInit {
   id:any;
+  num:any;
   rechargeId:number;
   addon: Addon = new Addon();
   recharge : Recharge=new Recharge();
@@ -75,9 +76,10 @@ export class AddonRechargeconfirmationComponent implements OnInit {
     },error => console.log(error));
   }
   onRecharge(){
-    console.log(document.getElementById("email"));
+   
     this.saveRecharge();
-    this.router.navigate(['notifications']);
+    this.num=this.recharge.mobile;
+    this.router.navigate(['notifications',this.num]);
     
   }
 }
