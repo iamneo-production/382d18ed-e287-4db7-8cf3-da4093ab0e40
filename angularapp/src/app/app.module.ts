@@ -23,6 +23,7 @@ import { UpdateAddonComponent } from './update-addon/update-addon.component';
 import { DisplayrechargeComponent } from './displayrecharge/displayrecharge.component';
 import { EditrechargeComponent } from './editrecharge/editrecharge.component';
 import{NotificationsComponent} from './notifications/notifications.component';
+import { AddonRechargeconfirmationComponent } from './addon-rechargeconfirmation/addon-rechargeconfirmation.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Popularplans', pathMatch: 'full' },
@@ -54,7 +55,8 @@ const routes: Routes = [
     UpdateAddonComponent,
     DisplayrechargeComponent,
     EditrechargeComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    AddonRechargeconfirmationComponent
     
   ],
   imports: [

@@ -17,8 +17,8 @@
         <br>
         <br>
         <br>
-        <form>
-            <div class="InputUser">
+       
+            <div class="-InputUser">
                 <br>
                 <br>
                 <br>
@@ -29,13 +29,13 @@
                 <input type="text" [(ngModel)] = "recharge.name" class="name" placeholder="Name" id="name"> 
                 <br>
                 <label>Mobile Number:</label>
-                <input type="mobile" [(ngModel)] = "recharge.mobile" class="MobileNumber" placeholder="Mobile Number" id="mobile">
+                <input type="mobile"  [(ngModel)] = "recharge.mobile" class="MobileNumber" placeholder="Mobile Number" id="mobile">
                 <br>
                 <label>Email:</label>
                 <input type="email" [(ngModel)] = "recharge.email" class="email" placeholder="Email" id="email">
                 <br>
             </div>
-        </form>
+        
         <div class="gap"></div>
         <br>
         <br>
@@ -46,7 +46,7 @@
                 <ul class="features__list">
                     <li>Addon Type:{{addon.addonDetails}}</li>
                 </ul> 
-                <h4><a href="/notifications"><button class="confirmRecharge" (click)="onRecharge()" >Recharge</button></a></h4>
+                <h4><a><button class="confirmRecharge" (click)="onRecharge()" >Recharge</button></a></h4>
                 <h4><a href="/addons"><button class="Delete" >Delete</button></a></h4>
                 <h4><a href="/addons"><button class="Edit" >Edit</button></a></h4>
         </div>

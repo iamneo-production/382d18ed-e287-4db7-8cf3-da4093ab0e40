@@ -16,6 +16,7 @@ import {FormGroup,FormControl,FormControlName,Validators, AbstractControl} from 
 })
 export class RechargeconfirmationComponent implements OnInit {
   planId:any;
+  num:any;
   rechargeId:number;
   plan: Plan = new Plan();
   recharge : Recharge=new Recharge();
@@ -36,12 +37,14 @@ export class RechargeconfirmationComponent implements OnInit {
       this.recharge.rechargePlan=data.planName;
       this.recharge.rechargePrice=data.planPrice;
       this.recharge.rechargetype=data.planType;
+      
     },error => console.log(error));
   }
 
   saveRecharge(){
     console.log("save rechargeworking");
     this.rechargemodel();
+   
     this.RechargeService.createRecharge(this.recharge).subscribe(data=>{
       console.log(data);
       
@@ -62,7 +65,9 @@ export class RechargeconfirmationComponent implements OnInit {
 	  return this.rechargeform.get('name');
   }
   get mobile(){
-	  return this.rechargeform.get('mobile');
+	  
+    return  this.rechargeform.get('mobile');
+   
   }
   ngOnInit(): void {
     this.getPlan();
@@ -78,10 +83,11 @@ export class RechargeconfirmationComponent implements OnInit {
       //this.recharge.email=document.getElementById("email");
     },error => console.log(error));
   }
+
   onRecharge(){
-    console.log(document.getElementById("email"));
     this.saveRecharge();
-    this.router.navigate(['notifications']);
+    this.num=this.recharge.mobile;
+    this.router.navigate(['notifications',this.num]);
     
   }
   /*deteleRecharge(rechargeId:number){

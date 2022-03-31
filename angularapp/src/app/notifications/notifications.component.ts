@@ -10,27 +10,20 @@ import {FormGroup,FormControl,FormControlName,Validators, AbstractControl} from 
   styleUrls: ['./notifications.component.css']
 })
 export class NotificationsComponent implements OnInit {
-  rechargeId:number;
+  num:any;
   recharge : Recharge=new Recharge();
   recharges: Recharge[] | undefined;
   constructor(private RechargeService:RechargeService , private rechargeService: RechargeService, private route:ActivatedRoute,private router :Router ) { }
   
-  private getRecharge() {
-       this.rechargeService.getRecharges().subscribe(data => {
-        this.recharges = data;
-        console.log(data);
-      });
-  }
   private rechargemodel()
   {
-    this.rechargeService.getRechargeById(this.rechargeId).subscribe(data=>{
-      this.recharge=data;
-      this.recharge.name=data.name;
-      this.recharge.mobile=data.mobile;
-    },error => console.log(error));
+    this.num = this.route.snapshot.params['num'];
+    console.log("number");
+   console.log(this.num);
   }
 
   ngOnInit(): void {
+    this.rechargemodel();
     
   }
 
