@@ -5,16 +5,13 @@
     </script>
 
 
-<div class="bg">
-  
-</div>
+<div class="bg"></div>
 
-<div class="sidenav col-md-6 offset-md-3">
-    <h3 class="main-head text-center font-weight-bolder text-white"> Sign Up </h3>
-    
+    <!--<div class="sidenav col-md-6 offset-md-3">
+    <h3 class="main-head text-center font-weight-bolder text-black"> Sign Up </h3>
     <form  (ngSubmit)="onSubmit()" #SignupForm="ngForm">
-        <small class="text-danger">{{msg}}</small>
-        <div class="form-group font-weight-bold text-white " >
+    
+        <div class="form-group font-weight-bold text-black " >
             <label> UserName</label>
             <input  type="text" class ="form-control" id = "username" 
                 [(ngModel)] = "user.username" name = "username" placeholder="Enter UserName" required >
@@ -24,20 +21,19 @@
                 
         </div>
     
-        <div class="form-group font-weight-bold text-white">
+        <div class="form-group font-weight-bold text-black">
             <label> MobileNumber</label>
             <input type="text" class ="form-control" id = "mobilenumber"
                 [(ngModel)] = "user.mobilenumber" name = "mobilenumber"  pattern="^\d{10}$" placeholder="Enter your MobileNumber" required>
         </div>
     
-        <div class="form-group font-weight-bold text-white">
+        <div class="form-group font-weight-bold text-black">
             <label> Email Id</label>
             <input type="text" class ="form-control" id = "emailId"
                 [(ngModel)] = "user.emailId" name = "emailId" placeholder="Example@gmail.com" pattern=".+@gmail.com" size="30" min='5' required>
         </div>
         
-        <div class="form-group font-weight-bold text-white">
-            <label> Password</label>
+        
             <input type="password" class ="form-control" id = "password"
                 [(ngModel)] = "user.password" name = "password" placeholder="up to 8 characters(One should be upperCase atleast and also @#₹ symbol must need)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                 required  />
@@ -49,7 +45,7 @@
 
 
         </div>
-        <div class="form-group font-weight-bold text-white">
+        <div class="form-group font-weight-bold text-black">
             <label> Confirm Password</label>
             <input type="password" class ="form-control" id = "confirmpassword"  (ngModel) = "user.password"
              name = "confirmpassword" placeholder="Repeat the password again" pattern=".{8,}" required 
@@ -62,7 +58,48 @@
         <div class="form-group">
         
         <button type="submit" class="btn btn-success" [disabled]="!SignupForm.form.valid">Submit</button>
-        <p class="text-white">I already have an account. <a href="/login">Login</a></p>
+        <p class="text-black">I already have an account. <a href="/login">Login</a></p>
         </div>
     </form>
+    </div>-->
+    <div class="sidenav col-md-6 offset-md-3">
+        <h3 class="main-head text-center font-weight-bolder text-danger"> Sign Up </h3>
+            <form [formGroup]="signupform" (ngSubmit)="onSubmit()">
+                <small class="text-danger">{{msg}}</small>
+                <div class="form-group font-weight-bold text-black">
+                    <label>Email:</label>
+                    <br>
+                    <input [(ngModel)] = "user.emailId" type="email" id="emailId" class ="form-control" placeholder="Enter email" name="emailId" formControlName="emailId" pattern=".+@[a-z]+[.][a-z]{3}" size="30" min='5' required >
+                    <span style="color:red" *ngIf="emailId && emailId.invalid && emailId.touched">Please enter valid emailId</span>
+                </div>
+                <div class="form-group font-weight-bold text-black " >
+                    <label> UserName:</label>
+                    <br>
+                    <input [(ngModel)] = "user.username" type="text" id="username" placeholder="Enter Username" name="username" formControlName="username" class="form-control" required>
+                    <span style="color:red" *ngIf="username && username.invalid && username.touched">Please enter valid username</span>
+                </div>
+                <div class="form-group font-weight-bold text-black">
+                    <label> Mobile Number:</label>
+                    <br>
+                    <input [(ngModel)] = "user.mobilenumber" type="text" id="mobilenumber" class ="form-control" placeholder="Enter Mobilenumber" name="mobilenumber" formControlName="mobilenumber" required>
+                <span style="color:red" *ngIf="mobilenumber && mobilenumber.invalid && mobilenumber.touched">Please enter valid mobile number</span>
+                </div>
+                <div class="form-group font-weight-bold text-black">
+                    <label> Password:</label>
+                    <br>
+                    <input [(ngModel)] = "user.password" type="password" id="password" class ="form-control" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()" required>
+                    <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>
+                </div>
+                <div class="form-group font-weight-bold text-black">
+                    <label> Confirm Password</label>
+                    <br>
+                    <input type="password" id="confirmpassword" class ="form-control" placeholder="Confirm password" name="confirmpassword" formControlName="confirmpassword" (change)="onPasswordChange()" re >
+                    <span style="color:red" *ngIf="confirmpassword && confirmpassword.invalid && confirmpassword.touched &&confirm_password.hasError('mismatch')">Password and confirm password missmatch</span>
+                </div>
+                <br>
+                
+                <button type="submit" [disabled]="signupform.invalid" class="btn btn-success" id="submitButton">Submit</button>
+                Already a user ? <a id="signinLink" href="/login" >Login</a>
+        
+            </form>
     </div>
