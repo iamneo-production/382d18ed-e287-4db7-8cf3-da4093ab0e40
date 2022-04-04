@@ -2,13 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
 
 <html lang="en">
-    
-    <head>
-        <link rel="stylesheet" href="addon-rechargeconfirmation.component.css">
-        
-    </head>
     <body>
-        <header class="header">
+        <div class="header">
             <a href="#" class="logo">AirNet </a>
         
             <nav class="navbar">
@@ -17,23 +12,40 @@
                 <a href="/notifications" class="notifications">Notifications</a>
                 <a href="/login" class="login">Logout</a>
             </nav>
-        </header>   
+        </div>   
         <br>
         <br>
         <br>
-        <div class="InputUser">
-         
-            
-        </div>
+            <div class="InputUser">
+                <br>
+                <br>
+                <br>
+                <p>Please fill the details</p>
+                <hr>
+                <br>
+                <p>Name:</p>
+                <input type="text" [(ngModel)] = "recharge.name" class="name" placeholder="Name" id="name"> 
+                <br>
+                <p>Mobile Number:</p>
+                <input type="mobile" [(ngModel)] = "recharge.mobile" class="MobileNumber" placeholder="Mobile Number" id="mobile">
+                <br>
+                <p>Email:</p>
+                <input type="email" [(ngModel)] = "recharge.email" class="email" placeholder="Email" id="email">
+                <br>
+            </div>
+        <div class="gap"></div>
+        <br>
+        <br>
+        <br>
         <div class="container">
-            <div class="addonsGrid">
                 <h1 class="heading">{{addon.addonName}}</h1>
                 <h2 class="service__price">Rs.{{addon.addonPrice}}</h2>
                 <ul class="features__list">
                     <li>Addon Type:{{addon.addonDetails}}</li>
                 </ul> 
-                <h4><a href="/notifications"><button class="confirmRecharge" (click)="onRecharge()" >Recharge</button></a></h4>
-            </div>
+                <h4><a><button class="confirmRecharge" (click)="onRecharge()" >Recharge</button></a></h4>
+                <h4><a href="/addons"><button class="Delete" >Delete</button></a></h4>
+                <h4><a href="/addons"><button class="Edit" >Edit</button></a></h4>
         </div>
     </body>
 </html>

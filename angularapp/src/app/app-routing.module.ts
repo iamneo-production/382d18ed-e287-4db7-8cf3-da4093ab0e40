@@ -54,8 +54,9 @@ const routes: Routes = [
   {path: 'admin/editrecharge/:id',component:EditrechargeComponent },
   {path: 'addon-rechargeconfirmation/:id',component:AddonRechargeconfirmationComponent},
   {path: 'addon-rechargeconfirmation',component:AddonRechargeconfirmationComponent},
-  {path: 'notifications',component:NotificationsComponent}
 
+  {path: 'notifications',component:NotificationsComponent},
+  {path: 'notifications/:num',component:NotificationsComponent}
 
 ];
 

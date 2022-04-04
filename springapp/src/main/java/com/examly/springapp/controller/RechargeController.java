@@ -28,7 +28,8 @@ class RechargeController{
     @PostMapping("/addRecharge")
     public RechargeModel createRecharge(@RequestBody RechargeModel recharge)
     {
-        return prepo.save(recharge);
+         prepo.save(recharge);
+		 return recharge;
     }
 
     @GetMapping("/viewRecharge")

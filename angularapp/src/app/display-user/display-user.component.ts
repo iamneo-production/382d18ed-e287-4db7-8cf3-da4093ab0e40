@@ -35,6 +35,11 @@ export class DisplayUserComponent implements OnInit {
       this.getuser();
 
     })
+    
+  }
+  logout(){
+    sessionStorage.clear();
+    this.router.navigate(['']);
   }
 
 }

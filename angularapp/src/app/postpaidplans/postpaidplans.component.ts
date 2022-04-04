@@ -57,7 +57,7 @@ onSubmit(){
 
 logout(){
   sessionStorage.clear();
-  this.router.navigate(['user/login']);
+  this.router.navigate(['']);
 }
 
 
