@@ -27,12 +27,9 @@
         <div class="recharge_input" id="recharge_inputt">
             <h3>Welcome Admin! Enter details to add a recharge</h3>
             <form (ngSubmit) = "onSubmit()">
-                <div> <input type="text" [(ngModel)] = "recharge.name" class="name" placeholder="Name" id="name"> </div>
-                
-                <div> <input type="mobile" [(ngModel)] = "recharge.mobile" class="MobileNumber" placeholder="Mobile Number" id="mobile"></div>
-                
-                <div><input type="email" [(ngModel)] = "recharge.email" class="email" placeholder="Email" id="email"></div>
-                
+                <div> <input type="text" [(ngModel)] = "recharge.name" name="name" placeholder="Name" > </div>
+                <div> <input type="text" [(ngModel)] = "recharge.mobile" name="mobile" placeholder="Mobile Number" ></div>
+                <div><input type="text" [(ngModel)] = "recharge.email" name="email" placeholder="Email" ></div>
                 <div><input [(ngModel)] = "recharge.rechargeId" name="rechargeId" type="text" placeholder="Enter recharge ID"></div>
                 <div><input [(ngModel)] = "recharge.rechargePlan" name="rechargePlan" type="text" placeholder="Enter recharge Plan"></div>
                 <div><input [(ngModel)] = "recharge.rechargePrice" name="rechargePrice" type="text" placeholder="Enter the price"></div>

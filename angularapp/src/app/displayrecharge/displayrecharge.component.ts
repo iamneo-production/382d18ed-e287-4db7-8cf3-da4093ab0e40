@@ -38,6 +38,7 @@ private getrecharge() {
 
 saverecharge(){
   this.RechargeService.createRecharge(this.recharge).subscribe(data=>{
+    
     this.getrecharge();
   },
   error => console.log(error)
@@ -57,6 +58,7 @@ editrecharge(id: number){
 
 onSubmit(){
   this.saverecharge();
+  this.getrecharge();
 }
 
 logout(){

@@ -15,6 +15,7 @@ export class SignupComponent implements OnInit {
   {
 
   } 
+  msg='';
   user: User = new User();
   saveUser()
   {
@@ -22,11 +23,16 @@ export class SignupComponent implements OnInit {
       console.log(data);
       this.gotoUserlist();
     },
-    error => console.log(error));
+    error =>
+    {
+      console.log("exception occured");
+      this.msg="User with same Email Id is Already Present";
+    }
+  );
   }
   gotoUserlist()
   {
-    this.router.navigate(['/displayuser']);
+    this.router.navigate(['']);
   }
   onPasswordChange() {
     if (this.confirm_password.value == this.password1.value) {
