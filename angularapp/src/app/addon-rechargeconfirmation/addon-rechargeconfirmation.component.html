@@ -16,23 +16,28 @@
         <br>
         <br>
         <br>
-            <div class="InputUser">
-                <br>
-                <br>
-                <br>
-                <p>Please fill the details</p>
-                <hr>
-                <br>
-                <p>Name:</p>
-                <input type="text" [(ngModel)] = "recharge.name" class="name" placeholder="Name" id="name"> 
-                <br>
-                <p>Mobile Number:</p>
-                <input type="mobile" [(ngModel)] = "recharge.mobile" class="MobileNumber" placeholder="Mobile Number" id="mobile">
-                <br>
-                <p>Email:</p>
-                <input type="email" [(ngModel)] = "recharge.email" class="email" placeholder="Email" id="email">
-                <br>
-            </div>
+        <form [formGroup]="rechargeform" (ngSubmit)="onRecharge()" >
+
+        <div class="InputUser" >
+            <br>
+            <br>
+            <br>
+            <p>Please fill the details</p>
+            <hr>
+            <br>
+            <p>Name:</p>
+            <input type="text" [(ngModel)] = "recharge.name" formControlName="name" class="name" placeholder="Name" id="name"> 
+            <span style="color:red" *ngIf="name && name.invalid && name.touched">Please enter valid username</span>
+            <br>
+            <p>Mobile Number:</p>
+            <input type="mobile" [(ngModel)] = "recharge.mobile" formControlName="mobile" class="MobileNumber" placeholder="Mobile Number" id="mobile" pattern="^((\\+91-?) |0)?[0-9]{10}$" >
+            <span style="color:red" *ngIf="mobile && mobile.invalid && mobile.touched">Please enter valid mobile number</span>
+            <br>
+            <p>Email:</p>
+            <input type="email" [(ngModel)] = "recharge.email" formControlName="email" class="email" placeholder="Email" id="email" pattern=".+@[a-z]+[.][a-z]{3}" >
+            <span style="color:red" *ngIf="email && email.invalid && email.touched">Please enter valid email</span>
+            <br>
+        </div>
         <div class="gap"></div>
         <br>
         <br>
@@ -43,9 +48,11 @@
                 <ul class="features__list">
                     <li>Addon Type:{{addon.addonDetails}}</li>
                 </ul> 
-                <h4><a><button class="confirmRecharge" (click)="onRecharge()" >Recharge</button></a></h4>
+                <h4><a><button class="confirmRecharge" (click)="onRecharge()" [disabled]="rechargeform.invalid" >Recharge</button></a></h4>
+
                 <h4><a href="/addons"><button class="Delete" >Delete</button></a></h4>
                 <h4><a href="/addons"><button class="Edit" >Edit</button></a></h4>
         </div>
+        </form>
     </body>
 </html>

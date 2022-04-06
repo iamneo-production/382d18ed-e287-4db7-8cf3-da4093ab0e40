@@ -8,7 +8,7 @@ import {FormGroup,FormControl,FormControlName,Validators, AbstractControl} from 
 
 
 @Component({
-  selector: 'app-rechargeconfirmation',
+  selector: 'app-rechargeconfirmation,[required][ngModel]',
   templateUrl: './rechargeconfirmation.component.html',
   styleUrls: ['./rechargeconfirmation.component.css']
 })
@@ -19,6 +19,7 @@ export class RechargeconfirmationComponent implements OnInit {
   plan: Plan = new Plan();
   recharge : Recharge=new Recharge();
   plans: Plan[] | undefined;
+  formBuilder: any;
   constructor(private RechargeService:RechargeService , private planService: PlanServService, private route:ActivatedRoute,private router :Router ) { }
   //constructor(private RechargeService:RechargeService,private route:ActivatedRoute,private router :Router){}
   private getPlan() {
@@ -51,9 +52,9 @@ export class RechargeconfirmationComponent implements OnInit {
     );
   }
   rechargeform=new FormGroup({
-	  email:new FormControl(''),
+	  email:new FormControl('',[Validators.required,Validators.email]),
 	  name:new FormControl(''),
-    mobile:new FormControl('')
+    mobile:new FormControl('',[Validators.required,Validators.pattern("[0-9 ]{10}")])
   })
 
   get email(){
@@ -67,6 +68,7 @@ export class RechargeconfirmationComponent implements OnInit {
     return  this.rechargeform.get('mobile');
    
   }
+ 
   ngOnInit(): void {
     this.getPlan();
     this.planId=this.route.snapshot.params['planId'];
@@ -80,9 +82,11 @@ export class RechargeconfirmationComponent implements OnInit {
      // var em=document.getElementById("email");
       //this.recharge.email=document.getElementById("email");
     },error => console.log(error));
+  
   }
 
   onRecharge(){
+    
     this.saveRecharge();
     this.num=this.recharge.mobile;
     this.router.navigate(['notifications',this.num]);
