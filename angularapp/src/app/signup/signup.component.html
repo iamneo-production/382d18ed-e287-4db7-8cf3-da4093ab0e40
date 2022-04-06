@@ -64,7 +64,7 @@
     </div>-->
     <div class="sidenav col-md-6 offset-md-3">
         <h3 class="main-head text-center font-weight-bolder text-danger"> Sign Up </h3>
-            <form [formGroup]="signupform" (ngSubmit)="onSubmit()">
+            <form [formGroup]="signupform" (ngSubmit)="onSubmit()" >
                 <small class="text-danger">{{msg}}</small>
                 <div class="form-group font-weight-bold text-black">
                     <label>Email:</label>
