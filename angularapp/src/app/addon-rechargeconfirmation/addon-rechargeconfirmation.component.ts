@@ -8,7 +8,7 @@ import {FormGroup,FormControl,FormControlName,Validators, AbstractControl} from 
 
 
 @Component({
-  selector: 'app-addon-rechargeconfirmation',
+  selector: 'app-addon-rechargeconfirmation,[required][ngModel]',
   templateUrl: './addon-rechargeconfirmation.component.html',
   styleUrls: ['./addon-rechargeconfirmation.component.css']
 })
@@ -47,9 +47,9 @@ export class AddonRechargeconfirmationComponent implements OnInit {
     );
   }
   rechargeform=new FormGroup({
-	  email:new FormControl(''),
+	  email:new FormControl('',[Validators.required,Validators.email]),
 	  name:new FormControl(''),
-    mobile:new FormControl('')
+    mobile:new FormControl('',[Validators.required,Validators.pattern("[0-9 ]{10}")])
   })
 
   get email(){
