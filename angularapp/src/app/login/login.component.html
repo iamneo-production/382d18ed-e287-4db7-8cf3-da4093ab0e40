@@ -16,19 +16,17 @@
       
   
     <small class="text-danger">{{msg}}</small>
+    <div class="form-group font-weight-bold text-white">
+      <label> Email Id</label>
+   
+      <input type="text" class ="form-control" id = "emailId" [(ngModel)] = "user.emailId" name = "emailId" placeholder="Enter EmailId"  >
+  </div>
   
-      <div class="form-group font-weight-bold text-white">
-          <label> Email Id</label>
-          <input type="text" class ="form-control" id = "emailId"
-              [(ngModel)] = "user.emailId" name = "emailId" placeholder="Enter EmailId"  required>
-      </div>
-      
-      <div class="form-group font-weight-bold text-white">
-          <label> Password</label>
-          <input type="password" class ="form-control" id = "password"
-              [(ngModel)] = "user.password" name = "password" placeholder="Enter the password" required > 
-              
-      </div>
+  <div class="form-group font-weight-bold text-white">
+      <label> Password</label>
+      <input type="password" class ="form-control" id = "password" [(ngModel)] = "user.password" name = "password" placeholder="Enter the password"  > 
+          
+  </div>
       
       <div class="form-group">
       

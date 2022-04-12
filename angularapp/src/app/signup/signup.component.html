@@ -14,7 +14,7 @@
         <div class="form-group font-weight-bold text-black " >
             <label> UserName</label>
             <input  type="text" class ="form-control" id = "username" 
-                [(ngModel)] = "user.username" name = "username" placeholder="Enter UserName" required >
+                [(ngModel)] = "user.username" name = "username" placeholder="Enter UserName"   >
 
                 
 
@@ -24,22 +24,22 @@
         <div class="form-group font-weight-bold text-black">
             <label> MobileNumber</label>
             <input type="text" class ="form-control" id = "mobilenumber"
-                [(ngModel)] = "user.mobilenumber" name = "mobilenumber"  pattern="^\d{10}$" placeholder="Enter your MobileNumber" required>
+                [(ngModel)] = "user.mobilenumber" name = "mobilenumber"  pattern="^\d{10}$" placeholder="Enter your MobileNumber"  >
         </div>
     
         <div class="form-group font-weight-bold text-black">
             <label> Email Id</label>
             <input type="text" class ="form-control" id = "emailId"
-                [(ngModel)] = "user.emailId" name = "emailId" placeholder="Example@gmail.com" pattern=".+@gmail.com" size="30" min='5' required>
+                [(ngModel)] = "user.emailId" name = "emailId" placeholder="Example@gmail.com" pattern=".+@gmail.com" size="30" min='5'  >
         </div>
         
         
             <input type="password" class ="form-control" id = "password"
                 [(ngModel)] = "user.password" name = "password" placeholder="up to 8 characters(One should be upperCase atleast and also @#₹ symbol must need)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                required  />
+                   />
 
                 <div *ngIf="password.errors && (password.invalid && password.touched)" class="alert alert-danger" style="margin-top: 10px;">
-                    <div *ngIf="password.hasError('required')">Password is required</div>
+                    <div *ngIf="password.hasError(' ')">Password is  </div>
                     <div *ngIf="password.hasError('pattern')">Enter Valid password</div>
                    </div>
 
@@ -48,7 +48,7 @@
         <div class="form-group font-weight-bold text-black">
             <label> Confirm Password</label>
             <input type="password" class ="form-control" id = "confirmpassword"  (ngModel) = "user.password"
-             name = "confirmpassword" placeholder="Repeat the password again" pattern=".{8,}" required 
+             name = "confirmpassword" placeholder="Repeat the password again" pattern=".{8,}"   
              [class.is-invalid]="password.invalid && password.touched"   />
 
              <span class="alert alert-danger"  [class.d-none]="(confirmpassword.value==password.value) || password.untouched" style="margin-top: 10px;">Password doesn't Match</span>
@@ -69,25 +69,25 @@
                 <div class="form-group font-weight-bold text-black">
                     <label>Email:</label>
                     <br>
-                    <input [(ngModel)] = "user.emailId" type="email" id="emailId" class ="form-control" placeholder="Enter email" name="emailId" formControlName="emailId" pattern=".+@[a-z]+[.][a-z]{3}" size="30" min='5' required >
+                    <input [(ngModel)] = "user.emailId" type="email" id="emailId" class ="form-control" placeholder="Enter email" name="emailId" formControlName="emailId" pattern=".+@[a-z]+[.][a-z]{3}" size="30" min='5'   >
                     <span style="color:red" *ngIf="emailId && emailId.invalid && emailId.touched">Please enter valid emailId</span>
                 </div>
                 <div class="form-group font-weight-bold text-black " >
                     <label> UserName:</label>
                     <br>
-                    <input [(ngModel)] = "user.username" type="text" id="username" placeholder="Enter Username" name="username" formControlName="username" class="form-control" required>
+                    <input [(ngModel)] = "user.username" type="text" id="username" placeholder="Enter Username" name="username" formControlName="username" class="form-control"  >
                     <span style="color:red" *ngIf="username && username.invalid && username.touched">Please enter valid username</span>
                 </div>
                 <div class="form-group font-weight-bold text-black">
                     <label> Mobile Number:</label>
                     <br>
-                    <input [(ngModel)] = "user.mobilenumber" type="text" id="mobilenumber" class ="form-control" placeholder="Enter Mobilenumber" name="mobilenumber" formControlName="mobilenumber" required>
+                    <input [(ngModel)] = "user.mobilenumber" type="text" id="mobilenumber" class ="form-control" placeholder="Enter Mobilenumber" name="mobilenumber" formControlName="mobilenumber"  >
                 <span style="color:red" *ngIf="mobilenumber && mobilenumber.invalid && mobilenumber.touched">Please enter valid mobile number</span>
                 </div>
                 <div class="form-group font-weight-bold text-black">
                     <label> Password:</label>
                     <br>
-                    <input [(ngModel)] = "user.password" type="password" id="password" class ="form-control" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()" required>
+                    <input [(ngModel)] = "user.password" type="password" id="password" class ="form-control" placeholder="Enter password" name="password" formControlName="password" (change)="onPasswordChange()"  >
                     <span style="color:red" *ngIf="password && password.invalid && password.touched">Please enter valid password</span>
                 </div>
                 <div class="form-group font-weight-bold text-black">
